@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>National Commission on Women — Sri Lanka</title>
+<link rel="icon" type="image/png" href="static/images/ncw-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Serif+Sinhala:wght@400;600;700&family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#672D62;
+  --purple-dk:#4E2049;
+  --purple-lt:#F5EFF4;
+  --purple-lt2:#EADCE8;
+  --grey:#CFCFCF;
+  --teal:#003C4B;
+  --lavender:#E2D9FF;
+  --green:#AED799;
+  --cyan:#C8F0FF;
+  --dkgreen:#0B4E05;
+  --white:#FFFFFF;
+  --text:#241A23;
+  --tmid:#5C4B59;
+  --tlt:#8B7C89;
+  --border:#E3DCE2;
+  --focus:#0B4E05;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:100%}
+body{font-family:'Inter','Noto Sans Sinhala','Noto Sans Tamil',sans-serif;font-size:1.0625rem;color:var(--text);background:var(--white);line-height:1.7}
+h1,h2,h3,h4{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;color:var(--purple);line-height:1.15;font-weight:700}
+h1{font-size:clamp(2.2rem,4.4vw,3.2rem)}
+h2{font-size:clamp(1.7rem,3vw,2.3rem)}
+h3{font-size:1.35rem}
+h4{font-size:1.05rem}
+a{color:inherit}
+button{font-family:inherit}
+img{max-width:100%;display:block}
+[lang="si"]{font-family:'Noto Sans Sinhala',sans-serif}
+[lang="ta"]{font-family:'Noto Sans Tamil',sans-serif}
+.page{display:none}
+.page.active{display:block}
+.container{max-width:1120px;margin:0 auto;padding:0 32px}
+.section{padding:76px 0}
+.eyebrow{display:block;font-size:0.72rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal);margin-bottom:14px}
+.tmid{color:var(--tmid)}
+.lead{color:var(--tmid);font-size:1.05rem;line-height:1.8}
+
+/* focus visibility floor — always on */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid var(--focus);outline-offset:2px;
+}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--purple);color:#fff;padding:12px 20px;z-index:5000;font-weight:700;text-decoration:none}
+.skip-link:focus{left:12px;top:12px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ── buttons ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:3px;font-weight:700;font-size:0.86rem;letter-spacing:0.03em;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background .15s,color .15s,border-color .15s}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-primary:hover{background:#00272f}
+.btn-purple{background:var(--purple);color:#fff}
+.btn-purple:hover{background:var(--purple-dk)}
+.btn-outline{background:transparent;color:var(--purple);border-color:var(--purple)}
+.btn-outline:hover{background:var(--purple-lt)}
+.btn-outline-wh{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-outline-wh:hover{background:rgba(255,255,255,.12)}
+.btn-sm{padding:9px 18px;font-size:0.78rem}
+
+/* ── decorative arcs ── */
+.ripple-bg{position:absolute;border-radius:50%;border-style:solid;pointer-events:none}
+
+/* ═══════════ GATEWAY ═══════════ */
+#page-gateway{background:var(--white)}
+.gw-wrap{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:60px 70px 60px 24px}
+.gw-wrap .ripple-bg:nth-child(1){width:640px;height:640px;border-width:1px;border-color:var(--purple-lt2);top:-180px;right:-200px}
+.gw-wrap .ripple-bg:nth-child(2){width:420px;height:420px;border-width:1px;border-color:var(--purple-lt2);bottom:-140px;left:-140px}
+.gw-mark{position:relative;z-index:1;text-align:center;margin-bottom:56px}
+.gw-imgs{display:flex;justify-content:center;align-items:center;gap:26px;margin-bottom:20px}
+.gw-imgs .gw-emblem{height:86px;width:auto}
+.gw-imgs .gw-logo{height:72px;width:auto}
+.gw-mark .gw-si{font-family:'Noto Sans Sinhala',sans-serif;font-size:1.3rem;color:var(--purple);font-weight:600;margin-bottom:2px}
+.gw-mark .gw-ta{font-family:'Noto Sans Tamil',sans-serif;font-size:1.2rem;color:var(--purple);font-weight:600;margin-bottom:2px}
+.gw-mark .gw-en{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-size:1.1rem;color:var(--tmid);letter-spacing:0.02em}
+.gw-langs{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;width:100%}
+.gw-card{border:2px solid var(--border);padding:36px 26px;text-align:center;background:#fff;cursor:pointer;transition:border-color .15s,transform .15s}
+.gw-card:hover{border-color:var(--purple);transform:translateY(-3px)}
+.gw-card .gw-greet{font-size:1.5rem;color:var(--purple);margin-bottom:8px}
+.gw-card.si .gw-greet{font-family:'Noto Sans Sinhala',sans-serif}
+.gw-card.ta .gw-greet{font-family:'Noto Sans Tamil',sans-serif}
+.gw-card.en .gw-greet{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700}
+@media(max-width:720px){.gw-langs{grid-template-columns:1fr}}
+
+/* modals */
+.lang-modal{display:none;position:fixed;inset:0;background:rgba(36,26,35,.55);z-index:4000;align-items:center;justify-content:center;padding:24px}
+.lang-modal.open{display:flex}
+.lang-modal-box{background:#fff;max-width:480px;width:100%;padding:36px 32px;border-top:5px solid var(--purple)}
+.lang-modal-box h3{margin-bottom:14px}
+.lang-modal-box p{color:var(--tmid);line-height:1.75;margin-bottom:10px;font-size:0.96rem}
+.lang-modal-box .lm-native{font-size:1.05rem;color:var(--purple);margin-bottom:6px}
+.lang-modal-actions{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}
+
+/* ═══════════ SITE CHROME ═══════════ */
+#page-site{display:none}
+#page-site.active{display:block}
+.util-bar{background:var(--purple-lt);border-bottom:1px solid var(--border)}
+.util-inner{max-width:1120px;margin:0 auto;padding:0 32px;display:flex;justify-content:flex-end;align-items:center;height:38px;gap:2px}
+.util-lang{font-size:0.74rem;font-weight:700;letter-spacing:0.04em;color:var(--tmid);padding:6px 10px;cursor:pointer;border-radius:2px;background:none;border:none}
+.util-lang.active,.util-lang:hover{background:var(--purple);color:#fff}
+
+nav.mainnav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:300}
+.nav-logo-row-inner{max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px;cursor:pointer;text-decoration:none;flex-shrink:1;min-width:0}
+.brand-emblem{height:58px;width:auto;flex-shrink:0}
+.brand-logo{height:48px;width:auto;flex-shrink:0}
+.brand-text{line-height:1.3}
+.brand-text .si{font-family:'Noto Sans Sinhala',sans-serif;font-size:0.88rem;color:var(--purple);font-weight:600}
+.brand-text .ta{font-family:'Noto Sans Tamil',sans-serif;font-size:0.82rem;color:var(--purple);font-weight:600}
+.brand-text .en{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-size:0.94rem;color:var(--tmid);font-weight:600}
+
+.nav-menu-row{background:var(--purple-lt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.nav-menu-row-inner{max-width:1120px;margin:0 auto;padding:0 32px}
+.nav-menu{display:flex;align-items:stretch;gap:2px;justify-content:center;flex-wrap:wrap}
+.nav-item{position:relative;display:flex;align-items:center}
+.nav-toplink{background:none;border:none;height:54px;padding:0 15px;font-size:0.82rem;font-weight:700;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:5px;letter-spacing:0.01em;white-space:nowrap}
+.nav-toplink .caret{font-size:0.62rem;color:var(--tlt)}
+.nav-item:hover .nav-toplink,.nav-toplink.active{color:var(--purple)}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);border-top:3px solid var(--purple);min-width:260px;box-shadow:0 12px 30px rgba(36,26,35,.14);z-index:10;padding:6px 0}
+.nav-item:hover .nav-dropdown{display:block}
+.nav-dropdown a{display:block;padding:11px 20px;font-size:0.88rem;color:var(--text);text-decoration:none;cursor:pointer;border-left:3px solid transparent}
+.nav-dropdown a:hover{background:var(--purple-lt);border-left-color:var(--purple);color:var(--purple)}
+.nav-hamburger{display:flex;background:none;border:none;cursor:pointer;flex-direction:column;justify-content:center;padding:8px;flex-shrink:0}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--purple);margin:5px 0}
+
+.nav-menu-row{display:none}
+@media(min-width:981px){
+  .nav-menu-row{display:block}
+}
+
+.mob-menu{display:none;position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--border);border-top:3px solid var(--purple);width:min(100%,380px);max-height:80vh;overflow-y:auto;box-shadow:0 18px 44px rgba(36,26,35,.2);z-index:200}
+.mob-menu.open{display:block}
+.mob-group{border-bottom:1px solid var(--border)}
+.mob-group-hd{padding:14px 24px;font-weight:700;color:var(--purple);font-size:0.9rem;cursor:pointer}
+.mob-group-hd:hover{background:var(--purple-lt)}
+.mob-menu a{display:block;padding:10px 24px 10px 36px;font-size:0.86rem;color:var(--text);text-decoration:none;cursor:pointer}
+.mob-menu a:hover{background:var(--purple-lt)}
+.mob-menu a.mob-flat{padding-left:24px;font-weight:700;color:var(--purple)}
+@media(max-width:620px){
+  .brand-logo{display:none}
+}
+@media(max-width:460px){
+  .container{padding:0 18px}
+  .nav-logo-row-inner{padding:12px 18px}
+  .brand{gap:10px}
+  .brand-emblem{height:42px}
+  .brand-text{min-width:0}
+  .brand-text div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
+  .brand-text .si{font-size:0.7rem}
+  .brand-text .ta{font-size:0.66rem}
+  .brand-text .en{font-size:0.74rem}
+}
+
+/* ── action bar (HRCSL-style quick buttons) ── */
+.action-bar{background:var(--purple-lt);border-bottom:1px solid var(--border);padding:26px 0}
+.action-bar-inner{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+.pill-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--teal);color:#fff;border:none;padding:15px 30px;font-weight:700;font-size:0.82rem;letter-spacing:0.06em;text-transform:uppercase;border-radius:30px;cursor:pointer;transition:background .15s}
+.pill-btn:hover{background:#00272f}
+.pill-btn.alt{background:var(--purple)}
+.pill-btn.alt:hover{background:var(--purple-dk)}
+
+/* ── carousels ── */
+.carousel-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.carousel-wrap{display:flex;align-items:center;gap:10px;margin-top:32px}
+.carousel-track-outer{overflow:hidden;flex:1}
+.carousel-track{display:flex;gap:22px;transition:transform .35s ease}
+.car-card{flex:0 0 calc(33.333% - 15px);background:#fff;border:1px solid var(--border);cursor:pointer;transition:box-shadow .15s}
+.car-card:hover{box-shadow:0 10px 26px rgba(36,26,35,.12)}
+.car-img{background:var(--purple-lt);height:160px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px;text-align:center;border-bottom:3px solid var(--purple)}
+.car-img img{width:44px;height:44px}
+.car-img .ciw{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-size:0.78rem;color:var(--purple);font-weight:600;line-height:1.4}
+.car-img.alt{background:var(--cyan);border-bottom-color:var(--teal)}
+.car-img.alt .ciw{color:var(--teal)}
+.car-body{padding:20px}
+.car-body h4{font-size:1rem;margin-bottom:8px;line-height:1.35}
+.car-body p{font-size:0.86rem;color:var(--tmid);line-height:1.6;margin-bottom:0}
+.car-body .car-meta{font-size:0.76rem;color:var(--tlt);margin-top:10px}
+.car-arrow{flex-shrink:0;width:40px;height:40px;border-radius:50%;border:none;background:var(--teal);color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.car-arrow:hover{background:var(--purple)}
+.view-all-wrap{text-align:center;margin-top:30px}
+@media(max-width:860px){.car-card{flex:0 0 calc(50% - 11px)}}
+@media(max-width:620px){.car-card{flex:0 0 100%}.action-bar-inner{flex-direction:column;align-items:stretch}.pill-btn{text-align:center}}
+
+/* ── fab complaint ── */
+.fab-complaint{position:fixed;bottom:26px;right:26px;z-index:250;background:var(--teal);color:#fff;border:none;border-radius:50px;padding:15px 24px;font-weight:700;font-size:0.84rem;letter-spacing:0.03em;cursor:pointer;box-shadow:0 6px 24px rgba(0,60,75,.4);display:flex;align-items:center;gap:9px}
+.fab-complaint:hover{background:#00272f}
+
+/* ── a11y widget ── */
+.a11y-fab{position:fixed;top:220px;right:0;z-index:250;background:var(--purple);color:#fff;border:none;border-radius:8px 0 0 8px;width:50px;height:50px;cursor:pointer;box-shadow:-2px 4px 16px rgba(103,45,98,.35);display:flex;align-items:center;justify-content:center;font-size:1.3rem}
+.a11y-fab:hover{background:var(--purple-dk)}
+.a11y-panel{position:fixed;top:220px;right:8px;z-index:260;background:#fff;border:1px solid var(--border);border-top:4px solid var(--purple);width:280px;max-width:calc(100vw - 40px);box-shadow:0 16px 40px rgba(36,26,35,.22);display:none;padding:18px}
+.a11y-panel.open{display:block}
+.a11y-panel h4{font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--purple);margin-bottom:14px;font-family:'Inter','Noto Sans Sinhala','Noto Sans Tamil',sans-serif;font-weight:700}
+.a11y-row{margin-bottom:16px}
+.a11y-row .lbl{font-size:0.8rem;color:var(--tmid);margin-bottom:8px;font-weight:600}
+.a11y-btns{display:flex;gap:6px;flex-wrap:wrap}
+.a11y-btn{border:1.5px solid var(--border);background:#fff;color:var(--text);padding:7px 12px;font-size:0.76rem;font-weight:700;cursor:pointer;border-radius:2px}
+.a11y-btn:hover{border-color:var(--purple)}
+.a11y-btn[aria-pressed="true"]{background:var(--purple);color:#fff;border-color:var(--purple)}
+.a11y-reset{width:100%;text-align:center;padding:9px;font-size:0.78rem;font-weight:700;color:var(--teal);background:none;border:1.5px solid var(--teal);cursor:pointer;margin-top:4px}
+.a11y-reset:hover{background:var(--teal);color:#fff}
+
+html.a11y-kbdnav *:focus{outline:3px solid var(--dkgreen)!important;outline-offset:2px!important}
+html.a11y-readable body{letter-spacing:0.01em;line-height:2}
+html.a11y-readable h1,html.a11y-readable h2,html.a11y-readable h3,html.a11y-readable h4{font-family:'Inter','Noto Sans Sinhala','Noto Sans Tamil',sans-serif}
+html[data-theme="dark"] body{background:#15101a;color:#F3EEF3}
+html[data-theme="dark"] .page,html[data-theme="dark"] nav.mainnav,html[data-theme="dark"] .util-bar,html[data-theme="dark"] footer{background:#15101a!important}
+html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] h4{color:#D9A9D2}
+html[data-theme="dark"] .card,html[data-theme="dark"] .nav-dropdown,html[data-theme="dark"] .mob-menu,html[data-theme="dark"] .lang-modal-box,html[data-theme="dark"] .a11y-panel,html[data-theme="dark"] .info-block-bd,html[data-theme="dark"] .obj-item,html[data-theme="dark"] .pow-item,html[data-theme="dark"] .enf-body,html[data-theme="dark"] .comm-card,html[data-theme="dark"] .comm-photo,html[data-theme="dark"] .util-bar,html[data-theme="dark"] .notice-card,html[data-theme="dark"] .comm-note,html[data-theme="dark"] .enf-lbl,html[data-theme="dark"] .summary-toggle,html[data-theme="dark"] .summary-body,html[data-theme="dark"] .nav-menu-row,html[data-theme="dark"] .action-bar,html[data-theme="dark"] .car-card,html[data-theme="dark"] .car-img,html[data-theme="dark"] .doc-item,html[data-theme="dark"] .doc-filter button,html[data-theme="dark"] .sp-vm>div,html[data-theme="dark"] .sp-box,html[data-theme="dark"] .div-card,html[data-theme="dark"] .org-box{background:#241A28!important;border-color:#453a48!important}
+html[data-theme="dark"] .nav-toplink,html[data-theme="dark"] .tmid,html[data-theme="dark"] .mob-group-hd,html[data-theme="dark"] .nav-dropdown a,html[data-theme="dark"] .mob-menu a,html[data-theme="dark"] p,html[data-theme="dark"] li,html[data-theme="dark"] .crumb,html[data-theme="dark"] .kd-txt,html[data-theme="dark"] .rl,html[data-theme="dark"] .lm-native,html[data-theme="dark"] .util-lang,html[data-theme="dark"] .doc-lang,html[data-theme="dark"] .org-box{color:#E7DCE6!important}
+html[data-theme="dark"] .footer-col a,html[data-theme="dark"] .footer-brand p,html[data-theme="dark"] .footer-bottom{color:#C9B9C7!important}
+html[data-theme="yellow"] body{background:#000;color:#FFE600}
+html[data-theme="yellow"] .page,html[data-theme="yellow"] nav.mainnav,html[data-theme="yellow"] .util-bar,html[data-theme="yellow"] footer{background:#000!important}
+html[data-theme="yellow"] h1,html[data-theme="yellow"] h2,html[data-theme="yellow"] h3,html[data-theme="yellow"] h4{color:#FFE600}
+html[data-theme="yellow"] a,html[data-theme="yellow"] .tmid{color:#FFE600!important}
+html[data-theme="gray"] body{filter:grayscale(1)}
+
+/* ═══════════ PAGE HERO (inner pages) ═══════════ */
+.crumb{font-size:0.8rem;color:var(--tlt);margin-bottom:18px}
+.crumb a{cursor:pointer;color:var(--tmid);text-decoration:none}
+.crumb a:hover{color:var(--purple);text-decoration:underline}
+.page-hero-plain{padding:56px 0 48px;border-bottom:1px solid var(--border)}
+.page-hero-plain p{max-width:640px}
+
+/* ═══════════ ABOUT CONTENT PATTERNS ═══════════ */
+.about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:60px;align-items:start}
+.about-grid p{color:var(--tmid);line-height:1.9;margin-bottom:18px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+.info-block{border:1px solid var(--border);margin-bottom:3px}
+.info-block-hd{background:var(--purple);color:#fff;padding:12px 18px;font-size:0.78rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase}
+.info-block-bd{padding:18px;background:var(--purple-lt)}
+.info-block-bd p{font-size:0.9rem;color:var(--tmid);line-height:1.75;margin-bottom:8px}
+.info-block-bd p:last-child{margin-bottom:0}
+
+.key-dates{list-style:none;margin-top:8px}
+.key-dates li{display:flex;gap:16px;padding:16px 18px;border-bottom:1px solid var(--border)}
+.key-dates li:last-child{border-bottom:none}
+.key-dates .kd-date{flex-shrink:0;width:112px;font-weight:700;color:var(--purple);font-size:0.9rem}
+.key-dates .kd-txt{color:var(--tmid);font-size:0.92rem;line-height:1.6}
+
+.lang-btns-row{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 8px}
+.lang-btns-row .btn{padding:10px 20px}
+
+.summary-acc{border:1px solid var(--border);margin-top:24px}
+.summary-toggle{width:100%;background:var(--purple-lt);border:none;padding:14px 20px;text-align:left;font-weight:700;font-size:0.86rem;color:var(--purple);cursor:pointer;display:flex;align-items:center;gap:10px}
+.summary-toggle .sa{margin-left:auto;transition:transform .2s;font-size:0.75rem}
+.summary-toggle.open .sa{transform:rotate(180deg)}
+.summary-body{display:none;padding:20px;border-top:1px solid var(--border)}
+.summary-body.open{display:block}
+.summary-body p{color:var(--tmid);line-height:1.8;margin-bottom:10px;font-size:0.94rem}
+.summary-body ul{margin:6px 0 10px 20px}
+.summary-body li{color:var(--tmid);line-height:1.7;margin-bottom:6px;font-size:0.92rem}
+
+.obj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:20px}
+.obj-item{background:#fff;padding:22px 24px;display:flex;gap:16px}
+.obj-num{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700;color:var(--teal);font-size:1.5rem;flex-shrink:0;width:34px;line-height:1}
+.obj-item p{color:var(--tmid);font-size:0.92rem;line-height:1.6;margin:0}
+@media(max-width:700px){.obj-grid{grid-template-columns:1fr}}
+
+.pow-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:20px}
+.pow-item{background:#fff;padding:22px 24px}
+.pow-item h4{margin-bottom:6px;font-size:1rem}
+.pow-item p{color:var(--tmid);font-size:0.88rem;line-height:1.6;margin:0}
+@media(max-width:700px){.pow-grid{grid-template-columns:1fr}}
+
+.enf-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:20px}
+.enf-card{display:grid;grid-template-columns:78px 1fr;background:#fff}
+.enf-lbl{background:var(--purple-lt);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 8px;text-align:center}
+.enf-lbl .t{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700;color:var(--purple);font-size:1.5rem;line-height:1}
+.enf-lbl .u{font-size:0.6rem;color:var(--tmid);text-transform:uppercase;letter-spacing:0.05em;margin-top:3px}
+.enf-body{padding:18px}
+.enf-body h4{font-size:0.88rem;margin-bottom:6px}
+.enf-body p{font-size:0.84rem;color:var(--tmid);line-height:1.6;margin:0}
+.enf-card.span2{grid-column:span 2;grid-template-columns:120px 1fr}
+@media(max-width:700px){.enf-grid{grid-template-columns:1fr}.enf-card.span2{grid-column:span 1}}
+
+/* ── members ── */
+.comm-note{background:var(--purple-lt);border-left:4px solid var(--teal);padding:14px 18px;font-size:0.86rem;color:var(--tmid);margin:24px 0}
+.comm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:16px}
+.comm-card{background:#fff;display:flex;flex-direction:column}
+.comm-photo{background:var(--purple-lt);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;border-bottom:3px solid var(--purple);overflow:hidden}
+.comm-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.comm-photo svg{width:52px;height:52px}
+.comm-info{padding:16px 16px 20px;flex:1;display:flex;flex-direction:column;align-items:flex-start}
+.comm-info .nm{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700;font-size:1rem;margin-bottom:4px;color:var(--purple)}
+.comm-info .rl{font-size:0.8rem;color:var(--tlt);line-height:1.5}
+.comm-badge{display:inline-block;font-size:0.64rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#fff;background:var(--teal);padding:3px 9px;margin-bottom:8px}
+.comm-bio-btn{margin-top:auto;padding-top:14px;background:none;border:none;color:var(--purple);font-weight:700;font-size:0.8rem;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.comm-bio-btn:hover{color:var(--teal)}
+@media(max-width:860px){.comm-grid{grid-template-columns:repeat(2,1fr)}}
+.comm-grid::after{content:'';background:#fff}
+.bio-box{max-width:780px;max-height:88vh;overflow-y:auto;display:grid;grid-template-columns:190px 1fr;gap:28px;position:relative}
+.bio-box .bio-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;background:var(--purple-lt)}
+.bio-box .bio-role{font-size:0.82rem;font-weight:700;color:var(--teal);margin-bottom:14px}
+.bio-box .bio-close{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.5rem;line-height:1;color:var(--tmid);cursor:pointer;padding:6px}
+@media(max-width:640px){.bio-box{grid-template-columns:1fr}.bio-box .bio-photo{max-width:170px}}
+
+/* ── structure ── */
+.tier-list{position:relative;margin-top:32px;padding-left:32px;border-left:2px solid var(--purple-lt2)}
+.tier{position:relative;padding-bottom:34px}
+.tier:last-child{padding-bottom:0}
+.tier::before{content:'';position:absolute;left:-38px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--purple);border:3px solid var(--purple-lt)}
+.tier h4{margin-bottom:6px}
+.tier p{color:var(--tmid);font-size:0.92rem;line-height:1.7;max-width:600px}
+.tier p a{color:var(--purple);cursor:pointer;text-decoration:underline}
+
+.notice-card{border:2px dashed var(--border);background:var(--purple-lt);padding:40px 32px;text-align:center;margin-top:28px}
+.notice-card h3{margin-bottom:10px}
+.notice-card p{color:var(--tmid);max-width:480px;margin:0 auto;line-height:1.75;font-size:0.94rem}
+
+/* ── divisions ── */
+.org-chart{display:flex;flex-direction:column;align-items:center}
+.org-box{border:1px solid var(--border);background:#fff;padding:14px 26px;text-align:center;font-weight:700;color:var(--purple);font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;min-width:280px}
+.org-box.top{background:var(--purple);color:#fff;border-color:var(--purple)}
+.org-line{width:2px;height:28px;background:var(--purple-lt2)}
+.div-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);width:100%;border-top:3px solid var(--purple)}
+.div-card{background:#fff;padding:24px 22px}
+.div-card h3{font-size:1.1rem;margin-bottom:6px}
+.div-card .div-lead{font-size:0.84rem;font-weight:700;color:var(--teal);margin-bottom:14px}
+.div-card ul{list-style:none}
+.div-card li{font-size:0.88rem;color:var(--tmid);padding:7px 0;border-top:1px solid var(--border)}
+@media(max-width:900px){.div-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.div-grid{grid-template-columns:1fr}.org-box{min-width:0;width:100%}}
+
+/* ── documentation ── */
+.doc-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.doc-filter button{border:1.5px solid var(--border);background:#fff;padding:8px 18px;font-size:0.8rem;font-weight:700;color:var(--tmid);cursor:pointer;border-radius:30px}
+.doc-filter button:hover{border-color:var(--purple);color:var(--purple)}
+.doc-filter button[aria-pressed="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+.doc-list{border-top:1px solid var(--border)}
+.doc-item{display:grid;grid-template-columns:1fr 190px;gap:28px;padding:26px 16px;border-bottom:1px solid var(--border);scroll-margin-top:150px;transition:background .6s}
+.doc-item.flash{background:var(--purple-lt)}
+.doc-type{display:block;font-size:0.74rem;font-weight:700;color:var(--dkgreen);margin-bottom:6px}
+.doc-item h3{font-size:1.15rem;margin-bottom:8px;line-height:1.35}
+.doc-item p{color:var(--tmid);font-size:0.92rem;line-height:1.65;max-width:640px}
+.doc-date{font-size:0.8rem;color:var(--tlt);margin-top:10px}
+.doc-langs{display:flex;flex-direction:column;gap:6px}
+.doc-lang{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 14px;border:1.5px solid var(--purple);color:var(--purple);font-size:0.84rem;font-weight:700;text-decoration:none;border-radius:3px;background:#fff}
+.doc-lang:hover{background:var(--purple);color:#fff}
+.doc-lang small{font-size:0.7rem;font-weight:600;font-family:'Inter','Noto Sans Sinhala','Noto Sans Tamil',sans-serif}
+.doc-lang.na{border:1.5px dashed var(--border);color:var(--tlt);cursor:default}
+.doc-lang.na:hover{background:#fff;color:var(--tlt)}
+.doc-empty{padding:30px 0;color:var(--tmid)}
+@media(max-width:700px){.doc-item{grid-template-columns:1fr;padding:22px 0}.doc-langs{flex-direction:row;flex-wrap:wrap}.doc-lang{flex:1 1 140px}}
+
+/* ── strategic plan ── */
+.sp-vm{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);border-top:3px solid var(--purple)}
+.sp-vm>div{background:#fff;padding:30px 28px}
+.sp-vm h3{font-size:1.05rem;margin-bottom:10px;color:var(--teal);font-family:'Inter','Noto Sans Sinhala','Noto Sans Tamil',sans-serif}
+.sp-vm p{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-size:1.15rem;color:var(--text);line-height:1.6}
+@media(max-width:760px){.sp-vm{grid-template-columns:1fr}}
+.theme-block{border-left:4px solid var(--purple);padding:4px 0 4px 26px;margin-top:34px}
+.theme-block h3{margin-bottom:8px}
+.theme-block .obj{font-style:italic;color:var(--tmid);margin-bottom:14px;line-height:1.7;max-width:720px}
+.theme-block ul{margin-left:20px}
+.theme-block li{color:var(--tmid);line-height:1.7;margin-bottom:6px;font-size:0.94rem}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{border:1px solid var(--teal);color:var(--teal);padding:6px 14px;border-radius:30px;font-size:0.82rem;font-weight:600}
+.sp-two{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border:1px solid var(--border);margin-top:22px}
+.sp-box{background:#fff;padding:26px}
+.sp-box h3{font-size:1.1rem;margin-bottom:10px}
+.sp-box p{color:var(--tmid);font-size:0.92rem;line-height:1.75}
+@media(max-width:760px){.sp-two{grid-template-columns:1fr}}
+
+/* ── contact ── */
+.contact-row{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
+.contact-icon{width:44px;height:44px;background:var(--purple-lt);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.contact-lbl{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--tlt);margin-bottom:5px}
+.contact-val{font-size:1.02rem;color:var(--text);line-height:1.6}
+.contact-val a{color:var(--purple);text-decoration:none}
+.contact-val a:hover{text-decoration:underline}
+
+.stub-wrap{max-width:560px;margin:0 auto;text-align:center;padding:60px 0}
+.stub-wrap .si{font-size:2.2rem;margin-bottom:18px;display:block}
+.stub-wrap p{color:var(--tmid);line-height:1.85;margin-bottom:26px}
+
+/* ═══════════ FOOTER ═══════════ */
+footer{background:var(--purple-lt);border-top:1px solid var(--border);padding:56px 0 28px}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.footer-brand{display:flex;gap:14px}
+.footer-brand img{width:42px;height:auto;flex-shrink:0;align-self:flex-start}
+.footer-brand p{color:var(--tmid);font-size:0.88rem;line-height:1.7;margin-top:10px;max-width:300px}
+.footer-brand .fen{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700;color:var(--purple);font-size:1rem}
+.footer-col h5{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--tlt);margin-bottom:14px}
+.footer-col a{display:block;font-size:0.88rem;color:var(--tmid);text-decoration:none;margin-bottom:9px;cursor:pointer}
+.footer-col a:hover{color:var(--purple)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:0.8rem;color:var(--tlt)}
+@media(max-width:800px){.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-inner{grid-template-columns:1fr}}
+
+/* ═══ Sinhala / Tamil adjustments (text only; layout unchanged) ═══ */
+html[lang="si"] body *, html[lang="ta"] body *{letter-spacing:normal!important}
+html[lang="si"] .nav-toplink{font-size:0.8rem;padding:0 12px}
+html[lang="ta"] .nav-toplink{font-size:0.76rem;padding:0 10px}
+html[lang="si"] h1,html[lang="ta"] h1{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.3}
+html[lang="si"] h2,html[lang="ta"] h2{line-height:1.3}
+html[lang="si"] h3,html[lang="si"] h4,html[lang="ta"] h3,html[lang="ta"] h4{line-height:1.35}
+html[lang="ta"] .pill-btn,html[lang="si"] .pill-btn{text-transform:none;font-size:0.86rem}
+html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link" data-i18n="ui.skip">Skip to main content</a>
+
+<!-- ═══════════ GATEWAY ═══════════ -->
+<div id="page-gateway" class="page active">
+  <div class="gw-wrap">
+    <div class="ripple-bg" aria-hidden="true"></div>
+    <div class="ripple-bg" aria-hidden="true"></div>
+    <div class="gw-mark">
+      <div class="gw-imgs">
+        <img class="gw-emblem" src="static/images/national-emblem.png" alt="National Emblem of Sri Lanka">
+        <img class="gw-logo" src="static/images/ncw-logo.png" alt="National Commission on Women logo">
+      </div>
+      <div class="gw-si" lang="si">කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව</div>
+      <div class="gw-ta" lang="ta">பெண்கள் பற்றிய தேசிய ஆணைக்குழு</div>
+      <div class="gw-en">National Commission on Women — Sri Lanka</div>
+    </div>
+    <div class="gw-langs">
+      <div class="gw-card si" onclick="chooseLang('si')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')chooseLang('si')">
+        <div class="gw-greet" lang="si">ආයුබෝවන්</div>
+        <span class="btn btn-outline btn-sm" lang="si">සිංහලෙන් බලන්න</span>
+      </div>
+      <div class="gw-card en" onclick="chooseLang('en')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')chooseLang('en')">
+        <div class="gw-greet">Welcome</div>
+        <span class="btn btn-purple btn-sm">View in English</span>
+      </div>
+      <div class="gw-card ta" onclick="chooseLang('ta')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')chooseLang('ta')">
+        <div class="gw-greet" lang="ta">வணக்கம்</div>
+        <span class="btn btn-outline btn-sm" lang="ta">தமிழில் பார்க்க</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- language-not-ready modal -->
+<div id="lang-modal" class="lang-modal">
+  <div class="lang-modal-box">
+    <h3>This language is still being prepared</h3>
+    <p class="lm-native" id="lm-native-msg"></p>
+    <p>We are sorry for the inconvenience. This section of the site is not yet available in the language you selected. You may continue in English, or go back and choose another language.</p>
+    <div class="lang-modal-actions">
+      <button class="btn btn-outline btn-sm" onclick="closeLangModal()">Go Back</button>
+      <button class="btn btn-purple btn-sm" onclick="proceedInEnglish()">Continue in English</button>
+    </div>
+  </div>
+</div>
+
+<!-- external site confirmation modal -->
+<div id="external-modal" class="lang-modal" onclick="if(event.target===this)closeExternalModal()">
+  <div class="lang-modal-box">
+    <h3>You are leaving the NCW website</h3>
+    <p id="external-modal-msg">This link opens an external site in a new tab.</p>
+    <div class="lang-modal-actions">
+      <button class="btn btn-outline btn-sm" onclick="closeExternalModal()">Cancel</button>
+      <button class="btn btn-purple btn-sm" id="external-modal-go">Continue</button>
+    </div>
+  </div>
+</div>
+
+<!-- biography modal -->
+<div id="bio-modal" class="lang-modal" onclick="if(event.target===this)closeBio()">
+  <div class="lang-modal-box bio-box" role="dialog" aria-modal="true" aria-labelledby="bio-name">
+    <button class="bio-close" onclick="closeBio()" aria-label="Close biography">×</button>
+    <div id="bio-photo-wrap"></div>
+    <div>
+      <h3 id="bio-name"></h3>
+      <div class="bio-role" id="bio-role"></div>
+      <div id="bio-text"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ MAIN SITE ═══════════ -->
+<div id="page-site">
+
+  <div class="util-bar">
+    <div class="util-inner">
+      <button class="util-lang" data-lang="si" lang="si" onclick="switchLangFromSite('si')">සිංහල</button>
+      <button class="util-lang active" data-lang="en" onclick="switchLangFromSite('en')">English</button>
+      <button class="util-lang" data-lang="ta" lang="ta" onclick="switchLangFromSite('ta')">தமிழ்</button>
+    </div>
+  </div>
+
+  <nav class="mainnav">
+    <div class="nav-logo-row">
+      <div class="nav-logo-row-inner">
+        <a class="brand" onclick="go('home')" aria-label="National Commission on Women, home">
+          <img class="brand-emblem" src="static/images/national-emblem.png" alt="">
+          <div class="brand-text">
+            <div class="si" lang="si">කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව</div>
+            <div class="ta" lang="ta">பெண்கள் பற்றிய தேசிய ஆணைக்குழு</div>
+            <div class="en">National Commission on Women</div>
+          </div>
+          <img class="brand-logo" src="static/images/ncw-logo.png" alt="">
+        </a>
+        <button class="nav-hamburger" onclick="toggleMob()" aria-label="Open menu" aria-expanded="false" id="hamburger-btn"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div class="nav-menu-row">
+      <div class="nav-menu-row-inner">
+        <div class="nav-menu">
+          <div class="nav-item">
+            <button class="nav-toplink" id="navtop-about" data-i18n="nav.about.btn">About Us <span class="caret">▾</span></button>
+            <div class="nav-dropdown">
+              <a onclick="go('about-history')" data-i18n="nav.history">History</a>
+              <a onclick="go('about-act')" data-i18n="nav.act">Act</a>
+              <a onclick="go('about-members')" data-i18n="nav.members">Members of the Commission</a>
+              <a onclick="go('about-structure')" data-i18n="nav.structure">Organisational Structure</a>
+              <a onclick="go('about-strategic')" data-i18n="nav.strategic">Strategic Plan</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" id="navtop-divisions" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</button>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" id="navtop-documentation" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</button>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" data-i18n="nav.recmed.btn">Recommendations &amp; Mediation <span class="caret">▾</span></button>
+            <div class="nav-dropdown">
+              <a onclick="goStub('Case Recommendations')" data-i18n="nav.caserec">Case Recommendations</a>
+              <a onclick="goStub('Mediations')" data-i18n="nav.mediations">Mediations</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" id="navtop-news" data-i18n="nav.news.btn">News <span class="caret">▾</span></button>
+            <div class="nav-dropdown">
+              <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
+              <a onclick="goStub('Events')" data-i18n="nav.events">Events</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" data-i18n="nav.contact.btn">Contact Us <span class="caret">▾</span></button>
+            <div class="nav-dropdown">
+              <a onclick="go('contact-head')" data-i18n="nav.head">Head Office</a>
+              <a onclick="goStub('Regional Offices')" data-i18n="nav.regional">Regional Offices</a>
+              <a onclick="goStub('Sub Offices')" data-i18n="nav.sub">Sub Offices</a>
+            </div>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" data-i18n="nav.rti.btn">Right to Information <span class="caret">▾</span></button>
+            <div class="nav-dropdown">
+              <a onclick="goStub('Download the Forms')" data-i18n="nav.forms">Download the Forms</a>
+              <a onclick="goStub('Information Officers')" data-i18n="nav.infoofficers">Information Officers</a>
+              <a onclick="goStub('Information available to the Public')" data-i18n="nav.infopublic">Information available to the Public</a>
+              <a onclick="goStub('Information not available for Public Disclosure')" data-i18n="nav.infonot">Information not available for Public Disclosure</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mob-menu" id="mob-menu">
+      <div class="mob-group"><a class="mob-group-hd" onclick="go('about-history')" data-i18n="nav.about">About Us</a>
+        <a onclick="go('about-history')" data-i18n="nav.history">History</a>
+        <a onclick="go('about-act')" data-i18n="nav.act">Act</a>
+        <a onclick="go('about-members')" data-i18n="nav.members">Members of the Commission</a>
+        <a onclick="go('about-structure')" data-i18n="nav.structure">Organisational Structure</a>
+        <a onclick="go('about-strategic')" data-i18n="nav.strategic">Strategic Plan</a>
+      </div>
+      <a class="mob-flat" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</a>
+      <a class="mob-flat" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</a>
+      <div class="mob-group"><a class="mob-group-hd" onclick="goStub('Case Recommendations')" data-i18n="nav.recmed">Recommendations &amp; Mediation</a>
+        <a onclick="goStub('Case Recommendations')" data-i18n="nav.caserec">Case Recommendations</a>
+        <a onclick="goStub('Mediations')" data-i18n="nav.mediations">Mediations</a>
+      </div>
+      <div class="mob-group"><a class="mob-group-hd" onclick="go('press')" data-i18n="nav.news">News</a>
+        <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
+        <a onclick="goStub('Events')" data-i18n="nav.events">Events</a>
+      </div>
+      <div class="mob-group"><a class="mob-group-hd" onclick="go('contact-head')" data-i18n="nav.contact">Contact Us</a>
+        <a onclick="go('contact-head')" data-i18n="nav.head">Head Office</a>
+        <a onclick="goStub('Regional Offices')" data-i18n="nav.regional">Regional Offices</a>
+        <a onclick="goStub('Sub Offices')" data-i18n="nav.sub">Sub Offices</a>
+      </div>
+      <div class="mob-group"><a class="mob-group-hd" onclick="goStub('Download the Forms')" data-i18n="nav.rti">Right to Information</a>
+        <a onclick="goStub('Download the Forms')" data-i18n="nav.forms">Download the Forms</a>
+        <a onclick="goStub('Information Officers')" data-i18n="nav.infoofficers">Information Officers</a>
+        <a onclick="goStub('Information available to the Public')" data-i18n="nav.infopublic">Information available to the Public</a>
+        <a onclick="goStub('Information not available for Public Disclosure')" data-i18n="nav.infonot">Information not available for Public Disclosure</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+  <!-- ═══ HOME ═══ -->
+  <div id="page-home" class="page">
+
+    <div class="action-bar">
+      <div class="container action-bar-inner">
+        <button class="pill-btn" onclick="go('contact-head')" data-i18n="act.complaint">Make a Complaint</button>
+        <button class="pill-btn alt" onclick="goStub('Progress of Complaints')" data-i18n="act.progress">Progress of Complaints</button>
+        <button class="pill-btn alt" onclick="goStub('Daily Inquiry Schedule')" data-i18n="act.schedule">Daily Inquiry Schedule</button>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="carousel-head"><h2 data-i18n="home.news">Latest News</h2></div>
+        <div class="carousel-wrap">
+          <button class="car-arrow" aria-label="Previous" onclick="carMove('newsTrack',-1)">‹</button>
+          <div class="carousel-track-outer"><div class="carousel-track" id="newsTrack"></div></div>
+          <button class="car-arrow" aria-label="Next" onclick="carMove('newsTrack',1)">›</button>
+        </div>
+        <div class="view-all-wrap"><button class="pill-btn" onclick="openDocs('all')" data-i18n="home.viewall">View All</button></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="carousel-head"><h2 data-i18n="home.activities">Current Activities</h2></div>
+        <div class="carousel-wrap">
+          <button class="car-arrow" aria-label="Previous" onclick="carMove('actTrack',-1)">‹</button>
+          <div class="carousel-track-outer"><div class="carousel-track" id="actTrack"></div></div>
+          <button class="car-arrow" aria-label="Next" onclick="carMove('actTrack',1)">›</button>
+        </div>
+        <div class="view-all-wrap"><button class="pill-btn" onclick="openDocs('submission')" data-i18n="home.viewall">View All</button></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ═══ ABOUT: HISTORY ═══ -->
+  <div id="page-about-history" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.history"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / History</p>
+      <span class="eyebrow" data-i18n="nav.about">About Us</span>
+      <h1 data-i18n="hist.h1">Our History</h1>
+      <p class="lead" data-i18n="hist.lead">How the National Commission on Women came to be established, and what it now oversees.</p>
+    </div>
+    <div class="action-bar">
+      <div class="container action-bar-inner">
+        <button class="pill-btn" onclick="go('contact-head')" data-i18n="act.complaint">Make a Complaint</button>
+        <button class="pill-btn alt" onclick="goStub('Progress of Complaints')" data-i18n="act.progress">Progress of Complaints</button>
+        <button class="pill-btn alt" onclick="goStub('Daily Inquiry Schedule')" data-i18n="act.schedule">Daily Inquiry Schedule</button>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <p data-i18n="hist.p1">The National Commission on Women was established under the Women Empowerment Act No. 37 of 2024, certified on 2 July 2024 and published in the Government Gazette.</p>
+            <p data-i18n="hist.p2">The Commission is the result of decades of work by women's rights groups and organisations across Sri Lanka, who campaigned for a national body dedicated to protecting and advancing women's rights.</p>
+            <p data-i18n="hist.p3">The first Commissioners were appointed by H.E. the President Anura Kumara Dissanayake in September 2025, based on the recommendations of the Constitutional Council and the Women Parliamentarians' Caucus.</p>
+            <p data-i18n="hist.p4">The Commission has oversight powers in relation to all Government Ministries, and a mandate to monitor how the National Policy on Gender Equality and Women's Empowerment is being implemented.</p>
+          </div>
+          <div>
+            <div class="info-block">
+              <div class="info-block-hd" data-i18n="hist.keydates">Key Dates</div>
+              <div class="info-block-bd" style="padding:0;background:#fff">
+                <ul class="key-dates">
+                  <li><span class="kd-date" data-i18n="hist.d1">2 Jul 2024</span><span class="kd-txt" data-i18n="hist.d1t">Women Empowerment Act No. 37 of 2024 certified</span></li>
+                  <li><span class="kd-date" data-i18n="hist.d2">Sep 2025</span><span class="kd-txt" data-i18n="hist.d2t">First Commissioners appointed by H.E. the President</span></li>
+                  <li><span class="kd-date" data-i18n="hist.d3">Aug 2026</span><span class="kd-txt" data-i18n="hist.d3t">Strategic Plan 2027–2031 finalised</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ ABOUT: ACT ═══ -->
+  <div id="page-about-act" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.act"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Act</p>
+      <span class="eyebrow" data-i18n="nav.about">About Us</span>
+      <h1 data-i18n="act.h1">Women Empowerment Act No. 37 of 2024</h1>
+      <p class="lead" data-i18n="act.lead">The law that establishes the National Commission on Women and sets out its powers and duties. Certified on 2 July 2024.</p>
+      <div class="lang-btns-row">
+        <a class="btn btn-purple btn-sm" href="static/files/we-act-english.pdf" target="_blank" rel="noopener" data-i18n="act.viewen">📄 View in English</a>
+        <a class="btn btn-outline btn-sm" href="static/files/we-act-sinhala.pdf" target="_blank" rel="noopener" hreflang="si">📄 <span lang="si">සිංහල</span></a>
+        <a class="btn btn-outline btn-sm" href="static/files/we-act-tamil.pdf" target="_blank" rel="noopener" hreflang="ta">📄 <span lang="ta">தமிழ்</span></a>
+      </div>
+      <div class="summary-acc">
+        <button class="summary-toggle" onclick="toggleSummary(this)" data-i18n="act.sumbtn">💡 Plain Language Summary — What does this Act mean for you? <span class="sa">▼</span></button>
+        <div class="summary-body">
+          <p data-i18n="act.sum.p">This is the law that created the National Commission on Women. It came into effect in July 2024.</p>
+          <ul>
+            <li data-i18n="act.sum.1">Every woman in Sri Lanka has rights that cannot be taken away from her.</li>
+            <li data-i18n="act.sum.2">A commission of seven independent people has been set up to protect those rights.</li>
+            <li data-i18n="act.sum.3">If your rights have been violated, or are about to be, you or someone acting for you can apply to the NCW within one month.</li>
+            <li data-i18n="act.sum.4">Once the NCW decides on your complaint, it must tell you what action it has taken within 14 days.</li>
+            <li data-i18n="act.sum.5">If your case is sent to mediation, the mediation must be concluded within 60 days.</li>
+            <li data-i18n="act.sum.6">If you are not satisfied with the NCW's decision, you can appeal to the Court of Appeal within one month.</li>
+            <li data-i18n="act.sum.7">The NCW can also investigate problems on its own, without a complaint being made first.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:56px">
+      <div class="container">
+        <span class="eyebrow" data-i18n="act.obj.eyebrow">Section 2 · Objectives of the Act</span>
+        <h2 data-i18n="act.obj.h2">What the Act Sets Out to Achieve</h2>
+        <div class="obj-grid">
+          <div class="obj-item"><span class="obj-num">01</span><p data-i18n="act.obj.1">Introduce ways to protect women's rights under the Constitution</p></div>
+          <div class="obj-item"><span class="obj-num">02</span><p data-i18n="act.obj.2">Carry out Sri Lanka's obligations under CEDAW and related laws</p></div>
+          <div class="obj-item"><span class="obj-num">03</span><p data-i18n="act.obj.3">Formulate and implement the national policy for the advancement and empowerment of women</p></div>
+          <div class="obj-item"><span class="obj-num">04</span><p data-i18n="act.obj.4">Protect women from discrimination based on gender and sexual orientation</p></div>
+          <div class="obj-item"><span class="obj-num">05</span><p data-i18n="act.obj.5">Prevent discrimination, marginalisation, sexual harassment and violence against women</p></div>
+          <div class="obj-item"><span class="obj-num">06</span><p data-i18n="act.obj.6">Recommend law reforms to stop discrimination and support women's empowerment</p></div>
+          <div class="obj-item"><span class="obj-num">07</span><p data-i18n="act.obj.7">Support women's participation in justice and equal representation in decision-making</p></div>
+          <div class="obj-item"><span class="obj-num">08</span><p data-i18n="act.obj.8">Ensure women's economic empowerment, with special attention to women with disabilities</p></div>
+          <div class="obj-item"><span class="obj-num">09</span><p data-i18n="act.obj.9">Run public education programmes on all aspects of women's empowerment</p></div>
+          <div class="obj-item"><span class="obj-num">10</span><p data-i18n="act.obj.10">Promote equal pay for men and women in employment of equal value</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <span class="eyebrow" data-i18n="act.pow.eyebrow">Section 6 · Powers of the Commission</span>
+        <h2 data-i18n="act.pow.h2">What the NCW Can Do</h2>
+        <div class="pow-grid">
+          <div class="pow-item"><h4 data-i18n="act.pow.1h">Investigate Violations</h4><p data-i18n="act.pow.1p">Look into rights violations, on its own initiative or when a complaint is received.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.2h">Go to Court</h4><p data-i18n="act.pow.2p">Intervene in court cases about women's rights and take action in any competent court.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.3h">Mediation</h4><p data-i18n="act.pow.3p">Refer cases of discrimination to the Panel of Mediators, either on a complaint or on its own motion.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.4h">Monitor Compliance</h4><p data-i18n="act.pow.4p">Monitor how private persons and non-state institutions follow policies and practices relating to women's rights.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.5h">Policy Formulation</h4><p data-i18n="act.pow.5p">Develop the National Policy on women's advancement and empowerment.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.6h">Recommend Law Changes</h4><p data-i18n="act.pow.6p">Advise the Government on updating laws to meet international standards.</p></div>
+          <div class="pow-item"><h4 data-i18n="nav.regional">Regional Offices</h4><p data-i18n="act.pow.7p">Open offices in provinces and regions across Sri Lanka for easier access.</p></div>
+          <div class="pow-item"><h4 data-i18n="act.pow.8h">Complaint Expenses</h4><p data-i18n="act.pow.8p">Award an aggrieved person a sum to meet the expenses reasonably incurred in making a complaint.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <span class="eyebrow" data-i18n="act.tl.eyebrow">Part II · Inquiry &amp; Enforcement</span>
+        <h2 data-i18n="act.tl.h2">Key Timelines</h2>
+        <div class="enf-grid">
+          <div class="enf-card"><div class="enf-lbl"><span class="t">1</span><span class="u" data-i18n="act.tl.month">Month</span></div><div class="enf-body"><h4 data-i18n="act.tl.1h">Making a Complaint</h4><p data-i18n="act.tl.1p">An application must be made within one month of the infringement, or of becoming aware of it (Section 19).</p></div></div>
+          <div class="enf-card"><div class="enf-lbl"><span class="t" data-i18n="act.tl.own">Own</span><span class="u" data-i18n="act.tl.motion">Motion</span></div><div class="enf-body"><h4 data-i18n="act.tl.2h">Inquiry and Investigation</h4><p data-i18n="act.tl.2p">The Commission may act on a complaint or on its own motion. A Committee appointed by the Commission conducts the inquiry within one month of receiving the application or information (Section 18).</p></div></div>
+          <div class="enf-card"><div class="enf-lbl"><span class="t">14</span><span class="u" data-i18n="act.tl.days">Days</span></div><div class="enf-body"><h4 data-i18n="act.tl.3h">Informing the Aggrieved Person</h4><p data-i18n="act.tl.3p">After deciding on a complaint, the Commission must inform the aggrieved person of the action taken within 14 days of the decision (Section 21).</p></div></div>
+          <div class="enf-card"><div class="enf-lbl"><span class="t">60</span><span class="u" data-i18n="act.tl.days">Days</span></div><div class="enf-body"><h4 data-i18n="act.pow.3h">Mediation</h4><p data-i18n="act.tl.4p">The Panel of Mediators must conclude mediation within 60 days of the referral (Section 22).</p></div></div>
+          <div class="enf-card span2"><div class="enf-lbl"><span class="t">1</span><span class="u" data-i18n="act.tl.month">Month</span></div><div class="enf-body"><h4 data-i18n="act.tl.5h">Right of Appeal</h4><p data-i18n="act.tl.5p">A person aggrieved by a decision of the Commission may appeal to the Court of Appeal within one month of being informed of it (Section 26).</p></div></div>
+          <div class="enf-card span2"><div class="enf-lbl"><span class="t" data-i18n="act.tl.sc">SC</span><span class="u" data-i18n="act.tl.referral">Referral</span></div><div class="enf-body"><h4 data-i18n="act.tl.6h">Supreme Court References</h4><p data-i18n="act.tl.6p">The Commission receives references from the Supreme Court on women's rights matters under Article 126, and may refer questions on the scope of women's rights to the Supreme Court during an inquiry (Section 17).</p></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ ABOUT: MEMBERS ═══ -->
+  <div id="page-about-members" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.members"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Members of the Commission</p>
+      <span class="eyebrow" data-i18n="nav.about">About Us</span>
+      <h1 data-i18n="nav.members">Members of the Commission</h1>
+      <p class="lead" data-i18n="mem.lead">The Commission has seven members, including the Chairperson, appointed by H.E. the President.</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="about-grid" style="margin-bottom:8px">
+          <div>
+            <p data-i18n="mem.p1">Five members are appointed on the recommendation of the Constitutional Council, and two on the recommendation of the Women Parliamentarians' Caucus.</p>
+            <p data-i18n="mem.p2">At least five members, including the Chairperson, must be women. Members hold office for four years and must have proven knowledge and experience in fields such as law, trade unionism, management, economic development, health, education or women's empowerment.</p>
+          </div>
+        </div>
+        <div class="comm-grid" id="comm-grid"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ ABOUT: ORGANISATIONAL STRUCTURE ═══ -->
+  <div id="page-about-structure" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.structure"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Organisational Structure</p>
+      <span class="eyebrow" data-i18n="nav.about">About Us</span>
+      <h1 data-i18n="nav.structure">Organisational Structure</h1>
+      <p class="lead" data-i18n="str.lead">How the Commission is organised under the Women Empowerment Act No. 37 of 2024.</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="tier-list">
+          <div class="tier"><h4 data-i18n="str.1h">The Commission</h4><p data-i18n="str.1p">Seven members, including the Chairperson, appointed for a term of four years. The Commission sets the direction of the NCW and makes decisions on inquiries, mediation and policy.</p></div>
+          <div class="tier"><h4 data-i18n="str.2h">The Secretariat</h4><p data-i18n="str.2p">Headed by the Executive Director, the Secretariat supports the Commission's day-to-day work.</p></div>
+          <div class="tier"><h4 data-i18n="nav.divisions">Divisions</h4><p data-i18n="str.3p">The Secretariat is organised into four divisions: Administration, Finance, Research and Development, and Legal Affairs. <a onclick="go('divisions')">View the Divisions</a>.</p></div>
+          <div class="tier"><h4 data-i18n="str.4h">Regional and Provincial Offices</h4><p data-i18n="str.4p">The Act empowers the Commission to open offices across Sri Lanka's provinces and regions, for easier access outside Colombo.</p></div>
+          <div class="tier"><h4 data-i18n="str.5h">The Ombuds for Women's Rights</h4><p data-i18n="str.5p">An office provided for under the Act that can receive complaints about gender-based violence or rights violations and forward recommendations to the Commission.</p></div>
+          <div class="tier"><h4 data-i18n="str.6h">National Fund for Women</h4><p data-i18n="str.6p">Managed by the Commission, the Fund receives money from Parliament and can accept donations from local and international sources.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ ABOUT: STRATEGIC PLAN ═══ -->
+  <div id="page-about-strategic" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.strategic"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Strategic Plan</p>
+      <span class="eyebrow" data-i18n="nav.about">About Us</span>
+      <h1 data-i18n="sp.h1">Strategic Plan 2027–2031</h1>
+      <p class="lead" data-i18n="sp.lead">The Commission's first five-year Strategic Plan sets out its vision, mission and priorities for 2027 to 2031. It was developed with all seven Commissioners and the Executive Director, and through consultations with women's rights organisations and other stakeholders.</p>
+      <div class="lang-btns-row">
+        <a class="btn btn-purple btn-sm" href="static/files/ncw-strategic-plan-2027-2031-english.pdf" target="_blank" rel="noopener" data-i18n="sp.view">📄 View the full Plan (English)</a>
+        <span class="btn btn-outline btn-sm" style="border-style:dashed;cursor:default;opacity:.75" data-i18n="sp.forth">Sinhala and Tamil versions forthcoming</span>
+      </div>
+    </div>
+    <section class="section" style="padding-top:56px">
+      <div class="container">
+        <div class="sp-vm">
+          <div><h3 data-i18n="sp.vision.h">Our Vision</h3><p data-i18n="sp.vision">All women in Sri Lanka enjoy their right to equality, dignity and justice.</p></div>
+          <div><h3 data-i18n="sp.mission.h">Our Mission</h3><p data-i18n="sp.mission">To protect and promote women's rights and gender equality through independent oversight, advocacy, and strengthening inclusive participation and accountability.</p></div>
+        </div>
+
+        <h2 style="margin-top:64px" data-i18n="sp.themes.h">Thematic Areas</h2>
+        <p class="lead" style="max-width:720px;margin-top:10px" data-i18n="sp.themes.p">The Plan is organised around three thematic areas.</p>
+
+        <div class="theme-block">
+          <h3 data-i18n="sp.t1.h">1. Access to Justice</h3>
+          <p class="obj" data-i18n="sp.t1.obj">To promote gender responsive laws and policies relating to access to justice, equal participation and representation.</p>
+          <ul>
+            <li data-i18n="sp.t1.1">Establish the Commission's own investigation, inquiry and mediation processes, and a regional presence.</li>
+            <li data-i18n="sp.t1.2">Analyse existing laws and policies for compliance with CEDAW, and intervene in ongoing law reform processes.</li>
+            <li data-i18n="sp.t1.3">Monitor the implementation of the National Policy on Gender Equality and Women's Empowerment 2023–2033.</li>
+            <li data-i18n="sp.t1.4">Promote sex-disaggregated data and women's representation in decision-making bodies.</li>
+          </ul>
+        </div>
+
+        <div class="theme-block">
+          <h3 data-i18n="sp.t2.h">2. Safety, Peace and Security</h3>
+          <p class="obj" data-i18n="sp.t2.obj">Gender-responsive access to justice is ensured in relation to safety, peace and security.</p>
+          <ul>
+            <li data-i18n="sp.t2.1"><strong>Sexual and Gender-Based Violence:</strong> monitor the Multisectoral National Action Plan to Address Sexual and Gender-Based Violence 2024–2028, address sexual harassment including at the workplace under ILO Convention 190, and undertake an islandwide study on rape.</li>
+            <li data-i18n="sp.t2.2"><strong>Women, Peace and Security:</strong> monitor the National Action Plan on Women, Peace and Security 2023–2027, and advocate for women affected by conflict.</li>
+          </ul>
+        </div>
+
+        <div class="theme-block">
+          <h3 data-i18n="sp.t3.h">3. Access to Resources and Opportunities</h3>
+          <p class="obj" data-i18n="sp.t3.obj">To promote gender responsive laws, policies and practices in the workplace, access to gender responsive health services that cover all phases of a woman's life, and gender-responsive actions to climate change and disasters.</p>
+          <ul>
+            <li data-i18n="sp.t3.1"><strong>Economic Justice:</strong> provide a gendered perspective on labour law reform and advocate for recognition of women's contribution to the economy.</li>
+            <li data-i18n="sp.t3.2"><strong>Women's Access to Health:</strong> promote free and quality healthcare for women throughout their lifespan.</li>
+            <li data-i18n="sp.t3.3"><strong>Environment, Climate Change and Disasters:</strong> address women's representation in climate and disaster decision-making, and advocate for sex-disaggregated data.</li>
+          </ul>
+        </div>
+
+        <h2 style="margin-top:64px" data-i18n="sp.work.h">How the Commission Will Work</h2>
+        <p class="lead" style="max-width:720px;margin-top:10px" data-i18n="sp.work.p">Six strategic interventions cut across all three thematic areas.</p>
+        <div class="chip-row">
+          <span class="chip" data-i18n="sp.chip.1">Policy and Law Reform</span>
+          <span class="chip" data-i18n="sp.chip.2">Inquiry, Litigation and Mediation</span>
+          <span class="chip" data-i18n="sp.chip.3">Referrals and Collaboration</span>
+          <span class="chip" data-i18n="sp.chip.4">Monitoring</span>
+          <span class="chip" data-i18n="sp.chip.5">Research and Fact Finding</span>
+          <span class="chip" data-i18n="sp.chip.6">Advocacy</span>
+        </div>
+
+        <div class="sp-two">
+          <div class="sp-box"><h3 data-i18n="str.6h">National Fund for Women</h3><p data-i18n="sp.fund.p">The Commission will set up and manage the National Fund for Women, as provided for in the Women Empowerment Act, and will establish a Fund Management Committee as an oversight mechanism.</p></div>
+          <div class="sp-box"><h3 data-i18n="sp.inst.h">Institutional Development</h3><p data-i18n="sp.inst.p">As a new Commission, it will focus on governance, infrastructure, financial management, human resources, communications, outreach and public engagement, including outreach across all nine provinces.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ DIVISIONS ═══ -->
+  <div id="page-divisions" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.divisions"><a onclick="go('home')" data-i18n="ui.home">Home</a> / Divisions</p>
+      <span class="eyebrow" data-i18n="div.eyebrow">Secretariat</span>
+      <h1 data-i18n="nav.divisions">Divisions</h1>
+      <p class="lead" data-i18n="div.lead">The Secretariat of the Commission is headed by the Executive Director and organised into four divisions, as set out in the Phase 1 approved structure of 4 April 2026.</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="org-chart">
+          <div class="org-box top" data-i18n="div.top">Chairperson and six Commissioners</div>
+          <div class="org-line" aria-hidden="true"></div>
+          <div class="org-box" data-i18n="div.ed">Executive Director</div>
+          <div class="org-line" aria-hidden="true"></div>
+          <div class="div-grid">
+            <div class="div-card">
+              <h3 data-i18n="div.admin">Administration</h3>
+              <div class="div-lead" data-i18n="div.admin.lead">Assistant Director (Admin)</div>
+              <ul><li data-i18n="div.ao">Administrative Officer</li><li data-i18n="div.ma">Management Assistant</li><li data-i18n="div.drivers">Drivers (2)</li><li data-i18n="div.oa">Office Assistants (2)</li></ul>
+            </div>
+            <div class="div-card">
+              <h3 data-i18n="div.fin">Finance</h3>
+              <div class="div-lead" data-i18n="div.fin.lead">Director Finance</div>
+              <ul><li data-i18n="div.dos">Development Officers (2)</li><li data-i18n="div.ma">Management Assistant</li></ul>
+            </div>
+            <div class="div-card">
+              <h3 data-i18n="div.rd">Research and Development</h3>
+              <div class="div-lead" data-i18n="div.rd.lead">Director Research and Development</div>
+              <ul><li data-i18n="div.do">Development Officer</li><li data-i18n="div.ma">Management Assistant</li></ul>
+            </div>
+            <div class="div-card">
+              <h3 data-i18n="div.legal">Legal Affairs</h3>
+              <div class="div-lead" data-i18n="div.legal.lead">Director Legal Affairs</div>
+              <ul><li data-i18n="div.adlegal">Assistant Director (Legal Affairs)</li><li data-i18n="div.do">Development Officer</li><li data-i18n="div.ma">Management Assistant</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ DOCUMENTATION ═══ -->
+  <div id="page-documentation" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.docs"><a onclick="go('home')" data-i18n="ui.home">Home</a> / Documentation</p>
+      <span class="eyebrow" data-i18n="nav.docs">Documentation</span>
+      <h1 data-i18n="nav.docs">Documentation</h1>
+      <p class="lead" data-i18n="docs.lead">Submissions, recommendations, statements and publications issued by the Commission. Each document opens as a PDF in a new tab. Sinhala and Tamil versions are added as they become available.</p>
+    </div>
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="doc-filter" role="group" aria-label="Filter documents">
+          <button data-filter="all" aria-pressed="true" onclick="setDocFilter('all')" data-i18n="docs.f.all">All</button>
+          <button data-filter="submission" aria-pressed="false" onclick="setDocFilter('submission')" data-i18n="docs.f.sub">Submissions and Recommendations</button>
+          <button data-filter="statement" aria-pressed="false" onclick="setDocFilter('statement')" data-i18n="docs.f.stmt">Statements</button>
+          <button data-filter="publication" aria-pressed="false" onclick="setDocFilter('publication')" data-i18n="docs.f.pub">Publications</button>
+        </div>
+        <div class="doc-list" id="doc-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ NEWS: PRESS RELEASES ═══ -->
+  <div id="page-press" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.press"><a onclick="go('home')" data-i18n="ui.home">Home</a> / News / Press Releases</p>
+      <span class="eyebrow" data-i18n="nav.news">News</span>
+      <h1 data-i18n="nav.press">Press Releases</h1>
+      <p class="lead" data-i18n="press.lead">Media statements issued by the Commission.</p>
+    </div>
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="doc-list" id="press-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ CONTACT: HEAD OFFICE ═══ -->
+  <div id="page-contact-head" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb" data-i18n="crumb.contact"><a onclick="go('home')" data-i18n="ui.home">Home</a> / Contact Us / Head Office</p>
+      <span class="eyebrow" data-i18n="nav.contact">Contact Us</span>
+      <h1 data-i18n="nav.head">Head Office</h1>
+      <p class="lead" data-i18n="con.lead">Contact the National Commission on Women at its head office.</p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="contact-row">
+              <div class="contact-icon">📍</div>
+              <div><div class="contact-lbl" data-i18n="con.addr.l">Address</div><div class="contact-val" data-i18n="con.addr">No. 110/9, Wijerama Mawatha, Colombo 07, Sri Lanka</div></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">☎️</div>
+              <div><div class="contact-lbl" data-i18n="con.phone.l">Phone</div><div class="contact-val"><a href="tel:+94112685582">+94 11 268 5582</a></div></div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon">✉️</div>
+              <div><div class="contact-lbl" data-i18n="con.email.l">Email</div><div class="contact-val"><a href="mailto:contact.ncw@gmail.com">contact.ncw@gmail.com</a></div></div>
+            </div>
+          </div>
+          <div>
+            <div class="info-block">
+              <div class="info-block-hd" data-i18n="con.how">How to Make a Complaint</div>
+              <div class="info-block-bd">
+                <p data-i18n="con.how.1">An aggrieved person, or anyone acting on her behalf, may apply to the Commission. The application must be made within one month of the infringement, or of becoming aware of it.</p>
+                <p data-i18n="con.how.2">After deciding on the complaint, the Commission must inform the aggrieved person of the action taken within 14 days of the decision.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ GENERIC STUB ═══ -->
+  <div id="page-stub" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb"><a onclick="go('home')" data-i18n="ui.home">Home</a> / <span id="stub-crumb"></span></p>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="stub-wrap">
+          <span class="si">🚧</span>
+          <h2 id="stub-title">Page</h2>
+          <p data-i18n="stub.p">This section is being prepared. Content will be published here as it becomes available.<br>In the meantime, you can contact the Commission directly at <strong>contact.ncw@gmail.com</strong>.</p>
+          <button class="btn btn-outline" onclick="go('home')" data-i18n="stub.back">← Back to Home</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="static/images/ncw-logo.png" alt="">
+          <div>
+            <div class="fen" data-i18n="foot.name">National Commission on Women</div>
+            <p data-i18n="foot.desc">An independent commission established under the Women Empowerment Act No. 37 of 2024 to protect and promote the rights of women in Sri Lanka.</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="foot.nav">Navigate</h5>
+          <a onclick="go('home')" data-i18n="ui.home">Home</a>
+          <a onclick="go('about-history')" data-i18n="nav.about">About Us</a>
+          <a onclick="go('divisions')" data-i18n="nav.divisions">Divisions</a>
+          <a onclick="openDocs('all')" data-i18n="nav.docs">Documentation</a>
+          <a onclick="go('contact-head')" data-i18n="nav.contact">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="foot.info">Information</h5>
+          <a onclick="goStub('Case Recommendations')" data-i18n="nav.recmed">Recommendations &amp; Mediation</a>
+          <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
+          <a onclick="go('about-strategic')" data-i18n="sp.h1">Strategic Plan 2027–2031</a>
+          <a onclick="goStub('Download the Forms')" data-i18n="nav.rti">Right to Information</a>
+          <a onclick="go('about-act')" data-i18n="foot.act">Women Empowerment Act 2024</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="foot.copy">© 2026 National Commission on Women, Sri Lanka</span>
+        <span data-i18n="foot.est">Established under Women Empowerment Act No. 37 of 2024</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab-complaint" onclick="go('contact-head')" data-i18n="act.fab">📋 Make a Complaint</button>
+
+</div><!-- /page-site -->
+
+<!-- ═══ ACCESSIBILITY WIDGET (site-wide) ═══ -->
+<button class="a11y-fab" onclick="toggleA11y()" aria-label="Accessibility options" aria-expanded="false" id="a11y-fab">♿</button>
+<div class="a11y-panel" id="a11y-panel" role="dialog" aria-label="Accessibility options">
+  <h4 data-i18n="a11y.h">Accessibility</h4>
+  <div class="a11y-row">
+    <div class="lbl" data-i18n="a11y.font">Font Size</div>
+    <div class="a11y-btns">
+      <button class="a11y-btn" onclick="fontStep(-1)" aria-label="Decrease font size">A−</button>
+      <button class="a11y-btn" onclick="fontStep(1)" aria-label="Increase font size">A+</button>
+    </div>
+  </div>
+  <div class="a11y-row">
+    <div class="lbl" data-i18n="a11y.kbd">Keyboard Navigation</div>
+    <div class="a11y-btns"><button class="a11y-btn" id="btn-kbdnav" aria-pressed="false" onclick="toggleKbdNav()">Enable</button></div>
+  </div>
+  <div class="a11y-row">
+    <div class="lbl" data-i18n="a11y.readable">Readable Font</div>
+    <div class="a11y-btns"><button class="a11y-btn" id="btn-readable" aria-pressed="false" onclick="toggleReadable()">Enable</button></div>
+  </div>
+  <div class="a11y-row">
+    <div class="lbl" data-i18n="a11y.contrast">Contrast</div>
+    <div class="a11y-btns">
+      <button class="a11y-btn" data-theme="" onclick="setTheme('')" aria-pressed="true" data-i18n="a11y.default">Default</button>
+      <button class="a11y-btn" data-theme="dark" onclick="setTheme('dark')" aria-pressed="false" data-i18n="a11y.dark">Dark</button>
+      <button class="a11y-btn" data-theme="yellow" onclick="setTheme('yellow')" aria-pressed="false" data-i18n="a11y.yellow">Yellow / Black</button>
+      <button class="a11y-btn" data-theme="gray" onclick="setTheme('gray')" aria-pressed="false" data-i18n="a11y.grey">Greyscale</button>
+    </div>
+  </div>
+  <button class="a11y-reset" onclick="resetA11y()" data-i18n="a11y.reset">Reset All</button>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+//  LANGUAGE
+//  All Sinhala and Tamil text lives in I18N, STUB, DOCS and MEMBERS below.
+//  To correct a translation, edit the matching "si" or "ta" value.
+// ══════════════════════════════════════════════
+const I18N = {
+"crumb.history": {
+"en": "<a onclick=\"go('home')\">Home</a> / About Us / History",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප ගැන / ඉතිහාසය",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைப் பற்றி / வரலாறு"
+},
+"crumb.act": {
+"en": "<a onclick=\"go('home')\">Home</a> / About Us / Act",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප ගැන / පනත",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைப் பற்றி / சட்டம்"
+},
+"crumb.members": {
+"en": "<a onclick=\"go('home')\">Home</a> / About Us / Members of the Commission",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප ගැන / කොමිෂන් සභාවේ සාමාජිකයින්",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைப் பற்றி / ஆணைக்குழு உறுப்பினர்கள்"
+},
+"crumb.structure": {
+"en": "<a onclick=\"go('home')\">Home</a> / About Us / Organisational Structure",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප ගැන / සංවිධාන ව්‍යුහය",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைப் பற்றி / நிறுவனக் கட்டமைப்பு"
+},
+"crumb.strategic": {
+"en": "<a onclick=\"go('home')\">Home</a> / About Us / Strategic Plan",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප ගැන / උපායමාර්ගික සැලැස්ම",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைப் பற்றி / மூலோபாயத் திட்டம்"
+},
+"crumb.divisions": {
+"en": "<a onclick=\"go('home')\">Home</a> / Divisions",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අංශ",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / பிரிவுகள்"
+},
+"crumb.docs": {
+"en": "<a onclick=\"go('home')\">Home</a> / Documentation",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / ලේඛන",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / ஆவணங்கள்"
+},
+"crumb.press": {
+"en": "<a onclick=\"go('home')\">Home</a> / News / Press Releases",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / පුවත් / මාධ්‍ය නිවේදන",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / செய்திகள் / ஊடக அறிக்கைகள்"
+},
+"crumb.contact": {
+"en": "<a onclick=\"go('home')\">Home</a> / Contact Us / Head Office",
+"si": "<a onclick=\"go('home')\">මුල් පිටුව</a> / අප අමතන්න / ප්‍රධාන කාර්යාලය",
+"ta": "<a onclick=\"go('home')\">முகப்பு</a> / எம்மைத் தொடர்புகொள்ள / தலைமை அலுவலகம்"
+},
+"nav.about.btn": {
+"en": "About Us <span class=\"caret\">▾</span>",
+"si": "අප ගැන <span class=\"caret\">▾</span>",
+"ta": "எம்மைப் பற்றி <span class=\"caret\">▾</span>"
+},
+"nav.about": {
+"en": "About Us",
+"si": "අප ගැන",
+"ta": "எம்மைப் பற்றி"
+},
+"nav.history": {
+"en": "History",
+"si": "ඉතිහාසය",
+"ta": "வரலாறு"
+},
+"nav.act": {
+"en": "Act",
+"si": "පනත",
+"ta": "சட்டம்"
+},
+"nav.members": {
+"en": "Members of the Commission",
+"si": "කොමිෂන් සභාවේ සාමාජිකයින්",
+"ta": "ஆணைக்குழு உறுப்பினர்கள்"
+},
+"nav.structure": {
+"en": "Organisational Structure",
+"si": "සංවිධාන ව්‍යුහය",
+"ta": "நிறுவனக் கட்டமைப்பு"
+},
+"nav.strategic": {
+"en": "Strategic Plan",
+"si": "උපායමාර්ගික සැලැස්ම",
+"ta": "மூலோபாயத் திட்டம்"
+},
+"nav.divisions": {
+"en": "Divisions",
+"si": "අංශ",
+"ta": "பிரிவுகள்"
+},
+"nav.docs": {
+"en": "Documentation",
+"si": "ලේඛන",
+"ta": "ஆவணங்கள்"
+},
+"nav.recmed.btn": {
+"en": "Recommendations &amp; Mediation <span class=\"caret\">▾</span>",
+"si": "නිර්දේශ සහ සමථකරණය <span class=\"caret\">▾</span>",
+"ta": "விதப்புரைகள் மற்றும் மத்தியஸ்தம் <span class=\"caret\">▾</span>"
+},
+"nav.recmed": {
+"en": "Recommendations &amp; Mediation",
+"si": "නිර්දේශ සහ සමථකරණය",
+"ta": "விதப்புரைகள் மற்றும் மத்தியஸ்தம்"
+},
+"nav.caserec": {
+"en": "Case Recommendations",
+"si": "පැමිණිලි සම්බන්ධ නිර්දේශ",
+"ta": "வழக்கு விதப்புரைகள்"
+},
+"nav.mediations": {
+"en": "Mediations",
+"si": "සමථකරණ",
+"ta": "மத்தியஸ்தங்கள்"
+},
+"nav.news.btn": {
+"en": "News <span class=\"caret\">▾</span>",
+"si": "පුවත් <span class=\"caret\">▾</span>",
+"ta": "செய்திகள் <span class=\"caret\">▾</span>"
+},
+"nav.news": {
+"en": "News",
+"si": "පුවත්",
+"ta": "செய்திகள்"
+},
+"nav.press": {
+"en": "Press Releases",
+"si": "මාධ්‍ය නිවේදන",
+"ta": "ஊடக அறிக்கைகள்"
+},
+"nav.events": {
+"en": "Events",
+"si": "සිදුවීම්",
+"ta": "நிகழ்வுகள்"
+},
+"nav.contact.btn": {
+"en": "Contact Us <span class=\"caret\">▾</span>",
+"si": "අප අමතන්න <span class=\"caret\">▾</span>",
+"ta": "எம்மைத் தொடர்புகொள்ள <span class=\"caret\">▾</span>"
+},
+"nav.contact": {
+"en": "Contact Us",
+"si": "අප අමතන්න",
+"ta": "எம்மைத் தொடர்புகொள்ள"
+},
+"nav.head": {
+"en": "Head Office",
+"si": "ප්‍රධාන කාර්යාලය",
+"ta": "தலைமை அலுவலகம்"
+},
+"nav.regional": {
+"en": "Regional Offices",
+"si": "ප්‍රාදේශීය කාර්යාල",
+"ta": "பிராந்திய அலுவலகங்கள்"
+},
+"nav.sub": {
+"en": "Sub Offices",
+"si": "උප කාර්යාල",
+"ta": "உப அலுவலகங்கள்"
+},
+"nav.rti.btn": {
+"en": "Right to Information <span class=\"caret\">▾</span>",
+"si": "තොරතුරු දැනගැනීමේ අයිතිය <span class=\"caret\">▾</span>",
+"ta": "தகவல் அறியும் உரிமை <span class=\"caret\">▾</span>"
+},
+"nav.rti": {
+"en": "Right to Information",
+"si": "තොරතුරු දැනගැනීමේ අයිතිය",
+"ta": "தகவல் அறியும் உரிமை"
+},
+"nav.forms": {
+"en": "Download the Forms",
+"si": "ආකෘති පත්‍ර බාගත කරන්න",
+"ta": "படிவங்களைப் பதிவிறக்குக"
+},
+"nav.infoofficers": {
+"en": "Information Officers",
+"si": "තොරතුරු නිලධාරීන්",
+"ta": "தகவல் உத்தியோகத்தர்கள்"
+},
+"nav.infopublic": {
+"en": "Information available to the Public",
+"si": "මහජනතාවට ලබාගත හැකි තොරතුරු",
+"ta": "பொதுமக்களுக்குக் கிடைக்கக்கூடிய தகவல்கள்"
+},
+"nav.infonot": {
+"en": "Information not available for Public Disclosure",
+"si": "මහජනතාවට හෙළි නොකෙරෙන තොරතුරු",
+"ta": "பொதுமக்களுக்கு வெளிப்படுத்தப்படாத தகவல்கள்"
+},
+"ui.home": {
+"en": "Home",
+"si": "මුල් පිටුව",
+"ta": "முகப்பு"
+},
+"ui.skip": {
+"en": "Skip to main content",
+"si": "ප්‍රධාන අන්තර්ගතයට යන්න",
+"ta": "பிரதான உள்ளடக்கத்திற்குச் செல்க"
+},
+"act.complaint": {
+"en": "Make a Complaint",
+"si": "පැමිණිල්ලක් ඉදිරිපත් කරන්න",
+"ta": "முறைப்பாடு செய்தல்"
+},
+"act.progress": {
+"en": "Progress of Complaints",
+"si": "පැමිණිලිවල ප්‍රගතිය",
+"ta": "முறைப்பாடுகளின் முன்னேற்றம்"
+},
+"act.schedule": {
+"en": "Daily Inquiry Schedule",
+"si": "දෛනික පරීක්ෂණ කාලසටහන",
+"ta": "தினசரி விசாரணை அட்டவணை"
+},
+"act.fab": {
+"en": "📋 Make a Complaint",
+"si": "📋 පැමිණිල්ලක් ඉදිරිපත් කරන්න",
+"ta": "📋 முறைப்பாடு செய்தல்"
+},
+"home.news": {
+"en": "Latest News",
+"si": "නවතම පුවත්",
+"ta": "அண்மைய செய்திகள்"
+},
+"home.activities": {
+"en": "Current Activities",
+"si": "වර්තමාන ක්‍රියාකාරකම්",
+"ta": "தற்போதைய செயற்பாடுகள்"
+},
+"home.viewall": {
+"en": "View All",
+"si": "සියල්ල බලන්න",
+"ta": "அனைத்தையும் பார்க்க"
+},
+"hist.h1": {
+"en": "Our History",
+"si": "අපගේ ඉතිහාසය",
+"ta": "எமது வரலாறு"
+},
+"hist.lead": {
+"en": "How the National Commission on Women came to be established, and what it now oversees.",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව පිහිටුවනු ලැබූ ආකාරය සහ එය දැන් අධීක්ෂණය කරන කරුණු.",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழு தாபிக்கப்பட்ட விதமும் அது தற்போது மேற்பார்வை செய்யும் விடயங்களும்."
+},
+"hist.p1": {
+"en": "The National Commission on Women was established under the Women Empowerment Act No. 37 of 2024, certified on 2 July 2024 and published in the Government Gazette.",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව පිහිටුවනු ලැබුවේ 2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත යටතේ ය. මෙම පනත 2024 ජූලි 2 වන දින සහතික කරන ලද අතර, රජයේ ගැසට් පත්‍රයේ පළ කරන ලදී.",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழு, 2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டத்தின் கீழ் தாபிக்கப்பட்டது. இச்சட்டம் 2024 யூலை 2 ஆம் திகதி அத்தாட்சிப்படுத்தப்பட்டு, அரச வர்த்தமானியில் வெளியிடப்பட்டது."
+},
+"hist.p2": {
+"en": "The Commission is the result of decades of work by women's rights groups and organisations across Sri Lanka, who campaigned for a national body dedicated to protecting and advancing women's rights.",
+"si": "කාන්තා අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම සඳහා කැපවූ ජාතික ආයතනයක් ඉල්ලා, ශ්‍රී ලංකාව පුරා කාන්තා අයිතිවාසිකම් කණ්ඩායම් සහ සංවිධාන දශක ගණනාවක් තිස්සේ කළ කැපවීමේ ප්‍රතිඵලයක් ලෙස මෙම කොමිෂන් සභාව බිහි විය.",
+"ta": "பெண்களின் உரிமைகளைப் பாதுகாத்து மேம்படுத்துவதற்கென ஒரு தேசிய அமைப்பைக் கோரி, இலங்கை முழுவதுமுள்ள பெண்கள் உரிமைக் குழுக்களும் அமைப்புகளும் தசாப்த காலமாக மேற்கொண்ட பணியின் விளைவே இந்த ஆணைக்குழுவாகும்."
+},
+"hist.p3": {
+"en": "The first Commissioners were appointed by H.E. the President Anura Kumara Dissanayake in September 2025, based on the recommendations of the Constitutional Council and the Women Parliamentarians' Caucus.",
+"si": "ආණ්ඩුක්‍රම ව්‍යවස්ථා සභාවේ සහ පාර්ලිමේන්තු මන්ත්‍රීවරියන්ගේ සංසදයේ නිර්දේශ මත, ප්‍රථම කොමසාරිස්වරුන් 2025 සැප්තැම්බර් මාසයේදී ගරු ජනාධිපති අනුර කුමාර දිසානායක මැතිතුමා විසින් පත් කරන ලදී.",
+"ta": "அரசியலமைப்புப் பேரவையினதும் பாராளுமன்றப் பெண்கள் குழுவினதும் விதப்புரைகளின் அடிப்படையில், முதலாவது ஆணையாளர்கள் 2025 செப்டெம்பர் மாதம் கௌரவ சனாதிபதி அனுர குமார திசநாயக்கவினால் நியமிக்கப்பட்டனர்."
+},
+"hist.p4": {
+"en": "The Commission has oversight powers in relation to all Government Ministries, and a mandate to monitor how the National Policy on Gender Equality and Women's Empowerment is being implemented.",
+"si": "සියලු රජයේ අමාත්‍යාංශ සම්බන්ධයෙන් කොමිෂන් සභාවට අධීක්ෂණ බලතල ඇති අතර, ස්ත්‍රී පුරුෂ සමානාත්මතාවය සහ කාන්තා සවිබල ගැන්වීම පිළිබඳ ජාතික ප්‍රතිපත්තිය ක්‍රියාත්මක වන ආකාරය නිරීක්ෂණය කිරීමේ වගකීමද කොමිෂන් සභාවට පැවරී ඇත.",
+"ta": "அனைத்து அரசாங்க அமைச்சுகள் தொடர்பிலும் இந்த ஆணைக்குழு மேற்பார்வை அதிகாரங்களைக் கொண்டுள்ளதுடன், பால்நிலை சமத்துவம் மற்றும் பெண்கள் வலுவூட்டல் தொடர்பான தேசியக் கொள்கை எவ்வாறு நடைமுறைப்படுத்தப்படுகின்றது என்பதைக் கண்காணிக்கும் ஆணையையும் கொண்டுள்ளது."
+},
+"hist.keydates": {
+"en": "Key Dates",
+"si": "වැදගත් දින",
+"ta": "முக்கிய திகதிகள்"
+},
+"hist.d1": {
+"en": "2 Jul 2024",
+"si": "2024 ජූලි 2",
+"ta": "2024 யூலை 2"
+},
+"hist.d1t": {
+"en": "Women Empowerment Act No. 37 of 2024 certified",
+"si": "2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත සහතික කරන ලදී",
+"ta": "2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டம் அத்தாட்சிப்படுத்தப்பட்டது"
+},
+"hist.d2": {
+"en": "Sep 2025",
+"si": "2025 සැප්තැම්බර්",
+"ta": "2025 செப்டெம்பர்"
+},
+"hist.d2t": {
+"en": "First Commissioners appointed by H.E. the President",
+"si": "ප්‍රථම කොමසාරිස්වරුන් ගරු ජනාධිපතිතුමා විසින් පත් කරන ලදී",
+"ta": "முதலாவது ஆணையாளர்கள் கௌரவ சனாதிபதியினால் நியமிக்கப்பட்டனர்"
+},
+"hist.d3": {
+"en": "Aug 2026",
+"si": "2026 අගෝස්තු",
+"ta": "2026 ஓகஸ்ட்"
+},
+"hist.d3t": {
+"en": "Strategic Plan 2027–2031 finalised",
+"si": "2027–2031 උපායමාර්ගික සැලැස්ම අවසන් කරන ලදී",
+"ta": "மூலோபாயத் திட்டம் 2027–2031 இறுதிசெய்யப்பட்டது"
+},
+"act.h1": {
+"en": "Women Empowerment Act No. 37 of 2024",
+"si": "2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත",
+"ta": "2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டம்"
+},
+"act.lead": {
+"en": "The law that establishes the National Commission on Women and sets out its powers and duties. Certified on 2 July 2024.",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව පිහිටුවන සහ එහි බලතල හා කාර්යයන් නියම කරන නීතිය. 2024 ජූලි 2 වන දින සහතික කරන ලදී.",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழுவைத் தாபித்து, அதன் தத்துவங்களையும் கடமைகளையும் வரையறுக்கும் சட்டம். 2024 யூலை 2 ஆம் திகதி அத்தாட்சிப்படுத்தப்பட்டது."
+},
+"act.viewen": {
+"en": "📄 View in English",
+"si": "📄 ඉංග්‍රීසියෙන් බලන්න",
+"ta": "📄 ஆங்கிலத்தில் பார்க்க"
+},
+"act.sumbtn": {
+"en": "💡 Plain Language Summary — What does this Act mean for you? <span class=\"sa\">▼</span>",
+"si": "💡 සරල භාෂාවෙන් සාරාංශය: මෙම පනත ඔබට අදාළ වන්නේ කෙසේද? <span class=\"sa\">▼</span>",
+"ta": "💡 எளிய மொழியில் சுருக்கம்: இச்சட்டம் உங்களுக்கு எதைக் குறிக்கிறது? <span class=\"sa\">▼</span>"
+},
+"act.sum.p": {
+"en": "This is the law that created the National Commission on Women. It came into effect in July 2024.",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව පිහිටුවූ නීතිය මෙයයි. එය 2024 ජූලි මාසයේදී බලාත්මක විය.",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழுவை உருவாக்கிய சட்டம் இதுவாகும். இது 2024 யூலை மாதம் நடைமுறைக்கு வந்தது."
+},
+"act.sum.1": {
+"en": "Every woman in Sri Lanka has rights that cannot be taken away from her.",
+"si": "ශ්‍රී ලංකාවේ සෑම කාන්තාවකටම ඇයගෙන් ඉවත් කළ නොහැකි අයිතිවාසිකම් ඇත.",
+"ta": "இலங்கையிலுள்ள ஒவ்வொரு பெண்ணுக்கும் அவரிடமிருந்து பறிக்க முடியாத உரிமைகள் உள்ளன."
+},
+"act.sum.2": {
+"en": "A commission of seven independent people has been set up to protect those rights.",
+"si": "එම අයිතිවාසිකම් ආරක්ෂා කිරීම සඳහා ස්වාධීන සාමාජිකයින් හත් දෙනෙකුගෙන් යුත් කොමිෂන් සභාවක් පිහිටුවා ඇත.",
+"ta": "அந்த உரிமைகளைப் பாதுகாப்பதற்காக ஏழு சுயாதீன உறுப்பினர்களைக் கொண்ட ஆணைக்குழுவொன்று தாபிக்கப்பட்டுள்ளது."
+},
+"act.sum.3": {
+"en": "If your rights have been violated, or are about to be, you or someone acting for you can apply to the NCW within one month.",
+"si": "ඔබේ අයිතිවාසිකම් උල්ලංඝනය වී ඇත්නම් හෝ උල්ලංඝනය වීමට ආසන්න නම්, ඔබට හෝ ඔබ වෙනුවෙන් ක්‍රියා කරන අයෙකුට මාසයක් ඇතුළත කොමිෂන් සභාවට ඉල්ලුම් කළ හැකිය.",
+"ta": "உங்கள் உரிமைகள் மீறப்பட்டிருந்தால் அல்லது மீறப்படும் நிலையில் இருந்தால், நீங்களோ அல்லது உங்கள் சார்பில் செயற்படும் ஒருவரோ ஒரு மாதத்திற்குள் ஆணைக்குழுவிடம் விண்ணப்பிக்கலாம்."
+},
+"act.sum.4": {
+"en": "Once the NCW decides on your complaint, it must tell you what action it has taken within 14 days.",
+"si": "ඔබේ පැමිණිල්ල සම්බන්ධයෙන් කොමිෂන් සභාව තීරණයක් ගත් පසු, ගත් ක්‍රියාමාර්ගය දින 14ක් ඇතුළත ඔබට දැනුම් දිය යුතුය.",
+"ta": "உங்கள் முறைப்பாடு தொடர்பில் ஆணைக்குழு தீர்மானித்த பின்னர், மேற்கொண்ட நடவடிக்கை குறித்து 14 நாட்களுக்குள் உங்களுக்கு அறிவிக்க வேண்டும்."
+},
+"act.sum.5": {
+"en": "If your case is sent to mediation, the mediation must be concluded within 60 days.",
+"si": "ඔබේ කාරණය සමථකරණය සඳහා යොමු කළහොත්, සමථකරණය දින 60ක් ඇතුළත අවසන් කළ යුතුය.",
+"ta": "உங்கள் விடயம் மத்தியஸ்தத்திற்கு அனுப்பப்பட்டால், மத்தியஸ்தம் 60 நாட்களுக்குள் நிறைவுசெய்யப்பட வேண்டும்."
+},
+"act.sum.6": {
+"en": "If you are not satisfied with the NCW's decision, you can appeal to the Court of Appeal within one month.",
+"si": "කොමිෂන් සභාවේ තීරණය ගැන ඔබ සෑහීමකට පත් නොවන්නේ නම්, මාසයක් ඇතුළත අභියාචනාධිකරණයට අභියාචනා කළ හැකිය.",
+"ta": "ஆணைக்குழுவின் தீர்மானத்தில் நீங்கள் திருப்தியடையவில்லை எனில், ஒரு மாதத்திற்குள் மேன்முறையீட்டு நீதிமன்றத்திற்கு மேன்முறையீடு செய்யலாம்."
+},
+"act.sum.7": {
+"en": "The NCW can also investigate problems on its own, without a complaint being made first.",
+"si": "පැමිණිල්ලක් ඉදිරිපත් නොකළද, කොමිෂන් සභාවට ස්වකීය මූලිකත්වයෙන් ගැටලු පිළිබඳ පරීක්ෂණ කළ හැකිය.",
+"ta": "முறைப்பாடு எதுவும் செய்யப்படாவிட்டாலும், ஆணைக்குழு தானாக முன்வந்து பிரச்சினைகள் குறித்துப் புலனாய்வு செய்ய முடியும்."
+},
+"act.obj.eyebrow": {
+"en": "Section 2 · Objectives of the Act",
+"si": "2 වන වගන්තිය · පනතේ අරමුණු",
+"ta": "பிரிவு 2 · சட்டத்தின் நோக்கங்கள்"
+},
+"act.obj.h2": {
+"en": "What the Act Sets Out to Achieve",
+"si": "පනතින් සාක්ෂාත් කර ගැනීමට අපේක්ෂා කරන දෑ",
+"ta": "சட்டம் அடைய எதிர்பார்ப்பவை"
+},
+"act.obj.1": {
+"en": "Introduce ways to protect women's rights under the Constitution",
+"si": "ආණ්ඩුක්‍රම ව්‍යවස්ථාවට යටත්ව කාන්තා අයිතිවාසිකම් සුරක්ෂිත කිරීමේ යාන්ත්‍රණ හඳුන්වා දීම",
+"ta": "அரசியலமைப்புக்கு அமைவாகப் பெண்களின் உரிமைகளைப் பாதுகாப்பதற்கான பொறிமுறைகளை அறிமுகப்படுத்துதல்"
+},
+"act.obj.2": {
+"en": "Carry out Sri Lanka's obligations under CEDAW and related laws",
+"si": "CEDAW සම්මුතිය සහ අදාළ නීති යටතේ ශ්‍රී ලංකාව භාරගත් බැඳීම් ක්‍රියාත්මක කිරීම",
+"ta": "CEDAW சமவாயம் மற்றும் ஏற்புடைய சட்டங்களின் கீழ் இலங்கையின் கடப்பாடுகளை நிறைவேற்றுதல்"
+},
+"act.obj.3": {
+"en": "Formulate and implement the national policy for the advancement and empowerment of women",
+"si": "කාන්තාවන්ගේ අභිවෘද්ධිය සහ සවිබල ගැන්වීම සඳහා ජාතික ප්‍රතිපත්තිය සකස් කිරීම සහ ක්‍රියාත්මක කිරීම",
+"ta": "பெண்களின் மேம்பாடு மற்றும் வலுவூட்டலுக்கான தேசியக் கொள்கையை வகுத்து நடைமுறைப்படுத்துதல்"
+},
+"act.obj.4": {
+"en": "Protect women from discrimination based on gender and sexual orientation",
+"si": "ස්ත්‍රී පුරුෂ සමාජභාවය සහ ලිංගික නැඹුරුව මත පදනම් වූ වෙනස්කොට සැලකීම්වලින් කාන්තාවන් ආරක්ෂා කිරීම",
+"ta": "பால்நிலை மற்றும் பாலியல் நாட்டத்தின் அடிப்படையிலான பாரபட்சங்களிலிருந்து பெண்களைப் பாதுகாத்தல்"
+},
+"act.obj.5": {
+"en": "Prevent discrimination, marginalisation, sexual harassment and violence against women",
+"si": "කාන්තාවන්ට එරෙහි වෙනස්කොට සැලකීම්, කොන් කිරීම්, ලිංගික හිරිහැර සහ ප්‍රචණ්ඩත්වය වැළැක්වීම",
+"ta": "பெண்களுக்கு எதிரான பாரபட்சம், ஓரங்கட்டல், பாலியல் துன்புறுத்தல் மற்றும் வன்முறையைத் தடுத்தல்"
+},
+"act.obj.6": {
+"en": "Recommend law reforms to stop discrimination and support women's empowerment",
+"si": "වෙනස්කොට සැලකීම් වැළැක්වීමට සහ කාන්තා සවිබල ගැන්වීමට නීති ප්‍රතිසංස්කරණ නිර්දේශ කිරීම",
+"ta": "பாரபட்சத்தைத் தடுப்பதற்கும் பெண்களின் வலுவூட்டலுக்கும் சட்டச் சீர்திருத்தங்களை விதந்துரைத்தல்"
+},
+"act.obj.7": {
+"en": "Support women's participation in justice and equal representation in decision-making",
+"si": "යුක්තිය පසිඳලීමේ ක්‍රියාවලියට කාන්තා සහභාගීත්වය සහ තීරණ ගැනීමේ ව්‍යුහයන්හි සමාන නියෝජනය ප්‍රවර්ධනය කිරීම",
+"ta": "நீதி நிர்வாகத்தில் பெண்களின் பங்கேற்பையும் தீர்மானம் எடுக்கும் கட்டமைப்புகளில் சம பிரதிநிதித்துவத்தையும் ஊக்குவித்தல்"
+},
+"act.obj.8": {
+"en": "Ensure women's economic empowerment, with special attention to women with disabilities",
+"si": "ආබාධිත කාන්තාවන් කෙරෙහි විශේෂ අවධානය යොමු කරමින් කාන්තාවන්ගේ ආර්ථික සවිබල ගැන්වීම සහතික කිරීම",
+"ta": "மாற்றுத்திறனாளிப் பெண்கள் மீது விசேட கவனம் செலுத்தி, பெண்களின் பொருளாதார வலுவூட்டலை உறுதிப்படுத்துதல்"
+},
+"act.obj.9": {
+"en": "Run public education programmes on all aspects of women's empowerment",
+"si": "කාන්තා සවිබල ගැන්වීමේ සියලු අංශ පිළිබඳ මහජන අධ්‍යාපන වැඩසටහන් පැවැත්වීම",
+"ta": "பெண்கள் வலுவூட்டலின் அனைத்து அம்சங்கள் தொடர்பிலும் பொதுமக்கள் கல்வி நிகழ்ச்சித்திட்டங்களை நடத்துதல்"
+},
+"act.obj.10": {
+"en": "Promote equal pay for men and women in employment of equal value",
+"si": "සමාන වටිනාකමක් ඇති රැකියාවල නියුතු පුරුෂයින්ට සහ කාන්තාවන්ට සමාන වැටුප් ප්‍රවර්ධනය කිරීම",
+"ta": "சம பெறுமதியுடைய தொழில்களில் ஈடுபடும் ஆண்களுக்கும் பெண்களுக்கும் சம வேதனத்தை ஊக்குவித்தல்"
+},
+"act.pow.eyebrow": {
+"en": "Section 6 · Powers of the Commission",
+"si": "6 වන වගන්තිය · කොමිෂන් සභාවේ බලතල",
+"ta": "பிரிவு 6 · ஆணைக்குழுவின் தத்துவங்கள்"
+},
+"act.pow.h2": {
+"en": "What the NCW Can Do",
+"si": "කොමිෂන් සභාවට කළ හැකි දෑ",
+"ta": "ஆணைக்குழுவினால் செய்யக்கூடியவை"
+},
+"act.pow.1h": {
+"en": "Investigate Violations",
+"si": "උල්ලංඝනය කිරීම් පරීක්ෂා කිරීම",
+"ta": "மீறல்களைப் புலனாய்வு செய்தல்"
+},
+"act.pow.1p": {
+"en": "Look into rights violations, on its own initiative or when a complaint is received.",
+"si": "ස්වකීය මූලිකත්වයෙන් හෝ පැමිණිල්ලක් ලැබුණු විට, අයිතිවාසිකම් උල්ලංඝනය කිරීම් පිළිබඳ සොයා බැලීම.",
+"ta": "தானாக முன்வந்தோ அல்லது முறைப்பாடு கிடைக்கப்பெறும்போதோ உரிமை மீறல்கள் குறித்து ஆராய்தல்."
+},
+"act.pow.2h": {
+"en": "Go to Court",
+"si": "අධිකරණයට යාම",
+"ta": "நீதிமன்றத்தை நாடுதல்"
+},
+"act.pow.2p": {
+"en": "Intervene in court cases about women's rights and take action in any competent court.",
+"si": "කාන්තා අයිතිවාසිකම් පිළිබඳ නඩු කටයුතුවලට මැදිහත් වීම සහ නිසි බලය ඇති ඕනෑම අධිකරණයක නඩු පැවරීම.",
+"ta": "பெண்களின் உரிமைகள் தொடர்பான நீதிமன்ற வழக்குகளில் தலையிடுதல் மற்றும் தகுதிவாய்ந்த எந்தவொரு நீதிமன்றத்திலும் வழக்குத் தொடுத்தல்."
+},
+"act.pow.3h": {
+"en": "Mediation",
+"si": "සමථකරණය",
+"ta": "மத்தியஸ்தம்"
+},
+"act.pow.3p": {
+"en": "Refer cases of discrimination to the Panel of Mediators, either on a complaint or on its own motion.",
+"si": "පැමිණිල්ලක් මත හෝ ස්වකීය මූලිකත්වයෙන්, වෙනස්කොට සැලකීම් පිළිබඳ කාරණා සමථකරුවන්ගේ මණ්ඩලයට යොමු කිරීම.",
+"ta": "முறைப்பாட்டின் மீதோ அல்லது தானாக முன்வந்தோ, பாரபட்சம் தொடர்பான விடயங்களை மத்தியஸ்தர் குழாமிற்குப் பாரப்படுத்துதல்."
+},
+"act.pow.4h": {
+"en": "Monitor Compliance",
+"si": "අනුකූලතාව නිරීක්ෂණය",
+"ta": "இணக்கப்பாட்டைக் கண்காணித்தல்"
+},
+"act.pow.4p": {
+"en": "Monitor how private persons and non-state institutions follow policies and practices relating to women's rights.",
+"si": "කාන්තා අයිතිවාසිකම්වලට අදාළ ප්‍රතිපත්ති සහ පිළිවෙත් පුද්ගලික තැනැත්තන් සහ රාජ්‍ය නොවන ආයතන අනුගමනය කරන ආකාරය නිරීක්ෂණය කිරීම.",
+"ta": "பெண்களின் உரிமைகள் தொடர்பான கொள்கைகளையும் நடைமுறைகளையும் தனிநபர்களும் அரச சார்பற்ற நிறுவனங்களும் பின்பற்றும் விதத்தைக் கண்காணித்தல்."
+},
+"act.pow.5h": {
+"en": "Policy Formulation",
+"si": "ප්‍රතිපත්ති සම්පාදනය",
+"ta": "கொள்கை வகுத்தல்"
+},
+"act.pow.5p": {
+"en": "Develop the National Policy on women's advancement and empowerment.",
+"si": "කාන්තාවන්ගේ අභිවෘද්ධිය සහ සවිබල ගැන්වීම පිළිබඳ ජාතික ප්‍රතිපත්තිය සකස් කිරීම.",
+"ta": "பெண்களின் மேம்பாடு மற்றும் வலுவூட்டல் தொடர்பான தேசியக் கொள்கையை உருவாக்குதல்."
+},
+"act.pow.6h": {
+"en": "Recommend Law Changes",
+"si": "නීති සංශෝධන නිර්දේශ කිරීම",
+"ta": "சட்ட மாற்றங்களை விதந்துரைத்தல்"
+},
+"act.pow.6p": {
+"en": "Advise the Government on updating laws to meet international standards.",
+"si": "ජාත්‍යන්තර ප්‍රමිතීන්ට අනුකූල වන පරිදි නීති යාවත්කාලීන කිරීම පිළිබඳව රජයට උපදෙස් දීම.",
+"ta": "சர்வதேச தராதரங்களுக்கு அமைவாகச் சட்டங்களை இற்றைப்படுத்துவது குறித்து அரசாங்கத்திற்கு ஆலோசனை வழங்குதல்."
+},
+"act.pow.7h": {
+"en": "Regional Offices",
+"si": "ප්‍රාදේශීය කාර්යාල",
+"ta": "பிராந்திய அலுவலகங்கள்"
+},
+"act.pow.7p": {
+"en": "Open offices in provinces and regions across Sri Lanka for easier access.",
+"si": "පහසුවෙන් ප්‍රවේශ විය හැකි වන පරිදි ශ්‍රී ලංකාව පුරා පළාත් සහ ප්‍රදේශවල කාර්යාල විවෘත කිරීම.",
+"ta": "இலகுவாக அணுகக்கூடிய வகையில், இலங்கை முழுவதுமுள்ள மாகாணங்களிலும் பிராந்தியங்களிலும் அலுவலகங்களைத் திறத்தல்."
+},
+"act.pow.8h": {
+"en": "Complaint Expenses",
+"si": "පැමිණිලි වියදම්",
+"ta": "முறைப்பாட்டுச் செலவுகள்"
+},
+"act.pow.8p": {
+"en": "Award an aggrieved person a sum to meet the expenses reasonably incurred in making a complaint.",
+"si": "පැමිණිල්ලක් ඉදිරිපත් කිරීමේදී සාධාරණ ලෙස දැරූ වියදම් පියවීම සඳහා අගතියට පත් පුද්ගලයාට මුදලක් ප්‍රදානය කිරීම.",
+"ta": "முறைப்பாடு செய்வதில் நியாயமான முறையில் ஏற்பட்ட செலவுகளை ஈடுசெய்வதற்காகப் பாதிக்கப்பட்ட நபருக்குத் தொகையொன்றை வழங்குதல்."
+},
+"act.tl.eyebrow": {
+"en": "Part II · Inquiry &amp; Enforcement",
+"si": "II වන කොටස · පරීක්ෂණ සහ බලාත්මක කිරීම",
+"ta": "பகுதி II · விசாரணை மற்றும் வலுவுறுத்தல்"
+},
+"act.tl.h2": {
+"en": "Key Timelines",
+"si": "වැදගත් කාල සීමා",
+"ta": "முக்கிய கால வரம்புகள்"
+},
+"act.tl.month": {
+"en": "Month",
+"si": "මාසය",
+"ta": "மாதம்"
+},
+"act.tl.days": {
+"en": "Days",
+"si": "දින",
+"ta": "நாட்கள்"
+},
+"act.tl.own": {
+"en": "Own",
+"si": "ස්වයං",
+"ta": "சுய"
+},
+"act.tl.motion": {
+"en": "Motion",
+"si": "මූලිකත්වය",
+"ta": "முனைப்பு"
+},
+"act.tl.sc": {
+"en": "SC",
+"si": "ශ්‍රේ.අ.",
+"ta": "உ.நீ."
+},
+"act.tl.referral": {
+"en": "Referral",
+"si": "යොමු කිරීම",
+"ta": "பாரப்படுத்தல்"
+},
+"act.tl.1h": {
+"en": "Making a Complaint",
+"si": "පැමිණිල්ලක් ඉදිරිපත් කිරීම",
+"ta": "முறைப்பாடு செய்தல்"
+},
+"act.tl.1p": {
+"en": "An application must be made within one month of the infringement, or of becoming aware of it (Section 19).",
+"si": "උල්ලංඝනය සිදු වූ දින සිට හෝ ඒ පිළිබඳව දැනගත් දින සිට මාසයක් ඇතුළත ඉල්ලුම්පත්‍රය ඉදිරිපත් කළ යුතුය (19 වන වගන්තිය).",
+"ta": "மீறல் இடம்பெற்ற திகதியிலிருந்து அல்லது அது பற்றி அறிந்துகொண்ட திகதியிலிருந்து ஒரு மாதத்திற்குள் விண்ணப்பம் செய்யப்பட வேண்டும் (பிரிவு 19)."
+},
+"act.tl.2h": {
+"en": "Inquiry and Investigation",
+"si": "විමර්ශන සහ පරීක්ෂණ",
+"ta": "விசாரணையும் புலனாய்வும்"
+},
+"act.tl.2p": {
+"en": "The Commission may act on a complaint or on its own motion. A Committee appointed by the Commission conducts the inquiry within one month of receiving the application or information (Section 18).",
+"si": "කොමිෂන් සභාවට පැමිණිල්ලක් මත හෝ ස්වකීය මූලිකත්වයෙන් ක්‍රියා කළ හැකිය. ඉල්ලුම්පත්‍රය හෝ තොරතුරු ලැබී මාසයක් ඇතුළත, කොමිෂන් සභාව විසින් පත් කරනු ලබන කමිටුවක් මගින් පරීක්ෂණය පවත්වනු ලැබේ (18 වන වගන්තිය).",
+"ta": "ஆணைக்குழு முறைப்பாட்டின் மீதோ அல்லது தானாக முன்வந்தோ செயற்படலாம். விண்ணப்பம் அல்லது தகவல் கிடைத்து ஒரு மாதத்திற்குள், ஆணைக்குழுவினால் நியமிக்கப்படும் குழுவொன்று விசாரணையை நடத்தும் (பிரிவு 18)."
+},
+"act.tl.3h": {
+"en": "Informing the Aggrieved Person",
+"si": "අගතියට පත් පුද්ගලයාට දැනුම් දීම",
+"ta": "பாதிக்கப்பட்ட நபருக்கு அறிவித்தல்"
+},
+"act.tl.3p": {
+"en": "After deciding on a complaint, the Commission must inform the aggrieved person of the action taken within 14 days of the decision (Section 21).",
+"si": "පැමිණිල්ලක් සම්බන්ධයෙන් තීරණය කළ පසු, ගත් ක්‍රියාමාර්ගය පිළිබඳව තීරණය ගත් දින සිට දින 14ක් ඇතුළත කොමිෂන් සභාව අගතියට පත් පුද්ගලයාට දැනුම් දිය යුතුය (21 වන වගන්තිය).",
+"ta": "முறைப்பாடு தொடர்பில் தீர்மானித்த பின்னர், மேற்கொண்ட நடவடிக்கை குறித்துத் தீர்மானத் திகதியிலிருந்து 14 நாட்களுக்குள் ஆணைக்குழு பாதிக்கப்பட்ட நபருக்கு அறிவிக்க வேண்டும் (பிரிவு 21)."
+},
+"act.tl.4h": {
+"en": "Mediation",
+"si": "සමථකරණය",
+"ta": "மத்தியஸ்தம்"
+},
+"act.tl.4p": {
+"en": "The Panel of Mediators must conclude mediation within 60 days of the referral (Section 22).",
+"si": "යොමු කළ දින සිට දින 60ක් ඇතුළත සමථකරුවන්ගේ මණ්ඩලය සමථකරණය අවසන් කළ යුතුය (22 වන වගන්තිය).",
+"ta": "பாரப்படுத்திய திகதியிலிருந்து 60 நாட்களுக்குள் மத்தியஸ்தர் குழாம் மத்தியஸ்தத்தை நிறைவுசெய்ய வேண்டும் (பிரிவு 22)."
+},
+"act.tl.5h": {
+"en": "Right of Appeal",
+"si": "අභියාචනා කිරීමේ අයිතිය",
+"ta": "மேன்முறையீட்டு உரிமை"
+},
+"act.tl.5p": {
+"en": "A person aggrieved by a decision of the Commission may appeal to the Court of Appeal within one month of being informed of it (Section 26).",
+"si": "කොමිෂන් සභාවේ තීරණයකින් අගතියට පත් පුද්ගලයෙකුට, එම තීරණය දැනුම් දුන් දින සිට මාසයක් ඇතුළත අභියාචනාධිකරණයට අභියාචනා කළ හැකිය (26 වන වගන්තිය).",
+"ta": "ஆணைக்குழுவின் தீர்மானத்தினால் பாதிக்கப்பட்ட ஒருவர், அத்தீர்மானம் அறிவிக்கப்பட்ட திகதியிலிருந்து ஒரு மாதத்திற்குள் மேன்முறையீட்டு நீதிமன்றத்திற்கு மேன்முறையீடு செய்யலாம் (பிரிவு 26)."
+},
+"act.tl.6h": {
+"en": "Supreme Court References",
+"si": "ශ්‍රේෂ්ඨාධිකරණ යොමු කිරීම්",
+"ta": "உயர் நீதிமன்றப் பாரப்படுத்தல்கள்"
+},
+"act.tl.6p": {
+"en": "The Commission receives references from the Supreme Court on women's rights matters under Article 126, and may refer questions on the scope of women's rights to the Supreme Court during an inquiry (Section 17).",
+"si": "ආණ්ඩුක්‍රම ව්‍යවස්ථාවේ 126 වන ව්‍යවස්ථාව යටතේ කාන්තා අයිතිවාසිකම් පිළිබඳ කාරණා ශ්‍රේෂ්ඨාධිකරණය විසින් කොමිෂන් සභාවට යොමු කළ හැකි අතර, පරීක්ෂණයක් අතරතුර කාන්තා අයිතිවාසිකම්වල විෂය පථය පිළිබඳ ප්‍රශ්න කොමිෂන් සභාවට ශ්‍රේෂ්ඨාධිකරණයට යොමු කළ හැකිය (17 වන වගන්තිය).",
+"ta": "அரசியலமைப்பின் 126 ஆம் உறுப்புரையின் கீழ் பெண்களின் உரிமைகள் தொடர்பான விடயங்களை உயர் நீதிமன்றம் ஆணைக்குழுவிற்குப் பாரப்படுத்தலாம். விசாரணையின்போது பெண்களின் உரிமைகளின் வீச்சு தொடர்பான வினாக்களை ஆணைக்குழு உயர் நீதிமன்றத்திற்குப் பாரப்படுத்தலாம் (பிரிவு 17)."
+},
+"mem.h1": {
+"en": "Members of the Commission",
+"si": "කොමිෂන් සභාවේ සාමාජිකයින්",
+"ta": "ஆணைக்குழு உறுப்பினர்கள்"
+},
+"mem.lead": {
+"en": "The Commission has seven members, including the Chairperson, appointed by H.E. the President.",
+"si": "සභාපතිවරිය ද ඇතුළුව කොමිෂන් සභාව සාමාජිකයින් හත් දෙනෙකුගෙන් සමන්විත වන අතර, ඔවුන් ගරු ජනාධිපතිතුමා විසින් පත් කරනු ලැබේ.",
+"ta": "தவிசாளர் உட்பட ஏழு உறுப்பினர்களைக் கொண்ட இந்த ஆணைக்குழுவின் உறுப்பினர்கள் கௌரவ சனாதிபதியினால் நியமிக்கப்படுகின்றனர்."
+},
+"mem.p1": {
+"en": "Five members are appointed on the recommendation of the Constitutional Council, and two on the recommendation of the Women Parliamentarians' Caucus.",
+"si": "සාමාජිකයින් පස් දෙනෙකු ආණ්ඩුක්‍රම ව්‍යවස්ථා සභාවේ නිර්දේශය මත ද, දෙදෙනෙකු පාර්ලිමේන්තු මන්ත්‍රීවරියන්ගේ සංසදයේ නිර්දේශය මත ද පත් කරනු ලැබේ.",
+"ta": "ஐந்து உறுப்பினர்கள் அரசியலமைப்புப் பேரவையின் விதப்புரையின் பேரிலும், இருவர் பாராளுமன்றப் பெண்கள் குழுவின் விதப்புரையின் பேரிலும் நியமிக்கப்படுகின்றனர்."
+},
+"mem.p2": {
+"en": "At least five members, including the Chairperson, must be women. Members hold office for four years and must have proven knowledge and experience in fields such as law, trade unionism, management, economic development, health, education or women's empowerment.",
+"si": "සභාපතිවරිය ද ඇතුළුව අවම වශයෙන් සාමාජිකයින් පස් දෙනෙකු කාන්තාවන් විය යුතුය. සාමාජිකයින් වසර හතරක කාලයක් ධුරය දරන අතර, නීතිය, වෘත්තීය සමිති, කළමනාකරණය, ආර්ථික සංවර්ධනය, සෞඛ්‍යය, අධ්‍යාපනය හෝ කාන්තා සවිබල ගැන්වීම වැනි ක්ෂේත්‍රවල සනාථ කළ දැනුමක් සහ පළපුරුද්දක් තිබිය යුතුය.",
+"ta": "தவிசாளர் உட்பட குறைந்தது ஐந்து உறுப்பினர்கள் பெண்களாக இருக்க வேண்டும். உறுப்பினர்கள் நான்கு வருட காலத்திற்குப் பதவி வகிப்பதுடன், சட்டம், தொழிற்சங்கம், முகாமைத்துவம், பொருளாதார அபிவிருத்தி, சுகாதாரம், கல்வி அல்லது பெண்கள் வலுவூட்டல் போன்ற துறைகளில் நிரூபிக்கப்பட்ட அறிவும் அனுபவமும் கொண்டிருக்க வேண்டும்."
+},
+"str.h1": {
+"en": "Organisational Structure",
+"si": "සංවිධාන ව්‍යුහය",
+"ta": "நிறுவனக் கட்டமைப்பு"
+},
+"str.lead": {
+"en": "How the Commission is organised under the Women Empowerment Act No. 37 of 2024.",
+"si": "2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත යටතේ කොමිෂන් සභාව සංවිධානය වී ඇති ආකාරය.",
+"ta": "2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டத்தின் கீழ் ஆணைக்குழு ஒழுங்கமைக்கப்பட்டுள்ள விதம்."
+},
+"str.1h": {
+"en": "The Commission",
+"si": "කොමිෂන් සභාව",
+"ta": "ஆணைக்குழு"
+},
+"str.1p": {
+"en": "Seven members, including the Chairperson, appointed for a term of four years. The Commission sets the direction of the NCW and makes decisions on inquiries, mediation and policy.",
+"si": "සභාපතිවරිය ද ඇතුළුව වසර හතරක ධුර කාලයක් සඳහා පත් කරනු ලබන සාමාජිකයින් හත් දෙනෙකි. කොමිෂන් සභාව ආයතනයේ දිශානතිය තීරණය කරන අතර, පරීක්ෂණ, සමථකරණ සහ ප්‍රතිපත්ති පිළිබඳ තීරණ ගනී.",
+"ta": "தவிசாளர் உட்பட நான்கு வருட பதவிக் காலத்திற்கு நியமிக்கப்படும் ஏழு உறுப்பினர்கள். ஆணைக்குழு நிறுவனத்தின் திசையைத் தீர்மானிப்பதுடன், விசாரணைகள், மத்தியஸ்தம் மற்றும் கொள்கைகள் தொடர்பான தீர்மானங்களை மேற்கொள்கின்றது."
+},
+"str.2h": {
+"en": "The Secretariat",
+"si": "ලේකම් කාර්යාලය",
+"ta": "செயலகம்"
+},
+"str.2p": {
+"en": "Headed by the Executive Director, the Secretariat supports the Commission's day-to-day work.",
+"si": "විධායක අධ්‍යක්ෂවරයාගේ ප්‍රධානත්වයෙන් යුත් ලේකම් කාර්යාලය කොමිෂන් සභාවේ දෛනික කටයුතුවලට සහාය වේ.",
+"ta": "நிறைவேற்றுப் பணிப்பாளரின் தலைமையிலான செயலகம் ஆணைக்குழுவின் அன்றாடப் பணிகளுக்கு உதவுகின்றது."
+},
+"str.3h": {
+"en": "Divisions",
+"si": "අංශ",
+"ta": "பிரிவுகள்"
+},
+"str.3p": {
+"en": "The Secretariat is organised into four divisions: Administration, Finance, Research and Development, and Legal Affairs. <a onclick=\"go('divisions')\">View the Divisions</a>.",
+"si": "ලේකම් කාර්යාලය අංශ හතරකින් සමන්විත වේ: පරිපාලන, මුදල්, පර්යේෂණ හා සංවර්ධන, සහ නීති කටයුතු. <a onclick=\"go('divisions')\">අංශ බලන්න</a>.",
+"ta": "செயலகம் நான்கு பிரிவுகளைக் கொண்டது: நிர்வாகம், நிதி, ஆராய்ச்சி மற்றும் அபிவிருத்தி, சட்ட அலுவல்கள். <a onclick=\"go('divisions')\">பிரிவுகளைப் பார்க்க</a>."
+},
+"str.4h": {
+"en": "Regional and Provincial Offices",
+"si": "ප්‍රාදේශීය සහ පළාත් කාර්යාල",
+"ta": "பிராந்திய மற்றும் மாகாண அலுவலகங்கள்"
+},
+"str.4p": {
+"en": "The Act empowers the Commission to open offices across Sri Lanka's provinces and regions, for easier access outside Colombo.",
+"si": "කොළඹින් පිටත ප්‍රදේශවලට පහසුවෙන් ප්‍රවේශ විය හැකි වන පරිදි, ශ්‍රී ලංකාවේ පළාත් සහ ප්‍රදේශ පුරා කාර්යාල විවෘත කිරීමට පනත මගින් කොමිෂන් සභාවට බලය පැවරී ඇත.",
+"ta": "கொழும்புக்கு வெளியே இலகுவாக அணுகக்கூடிய வகையில், இலங்கையின் மாகாணங்களிலும் பிராந்தியங்களிலும் அலுவலகங்களைத் திறப்பதற்குச் சட்டம் ஆணைக்குழுவிற்கு அதிகாரம் அளிக்கின்றது."
+},
+"str.5h": {
+"en": "The Ombuds for Women's Rights",
+"si": "කාන්තා අයිතිවාසිකම් සඳහා වූ ඔම්බුඩ්ස්",
+"ta": "பெண்களின் உரிமைகளுக்கான ஒம்புட்ஸ்"
+},
+"str.5p": {
+"en": "An office provided for under the Act that can receive complaints about gender-based violence or rights violations and forward recommendations to the Commission.",
+"si": "ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය හෝ අයිතිවාසිකම් උල්ලංඝනය කිරීම් පිළිබඳ පැමිණිලි භාරගෙන, කොමිෂන් සභාවට නිර්දේශ යොමු කළ හැකි, පනත යටතේ විධිවිධාන සලසා ඇති ධුරයකි.",
+"ta": "பால்நிலை அடிப்படையிலான வன்முறை அல்லது உரிமை மீறல்கள் தொடர்பான முறைப்பாடுகளைப் பெற்று, ஆணைக்குழுவிற்கு விதப்புரைகளை அனுப்பக்கூடிய, சட்டத்தின் கீழ் ஏற்பாடு செய்யப்பட்டுள்ள பதவி."
+},
+"str.6h": {
+"en": "National Fund for Women",
+"si": "කාන්තාවන් සඳහා වූ ජාතික අරමුදල",
+"ta": "பெண்களுக்கான தேசிய நிதியம்"
+},
+"str.6p": {
+"en": "Managed by the Commission, the Fund receives money from Parliament and can accept donations from local and international sources.",
+"si": "කොමිෂන් සභාව විසින් කළමනාකරණය කරනු ලබන මෙම අරමුදලට පාර්ලිමේන්තුවෙන් මුදල් ලැබෙන අතර, දේශීය සහ විදේශීය මූලාශ්‍රවලින් පරිත්‍යාග භාර ගත හැකිය.",
+"ta": "ஆணைக்குழுவினால் முகாமைத்துவம் செய்யப்படும் இந்நிதியம் பாராளுமன்றத்திடமிருந்து நிதியைப் பெறுவதுடன், உள்நாட்டு மற்றும் வெளிநாட்டு மூலங்களிலிருந்து நன்கொடைகளையும் ஏற்கலாம்."
+},
+"sp.h1": {
+"en": "Strategic Plan 2027–2031",
+"si": "2027–2031 උපායමාර්ගික සැලැස්ම",
+"ta": "மூலோபாயத் திட்டம் 2027–2031"
+},
+"sp.lead": {
+"en": "The Commission's first five-year Strategic Plan sets out its vision, mission and priorities for 2027 to 2031. It was developed with all seven Commissioners and the Executive Director, and through consultations with women's rights organisations and other stakeholders.",
+"si": "කොමිෂන් සභාවේ ප්‍රථම පංච වාර්ෂික උපායමාර්ගික සැලැස්ම 2027 සිට 2031 දක්වා දැක්ම, මෙහෙවර සහ ප්‍රමුඛතා දක්වයි. එය කොමසාරිස්වරුන් හත් දෙනාම සහ විධායක අධ්‍යක්ෂවරයාගේ සහභාගීත්වයෙන් ද, කාන්තා අයිතිවාසිකම් සංවිධාන සහ අනෙකුත් පාර්ශවකරුවන් සමඟ පැවැත්වූ උපදේශන තුළින් ද සකස් කරන ලදී.",
+"ta": "ஆணைக்குழுவின் முதலாவது ஐந்தாண்டு மூலோபாயத் திட்டம் 2027 முதல் 2031 வரையான அதன் தூரநோக்கு, பணிக்கூற்று மற்றும் முன்னுரிமைகளை வரையறுக்கின்றது. இது ஏழு ஆணையாளர்கள் மற்றும் நிறைவேற்றுப் பணிப்பாளரின் பங்கேற்புடனும், பெண்கள் உரிமை அமைப்புகள் மற்றும் ஏனைய பங்குதாரர்களுடனான கலந்துரையாடல்கள் மூலமும் தயாரிக்கப்பட்டது."
+},
+"sp.view": {
+"en": "📄 View the full Plan (English)",
+"si": "📄 සම්පූර්ණ සැලැස්ම බලන්න (ඉංග්‍රීසි)",
+"ta": "📄 முழுத் திட்டத்தையும் பார்க்க (ஆங்கிலம்)"
+},
+"sp.forth": {
+"en": "Sinhala and Tamil versions forthcoming",
+"si": "සිංහල සහ දෙමළ පිටපත් ඉදිරියේදී",
+"ta": "சிங்கள, தமிழ்ப் பதிப்புகள் விரைவில்"
+},
+"sp.vision.h": {
+"en": "Our Vision",
+"si": "අපගේ දැක්ම",
+"ta": "எமது தூரநோக்கு"
+},
+"sp.vision": {
+"en": "All women in Sri Lanka enjoy their right to equality, dignity and justice.",
+"si": "සියලුම කාන්තාවන් සමානාත්මතාවය, ගෞරවය සහ යුක්තිය උපරිමයෙන් භුක්ති විඳින ශ්‍රී ලංකාවක්.",
+"ta": "இலங்கையின் சகல பெண்களும் சமத்துவம், கௌரவம் மற்றும் நீதிக்கான உரிமைகளை அடைதல்."
+},
+"sp.mission.h": {
+"en": "Our Mission",
+"si": "අපගේ මෙහෙවර",
+"ta": "எமது பணிக்கூற்று"
+},
+"sp.mission": {
+"en": "To protect and promote women's rights and gender equality through independent oversight, advocacy, and strengthening inclusive participation and accountability.",
+"si": "ස්වාධීන අධීක්ෂණය, උපදේශනය, සියලු දෙනාගේ සහභාගීත්වය සහ වගවීම ශක්තිමත් කිරීම තුළින් කාන්තා අයිතිවාසිකම් සහ ස්ත්‍රී පුරුෂ සමානාත්මතාවය ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම.",
+"ta": "பெண்களின் உரிமை மற்றும் பால்நிலை சமத்துவம் முதலானவற்றை சுயாதீன மேற்பார்வை, சகலரின் பங்குபற்றல் மற்றும் பொறுப்புக்கூறல் மூலம் பாதுகாத்தலும் மேம்படுத்தலும்."
+},
+"sp.themes.h": {
+"en": "Thematic Areas",
+"si": "තේමාත්මක ක්ෂේත්‍ර",
+"ta": "கருப்பொருள் பரப்புகள்"
+},
+"sp.themes.p": {
+"en": "The Plan is organised around three thematic areas.",
+"si": "සැලැස්ම තේමාත්මක ක්ෂේත්‍ර තුනක් වටා සකස් කර ඇත.",
+"ta": "திட்டம் மூன்று கருப்பொருள் பரப்புகளைச் சுற்றி ஒழுங்கமைக்கப்பட்டுள்ளது."
+},
+"sp.t1.h": {
+"en": "1. Access to Justice",
+"si": "1. යුක්තිය සඳහා ප්‍රවේශය",
+"ta": "1. நீதிக்கான அணுகல்"
+},
+"sp.t1.obj": {
+"en": "To promote gender responsive laws and policies relating to access to justice, equal participation and representation.",
+"si": "යුක්තිය සඳහා ප්‍රවේශය, සමාන සහභාගීත්වය සහ නියෝජනය සම්බන්ධ ස්ත්‍රී පුරුෂ සමාජභාවයට සංවේදී නීති සහ ප්‍රතිපත්ති ප්‍රවර්ධනය කිරීම.",
+"ta": "நீதிக்கான அணுகல், சம பங்கேற்பு மற்றும் பிரதிநிதித்துவம் தொடர்பான பால்நிலை உணர்திறன்மிக்க சட்டங்களையும் கொள்கைகளையும் ஊக்குவித்தல்."
+},
+"sp.t1.1": {
+"en": "Establish the Commission's own investigation, inquiry and mediation processes, and a regional presence.",
+"si": "කොමිෂන් සභාවේම පරීක්ෂණ, විමර්ශන සහ සමථකරණ ක්‍රියාවලි සහ ප්‍රාදේශීය පැවැත්මක් ස්ථාපිත කිරීම.",
+"ta": "ஆணைக்குழுவின் சொந்தப் புலனாய்வு, விசாரணை மற்றும் மத்தியஸ்தச் செயன்முறைகளையும் பிராந்தியப் பிரசன்னத்தையும் தாபித்தல்."
+},
+"sp.t1.2": {
+"en": "Analyse existing laws and policies for compliance with CEDAW, and intervene in ongoing law reform processes.",
+"si": "පවතින නීති සහ ප්‍රතිපත්ති CEDAW සම්මුතියට අනුකූල දැයි විශ්ලේෂණය කිරීම සහ දැනට සිදුවන නීති ප්‍රතිසංස්කරණ ක්‍රියාවලිවලට මැදිහත් වීම.",
+"ta": "நடைமுறையிலுள்ள சட்டங்களும் கொள்கைகளும் CEDAW சமவாயத்துடன் இணங்குகின்றனவா என்பதைப் பகுப்பாய்வு செய்தல் மற்றும் நடைபெறும் சட்டச் சீர்திருத்தச் செயன்முறைகளில் தலையிடுதல்."
+},
+"sp.t1.3": {
+"en": "Monitor the implementation of the National Policy on Gender Equality and Women's Empowerment 2023–2033.",
+"si": "2023–2033 ස්ත්‍රී පුරුෂ සමානාත්මතාවය සහ කාන්තා සවිබල ගැන්වීම පිළිබඳ ජාතික ප්‍රතිපත්තිය ක්‍රියාත්මක කිරීම නිරීක්ෂණය කිරීම.",
+"ta": "பால்நிலை சமத்துவம் மற்றும் பெண்கள் வலுவூட்டல் தொடர்பான தேசியக் கொள்கை 2023–2033 இன் நடைமுறைப்படுத்தலைக் கண்காணித்தல்."
+},
+"sp.t1.4": {
+"en": "Promote sex-disaggregated data and women's representation in decision-making bodies.",
+"si": "ස්ත්‍රී පුරුෂ භාවය අනුව වෙන් කළ දත්ත සහ තීරණ ගැනීමේ ආයතනවල කාන්තා නියෝජනය ප්‍රවර්ධනය කිරීම.",
+"ta": "பால் அடிப்படையில் பிரிக்கப்பட்ட தரவுகளையும் தீர்மானம் எடுக்கும் அமைப்புகளில் பெண்களின் பிரதிநிதித்துவத்தையும் ஊக்குவித்தல்."
+},
+"sp.t2.h": {
+"en": "2. Safety, Peace and Security",
+"si": "2. සුරක්ෂිතභාවය, සාමය සහ ආරක්ෂාව",
+"ta": "2. பாதுகாப்பு, சமாதானம் மற்றும் பாதுகாப்பு நிலை"
+},
+"sp.t2.obj": {
+"en": "Gender-responsive access to justice is ensured in relation to safety, peace and security.",
+"si": "සුරක්ෂිතභාවය, සාමය සහ ආරක්ෂාව සම්බන්ධයෙන් ස්ත්‍රී පුරුෂ සමාජභාවයට සංවේදී යුක්තිය සඳහා ප්‍රවේශය සහතික කෙරේ.",
+"ta": "பாதுகாப்பு, சமாதானம் மற்றும் பாதுகாப்பு நிலை தொடர்பில் பால்நிலை உணர்திறன்மிக்க நீதிக்கான அணுகல் உறுதிப்படுத்தப்படுகின்றது."
+},
+"sp.t2.1": {
+"en": "<strong>Sexual and Gender-Based Violence:</strong> monitor the Multisectoral National Action Plan to Address Sexual and Gender-Based Violence 2024–2028, address sexual harassment including at the workplace under ILO Convention 190, and undertake an islandwide study on rape.",
+"si": "<strong>ලිංගික සහ ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය:</strong> 2024–2028 ලිංගික සහ ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය ආමන්ත්‍රණය කිරීම සඳහා වූ බහු අංශ ජාතික ක්‍රියාකාරී සැලැස්ම නිරීක්ෂණය කිරීම, ILO 190 සම්මුතිය යටතේ සේවා ස්ථානය ඇතුළුව ලිංගික හිරිහැර ආමන්ත්‍රණය කිරීම, සහ ස්ත්‍රී දූෂණය පිළිබඳ දිවයින පුරා අධ්‍යයනයක් සිදු කිරීම.",
+"ta": "<strong>பாலியல் மற்றும் பால்நிலை அடிப்படையிலான வன்முறை:</strong> பாலியல் மற்றும் பால்நிலை அடிப்படையிலான வன்முறையைக் கையாள்வதற்கான பல்துறை தேசிய செயற்திட்டம் 2024–2028 ஐக் கண்காணித்தல், ILO சமவாயம் 190 இன் கீழ் பணியிடம் உட்பட பாலியல் துன்புறுத்தலைக் கையாளுதல், மற்றும் வன்புணர்வு தொடர்பான நாடளாவிய ஆய்வொன்றை மேற்கொள்ளுதல்."
+},
+"sp.t2.2": {
+"en": "<strong>Women, Peace and Security:</strong> monitor the National Action Plan on Women, Peace and Security 2023–2027, and advocate for women affected by conflict.",
+"si": "<strong>කාන්තාවන්, සාමය සහ ආරක්ෂාව:</strong> 2023–2027 කාන්තාවන්, සාමය සහ ආරක්ෂාව පිළිබඳ ජාතික ක්‍රියාකාරී සැලැස්ම නිරීක්ෂණය කිරීම, සහ ගැටුම්වලින් පීඩාවට පත් කාන්තාවන් වෙනුවෙන් පෙනී සිටීම.",
+"ta": "<strong>பெண்கள், சமாதானம் மற்றும் பாதுகாப்பு:</strong> பெண்கள், சமாதானம் மற்றும் பாதுகாப்பு தொடர்பான தேசிய செயற்திட்டம் 2023–2027 ஐக் கண்காணித்தல், மற்றும் மோதலினால் பாதிக்கப்பட்ட பெண்களுக்காக ஆதரித்து வாதாடுதல்."
+},
+"sp.t3.h": {
+"en": "3. Access to Resources and Opportunities",
+"si": "3. සම්පත් සහ අවස්ථා සඳහා ප්‍රවේශය",
+"ta": "3. வளங்களுக்கும் வாய்ப்புகளுக்குமான அணுகல்"
+},
+"sp.t3.obj": {
+"en": "To promote gender responsive laws, policies and practices in the workplace, access to gender responsive health services that cover all phases of a woman's life, and gender-responsive actions to climate change and disasters.",
+"si": "සේවා ස්ථානයේ ස්ත්‍රී පුරුෂ සමාජභාවයට සංවේදී නීති, ප්‍රතිපත්ති සහ පිළිවෙත්, කාන්තාවකගේ ජීවිතයේ සියලු අවධීන් ආවරණය වන ස්ත්‍රී පුරුෂ සමාජභාවයට සංවේදී සෞඛ්‍ය සේවා සඳහා ප්‍රවේශය, සහ දේශගුණික විපර්යාස හා ආපදාවලට ස්ත්‍රී පුරුෂ සමාජභාවයට සංවේදී ප්‍රතිචාර ප්‍රවර්ධනය කිරීම.",
+"ta": "பணியிடத்தில் பால்நிலை உணர்திறன்மிக்க சட்டங்கள், கொள்கைகள் மற்றும் நடைமுறைகள், ஒரு பெண்ணின் வாழ்வின் அனைத்துக் கட்டங்களையும் உள்ளடக்கும் பால்நிலை உணர்திறன்மிக்க சுகாதார சேவைகளுக்கான அணுகல், மற்றும் காலநிலை மாற்றம் மற்றும் அனர்த்தங்களுக்கான பால்நிலை உணர்திறன்மிக்க நடவடிக்கைகளை ஊக்குவித்தல்."
+},
+"sp.t3.1": {
+"en": "<strong>Economic Justice:</strong> provide a gendered perspective on labour law reform and advocate for recognition of women's contribution to the economy.",
+"si": "<strong>ආර්ථික යුක්තිය:</strong> කම්කරු නීති ප්‍රතිසංස්කරණ සඳහා ස්ත්‍රී පුරුෂ සමාජභාවී දෘෂ්ටිකෝණයක් ලබා දීම සහ ආර්ථිකයට කාන්තාවන්ගේ දායකත්වය පිළිගැනීම වෙනුවෙන් පෙනී සිටීම.",
+"ta": "<strong>பொருளாதார நீதி:</strong> தொழிலாளர் சட்டச் சீர்திருத்தத்திற்குப் பால்நிலைக் கண்ணோட்டத்தை வழங்குதல் மற்றும் பொருளாதாரத்திற்குப் பெண்களின் பங்களிப்பை அங்கீகரிப்பதற்காக ஆதரித்து வாதாடுதல்."
+},
+"sp.t3.2": {
+"en": "<strong>Women's Access to Health:</strong> promote free and quality healthcare for women throughout their lifespan.",
+"si": "<strong>කාන්තාවන්ගේ සෞඛ්‍ය ප්‍රවේශය:</strong> කාන්තාවන්ගේ ජීවිත කාලය පුරා නොමිලේ සහ ගුණාත්මක සෞඛ්‍ය සේවා ප්‍රවර්ධනය කිරීම.",
+"ta": "<strong>பெண்களின் சுகாதார அணுகல்:</strong> பெண்களின் வாழ்நாள் முழுவதும் இலவசமான, தரமான சுகாதாரப் பராமரிப்பை ஊக்குவித்தல்."
+},
+"sp.t3.3": {
+"en": "<strong>Environment, Climate Change and Disasters:</strong> address women's representation in climate and disaster decision-making, and advocate for sex-disaggregated data.",
+"si": "<strong>පරිසරය, දේශගුණික විපර්යාස සහ ආපදා:</strong> දේශගුණික සහ ආපදා සම්බන්ධ තීරණ ගැනීමේදී කාන්තා නියෝජනය ආමන්ත්‍රණය කිරීම සහ ස්ත්‍රී පුරුෂ භාවය අනුව වෙන් කළ දත්ත වෙනුවෙන් පෙනී සිටීම.",
+"ta": "<strong>சூழல், காலநிலை மாற்றம் மற்றும் அனர்த்தங்கள்:</strong> காலநிலை மற்றும் அனர்த்தம் தொடர்பான தீர்மானங்களில் பெண்களின் பிரதிநிதித்துவத்தைக் கையாளுதல் மற்றும் பால் அடிப்படையில் பிரிக்கப்பட்ட தரவுகளுக்காக ஆதரித்து வாதாடுதல்."
+},
+"sp.work.h": {
+"en": "How the Commission Will Work",
+"si": "කොමිෂන් සභාව ක්‍රියා කරන ආකාරය",
+"ta": "ஆணைக்குழு செயற்படும் விதம்"
+},
+"sp.work.p": {
+"en": "Six strategic interventions cut across all three thematic areas.",
+"si": "උපායමාර්ගික මැදිහත්වීම් හයක් තේමාත්මක ක්ෂේත්‍ර තුනටම පොදු වේ.",
+"ta": "ஆறு மூலோபாயத் தலையீடுகள் மூன்று கருப்பொருள் பரப்புகளுக்கும் பொதுவானவை."
+},
+"sp.chip.1": {
+"en": "Policy and Law Reform",
+"si": "ප්‍රතිපත්ති සහ නීති ප්‍රතිසංස්කරණ",
+"ta": "கொள்கை மற்றும் சட்டச் சீர்திருத்தம்"
+},
+"sp.chip.2": {
+"en": "Inquiry, Litigation and Mediation",
+"si": "පරීක්ෂණ, නඩු කටයුතු සහ සමථකරණය",
+"ta": "விசாரணை, வழக்காடல் மற்றும் மத்தியஸ்தம்"
+},
+"sp.chip.3": {
+"en": "Referrals and Collaboration",
+"si": "යොමු කිරීම් සහ සහයෝගීතාව",
+"ta": "பாரப்படுத்தல்களும் கூட்டிணைவும்"
+},
+"sp.chip.4": {
+"en": "Monitoring",
+"si": "නිරීක්ෂණය",
+"ta": "கண்காணிப்பு"
+},
+"sp.chip.5": {
+"en": "Research and Fact Finding",
+"si": "පර්යේෂණ සහ කරුණු සෙවීම",
+"ta": "ஆராய்ச்சியும் உண்மை கண்டறிதலும்"
+},
+"sp.chip.6": {
+"en": "Advocacy",
+"si": "උපදේශනය",
+"ta": "ஆதரித்து வாதாடுதல்"
+},
+"sp.fund.h": {
+"en": "National Fund for Women",
+"si": "කාන්තාවන් සඳහා වූ ජාතික අරමුදල",
+"ta": "பெண்களுக்கான தேசிய நிதியம்"
+},
+"sp.fund.p": {
+"en": "The Commission will set up and manage the National Fund for Women, as provided for in the Women Empowerment Act, and will establish a Fund Management Committee as an oversight mechanism.",
+"si": "කාන්තාවන් සවිබල ගැන්වීමේ පනතේ විධිවිධාන ප්‍රකාරව කොමිෂන් සභාව කාන්තාවන් සඳහා වූ ජාතික අරමුදල පිහිටුවා කළමනාකරණය කරන අතර, අධීක්ෂණ යාන්ත්‍රණයක් ලෙස අරමුදල් කළමනාකරණ කමිටුවක් ස්ථාපිත කරනු ඇත.",
+"ta": "பெண்களின் வலுவூட்டல் சட்டத்தின் ஏற்பாடுகளுக்கு அமைவாக, ஆணைக்குழு பெண்களுக்கான தேசிய நிதியத்தைத் தாபித்து முகாமைத்துவம் செய்வதுடன், மேற்பார்வைப் பொறிமுறையாக நிதிய முகாமைத்துவக் குழுவொன்றையும் தாபிக்கும்."
+},
+"sp.inst.h": {
+"en": "Institutional Development",
+"si": "ආයතනික සංවර්ධනය",
+"ta": "நிறுவன அபிவிருத்தி"
+},
+"sp.inst.p": {
+"en": "As a new Commission, it will focus on governance, infrastructure, financial management, human resources, communications, outreach and public engagement, including outreach across all nine provinces.",
+"si": "නව කොමිෂන් සභාවක් ලෙස, එය පාලනය, යටිතල පහසුකම්, මූල්‍ය කළමනාකරණය, මානව සම්පත්, සන්නිවේදනය, ප්‍රජා සම්බන්ධතා සහ මහජන සහභාගීත්වය කෙරෙහි අවධානය යොමු කරනු ඇත. පළාත් නවයම ආවරණය වන ප්‍රජා සම්බන්ධතා වැඩසටහනක් ද මෙයට ඇතුළත් වේ.",
+"ta": "புதிய ஆணைக்குழு என்ற வகையில், ஆளுகை, உட்கட்டமைப்பு, நிதி முகாமைத்துவம், மனித வளம், தொடர்பாடல், வெளிக்களச் செயற்பாடுகள் மற்றும் பொதுமக்கள் ஈடுபாடு ஆகியவற்றில் கவனம் செலுத்தும். இதில் ஒன்பது மாகாணங்களையும் உள்ளடக்கிய வெளிக்களச் செயற்திட்டமும் அடங்கும்."
+},
+"div.eyebrow": {
+"en": "Secretariat",
+"si": "ලේකම් කාර්යාලය",
+"ta": "செயலகம்"
+},
+"div.h1": {
+"en": "Divisions",
+"si": "අංශ",
+"ta": "பிரிவுகள்"
+},
+"div.lead": {
+"en": "The Secretariat of the Commission is headed by the Executive Director and organised into four divisions, as set out in the Phase 1 approved structure of 4 April 2026.",
+"si": "2026 අප්‍රේල් 4 දින අනුමත කරන ලද පළමු අදියර ව්‍යුහයට අනුව, කොමිෂන් සභාවේ ලේකම් කාර්යාලය විධායක අධ්‍යක්ෂවරයාගේ ප්‍රධානත්වයෙන් අංශ හතරකින් සමන්විත වේ.",
+"ta": "2026 ஏப்ரல் 4 ஆம் திகதி அங்கீகரிக்கப்பட்ட முதலாம் கட்டக் கட்டமைப்பின்படி, ஆணைக்குழுவின் செயலகம் நிறைவேற்றுப் பணிப்பாளரின் தலைமையில் நான்கு பிரிவுகளாக ஒழுங்கமைக்கப்பட்டுள்ளது."
+},
+"div.top": {
+"en": "Chairperson and six Commissioners",
+"si": "සභාපතිවරිය සහ කොමසාරිස්වරුන් හය දෙනා",
+"ta": "தவிசாளரும் ஆறு ஆணையாளர்களும்"
+},
+"div.ed": {
+"en": "Executive Director",
+"si": "විධායක අධ්‍යක්ෂ",
+"ta": "நிறைவேற்றுப் பணிப்பாளர்"
+},
+"div.admin": {
+"en": "Administration",
+"si": "පරිපාලන",
+"ta": "நிர்வாகம்"
+},
+"div.admin.lead": {
+"en": "Assistant Director (Admin)",
+"si": "සහකාර අධ්‍යක්ෂ (පරිපාලන)",
+"ta": "உதவிப் பணிப்பாளர் (நிர்வாகம்)"
+},
+"div.ao": {
+"en": "Administrative Officer",
+"si": "පරිපාලන නිලධාරී",
+"ta": "நிர்வாக உத்தியோகத்தர்"
+},
+"div.ma": {
+"en": "Management Assistant",
+"si": "කළමනාකරණ සහකාර",
+"ta": "முகாமைத்துவ உதவியாளர்"
+},
+"div.drivers": {
+"en": "Drivers (2)",
+"si": "රියදුරන් (2)",
+"ta": "சாரதிகள் (2)"
+},
+"div.oa": {
+"en": "Office Assistants (2)",
+"si": "කාර්යාල සහායකයින් (2)",
+"ta": "அலுவலக உதவியாளர்கள் (2)"
+},
+"div.fin": {
+"en": "Finance",
+"si": "මුදල්",
+"ta": "நிதி"
+},
+"div.fin.lead": {
+"en": "Director Finance",
+"si": "අධ්‍යක්ෂ (මුදල්)",
+"ta": "பணிப்பாளர் (நிதி)"
+},
+"div.dos": {
+"en": "Development Officers (2)",
+"si": "සංවර්ධන නිලධාරීන් (2)",
+"ta": "அபிவிருத்தி உத்தியோகத்தர்கள் (2)"
+},
+"div.rd": {
+"en": "Research and Development",
+"si": "පර්යේෂණ හා සංවර්ධන",
+"ta": "ஆராய்ச்சி மற்றும் அபிவிருத்தி"
+},
+"div.rd.lead": {
+"en": "Director Research and Development",
+"si": "අධ්‍යක්ෂ (පර්යේෂණ හා සංවර්ධන)",
+"ta": "பணிப்பாளர் (ஆராய்ச்சி மற்றும் அபிவிருத்தி)"
+},
+"div.do": {
+"en": "Development Officer",
+"si": "සංවර්ධන නිලධාරී",
+"ta": "அபிவிருத்தி உத்தியோகத்தர்"
+},
+"div.legal": {
+"en": "Legal Affairs",
+"si": "නීති කටයුතු",
+"ta": "சட்ட அலுவல்கள்"
+},
+"div.legal.lead": {
+"en": "Director Legal Affairs",
+"si": "අධ්‍යක්ෂ (නීති කටයුතු)",
+"ta": "பணிப்பாளர் (சட்ட அலுவல்கள்)"
+},
+"div.adlegal": {
+"en": "Assistant Director (Legal Affairs)",
+"si": "සහකාර අධ්‍යක්ෂ (නීති කටයුතු)",
+"ta": "உதவிப் பணிப்பாளர் (சட்ட அலுவல்கள்)"
+},
+"docs.h1": {
+"en": "Documentation",
+"si": "ලේඛන",
+"ta": "ஆவணங்கள்"
+},
+"docs.lead": {
+"en": "Submissions, recommendations, statements and publications issued by the Commission. Each document opens as a PDF in a new tab. Sinhala and Tamil versions are added as they become available.",
+"si": "කොමිෂන් සභාව විසින් නිකුත් කරන ලද යෝජනා, නිර්දේශ, ප්‍රකාශ සහ ප්‍රකාශන. සෑම ලේඛනයක්ම නව ටැබයක PDF ලෙස විවෘත වේ. සිංහල සහ දෙමළ පිටපත් ලැබෙන පරිදි එක් කරනු ලැබේ.",
+"ta": "ஆணைக்குழுவினால் வெளியிடப்பட்ட சமர்ப்பணங்கள், விதப்புரைகள், அறிக்கைகள் மற்றும் வெளியீடுகள். ஒவ்வொரு ஆவணமும் புதிய தாவலில் PDF ஆகத் திறக்கும். சிங்கள, தமிழ்ப் பதிப்புகள் கிடைக்கப்பெறும்போது சேர்க்கப்படும்."
+},
+"docs.f.all": {
+"en": "All",
+"si": "සියල්ල",
+"ta": "அனைத்தும்"
+},
+"docs.f.sub": {
+"en": "Submissions and Recommendations",
+"si": "යෝජනා සහ නිර්දේශ",
+"ta": "சமர்ப்பணங்களும் விதப்புரைகளும்"
+},
+"docs.f.stmt": {
+"en": "Statements",
+"si": "ප්‍රකාශ",
+"ta": "அறிக்கைகள்"
+},
+"docs.f.pub": {
+"en": "Publications",
+"si": "ප්‍රකාශන",
+"ta": "வெளியீடுகள்"
+},
+"press.h1": {
+"en": "Press Releases",
+"si": "මාධ්‍ය නිවේදන",
+"ta": "ஊடக அறிக்கைகள்"
+},
+"press.lead": {
+"en": "Media statements issued by the Commission.",
+"si": "කොමිෂන් සභාව විසින් නිකුත් කරන ලද මාධ්‍ය ප්‍රකාශ.",
+"ta": "ஆணைக்குழுவினால் வெளியிடப்பட்ட ஊடக அறிக்கைகள்."
+},
+"con.h1": {
+"en": "Head Office",
+"si": "ප්‍රධාන කාර්යාලය",
+"ta": "தலைமை அலுவலகம்"
+},
+"con.lead": {
+"en": "Contact the National Commission on Women at its head office.",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවේ ප්‍රධාන කාර්යාලය අමතන්න.",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழுவை அதன் தலைமை அலுவலகத்தில் தொடர்புகொள்ளுங்கள்."
+},
+"con.addr.l": {
+"en": "Address",
+"si": "ලිපිනය",
+"ta": "முகவரி"
+},
+"con.addr": {
+"en": "No. 110/9, Wijerama Mawatha, Colombo 07, Sri Lanka",
+"si": "අංක 110/9, විජේරාම මාවත, කොළඹ 07, ශ්‍රී ලංකාව",
+"ta": "இல. 110/9, விஜேராம மாவத்தை, கொழும்பு 07, இலங்கை"
+},
+"con.phone.l": {
+"en": "Phone",
+"si": "දුරකථන",
+"ta": "தொலைபேசி"
+},
+"con.email.l": {
+"en": "Email",
+"si": "විද්‍යුත් තැපෑල",
+"ta": "மின்னஞ்சல்"
+},
+"con.how": {
+"en": "How to Make a Complaint",
+"si": "පැමිණිල්ලක් ඉදිරිපත් කරන ආකාරය",
+"ta": "முறைப்பாடு செய்யும் முறை"
+},
+"con.how.1": {
+"en": "An aggrieved person, or anyone acting on her behalf, may apply to the Commission. The application must be made within one month of the infringement, or of becoming aware of it.",
+"si": "අගතියට පත් පුද්ගලයෙකුට හෝ ඇය වෙනුවෙන් ක්‍රියා කරන ඕනෑම අයෙකුට කොමිෂන් සභාවට ඉල්ලුම් කළ හැකිය. උල්ලංඝනය සිදු වූ දින සිට හෝ ඒ පිළිබඳව දැනගත් දින සිට මාසයක් ඇතුළත ඉල්ලුම්පත්‍රය ඉදිරිපත් කළ යුතුය.",
+"ta": "பாதிக்கப்பட்ட நபர் அல்லது அவர் சார்பில் செயற்படும் எவரும் ஆணைக்குழுவிடம் விண்ணப்பிக்கலாம். மீறல் இடம்பெற்ற திகதியிலிருந்து அல்லது அது பற்றி அறிந்துகொண்ட திகதியிலிருந்து ஒரு மாதத்திற்குள் விண்ணப்பம் செய்யப்பட வேண்டும்."
+},
+"con.how.2": {
+"en": "After deciding on the complaint, the Commission must inform the aggrieved person of the action taken within 14 days of the decision.",
+"si": "පැමිණිල්ල සම්බන්ධයෙන් තීරණය කළ පසු, ගත් ක්‍රියාමාර්ගය පිළිබඳව තීරණය ගත් දින සිට දින 14ක් ඇතුළත කොමිෂන් සභාව අගතියට පත් පුද්ගලයාට දැනුම් දිය යුතුය.",
+"ta": "முறைப்பாடு தொடர்பில் தீர்மானித்த பின்னர், மேற்கொண்ட நடவடிக்கை குறித்துத் தீர்மானத் திகதியிலிருந்து 14 நாட்களுக்குள் ஆணைக்குழு பாதிக்கப்பட்ட நபருக்கு அறிவிக்க வேண்டும்."
+},
+"stub.p": {
+"en": "This section is being prepared. Content will be published here as it becomes available.<br>In the meantime, you can contact the Commission directly at <strong>contact.ncw@gmail.com</strong>.",
+"si": "මෙම කොටස සකස් කරමින් පවතී. අන්තර්ගතය ලැබෙන පරිදි මෙහි පළ කරනු ලැබේ.<br>මේ අතරතුර, ඔබට <strong>contact.ncw@gmail.com</strong> හරහා කොමිෂන් සභාව සෘජුවම සම්බන්ධ කර ගත හැකිය.",
+"ta": "இப்பகுதி தயாரிக்கப்பட்டு வருகின்றது. உள்ளடக்கம் கிடைக்கப்பெறும்போது இங்கு வெளியிடப்படும்.<br>இதற்கிடையில், <strong>contact.ncw@gmail.com</strong> ஊடாக ஆணைக்குழுவை நேரடியாகத் தொடர்புகொள்ளலாம்."
+},
+"stub.back": {
+"en": "← Back to Home",
+"si": "← මුල් පිටුවට",
+"ta": "← முகப்புக்குத் திரும்புக"
+},
+"foot.name": {
+"en": "National Commission on Women",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழு"
+},
+"foot.desc": {
+"en": "An independent commission established under the Women Empowerment Act No. 37 of 2024 to protect and promote the rights of women in Sri Lanka.",
+"si": "ශ්‍රී ලංකාවේ කාන්තාවන්ගේ අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම සඳහා 2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත යටතේ පිහිටුවන ලද ස්වාධීන කොමිෂන් සභාවකි.",
+"ta": "இலங்கையில் பெண்களின் உரிமைகளைப் பாதுகாத்து மேம்படுத்துவதற்காக 2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டத்தின் கீழ் தாபிக்கப்பட்ட சுயாதீன ஆணைக்குழு."
+},
+"foot.nav": {
+"en": "Navigate",
+"si": "සංචලනය",
+"ta": "வழிசெலுத்தல்"
+},
+"foot.info": {
+"en": "Information",
+"si": "තොරතුරු",
+"ta": "தகவல்கள்"
+},
+"foot.sp": {
+"en": "Strategic Plan 2027–2031",
+"si": "2027–2031 උපායමාර්ගික සැලැස්ම",
+"ta": "மூலோபாயத் திட்டம் 2027–2031"
+},
+"foot.act": {
+"en": "Women Empowerment Act 2024",
+"si": "2024 කාන්තාවන් සවිබල ගැන්වීමේ පනත",
+"ta": "பெண்களின் வலுவூட்டல் சட்டம் 2024"
+},
+"foot.copy": {
+"en": "© 2026 National Commission on Women, Sri Lanka",
+"si": "© 2026 කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව, ශ්‍රී ලංකාව",
+"ta": "© 2026 பெண்கள் பற்றிய தேசிய ஆணைக்குழு, இலங்கை"
+},
+"foot.est": {
+"en": "Established under Women Empowerment Act No. 37 of 2024",
+"si": "2024 අංක 37 දරන කාන්තාවන් සවිබල ගැන්වීමේ පනත යටතේ පිහිටුවන ලදී",
+"ta": "2024 ஆம் ஆண்டின் 37 ஆம் இலக்க பெண்களின் வலுவூட்டல் சட்டத்தின் கீழ் தாபிக்கப்பட்டது"
+},
+"a11y.h": {
+"en": "Accessibility",
+"si": "ප්‍රවේශ්‍යතාව",
+"ta": "அணுகல்தன்மை"
+},
+"a11y.font": {
+"en": "Font Size",
+"si": "අකුරු ප්‍රමාණය",
+"ta": "எழுத்தளவு"
+},
+"a11y.kbd": {
+"en": "Keyboard Navigation",
+"si": "යතුරුපුවරු සංචලනය",
+"ta": "விசைப்பலகை வழிசெலுத்தல்"
+},
+"a11y.readable": {
+"en": "Readable Font",
+"si": "පහසුවෙන් කියවිය හැකි අකුරු",
+"ta": "வாசிக்க இலகுவான எழுத்துரு"
+},
+"a11y.contrast": {
+"en": "Contrast",
+"si": "වර්ණ වෙනස",
+"ta": "வேறுபாட்டு நிறம்"
+},
+"a11y.default": {
+"en": "Default",
+"si": "සාමාන්‍ය",
+"ta": "இயல்புநிலை"
+},
+"a11y.dark": {
+"en": "Dark",
+"si": "අඳුරු",
+"ta": "இருண்ட"
+},
+"a11y.yellow": {
+"en": "Yellow / Black",
+"si": "කහ / කළු",
+"ta": "மஞ்சள் / கறுப்பு"
+},
+"a11y.grey": {
+"en": "Greyscale",
+"si": "අළු පැහැය",
+"ta": "சாம்பல்நிறம்"
+},
+"a11y.reset": {
+"en": "Reset All",
+"si": "සියල්ල යළි සකසන්න",
+"ta": "அனைத்தையும் மீளமைக்க"
+},
+"ui.enable": {
+"en": "Enable",
+"si": "සක්‍රිය කරන්න",
+"ta": "இயக்குக"
+},
+"ui.disable": {
+"en": "Disable",
+"si": "අක්‍රිය කරන්න",
+"ta": "நிறுத்துக"
+},
+"ui.forthcoming": {
+"en": "Forthcoming",
+"si": "ඉදිරියේදී",
+"ta": "விரைவில்"
+},
+"ui.nodocs": {
+"en": "No documents in this category yet.",
+"si": "මෙම කාණ්ඩයේ තවම ලේඛන නොමැත.",
+"ta": "இப்பிரிவில் இன்னும் ஆவணங்கள் இல்லை."
+},
+"ui.readbio": {
+"en": "Read biography",
+"si": "චරිතාපදානය කියවන්න",
+"ta": "சுயவிபரத்தை வாசிக்க"
+},
+"ui.tba": {
+"en": "To be announced",
+"si": "පසුව දැනුම් දෙනු ලැබේ",
+"ta": "பின்னர் அறிவிக்கப்படும்"
+},
+"ui.tbadetail": {
+"en": "Details will be published shortly.",
+"si": "විස්තර ඉක්මනින් පළ කරනු ලැබේ.",
+"ta": "விபரங்கள் விரைவில் வெளியிடப்படும்."
+},
+"ui.chair": {
+"en": "Chairperson",
+"si": "සභාපතිවරිය",
+"ta": "தவிசாளர்"
+},
+"ui.commissioner": {
+"en": "Commissioner",
+"si": "කොමසාරිස්",
+"ta": "ஆணையாளர்"
+},
+"ui.type.submission": {
+"en": "Submission and Recommendations",
+"si": "යෝජනා සහ නිර්දේශ",
+"ta": "சமர்ப்பணமும் விதப்புரைகளும்"
+},
+"ui.type.statement": {
+"en": "Statement",
+"si": "ප්‍රකාශය",
+"ta": "அறிக்கை"
+},
+"ui.type.publication": {
+"en": "Publication",
+"si": "ප්‍රකාශනය",
+"ta": "வெளியீடு"
+},
+"ui.title": {
+"en": "National Commission on Women — Sri Lanka",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාව — ශ්‍රී ලංකාව",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழு — இலங்கை"
+}
+};
+const STUB = {
+"Case Recommendations": {
+"en": "Case Recommendations",
+"si": "පැමිණිලි සම්බන්ධ නිර්දේශ",
+"ta": "வழக்கு விதப்புரைகள்"
+},
+"Mediations": {
+"en": "Mediations",
+"si": "සමථකරණ",
+"ta": "மத்தியஸ்தங்கள்"
+},
+"Events": {
+"en": "Events",
+"si": "සිදුවීම්",
+"ta": "நிகழ்வுகள்"
+},
+"Regional Offices": {
+"en": "Regional Offices",
+"si": "ප්‍රාදේශීය කාර්යාල",
+"ta": "பிராந்திய அலுவலகங்கள்"
+},
+"Sub Offices": {
+"en": "Sub Offices",
+"si": "උප කාර්යාල",
+"ta": "உப அலுவலகங்கள்"
+},
+"Download the Forms": {
+"en": "Download the Forms",
+"si": "ආකෘති පත්‍ර බාගත කරන්න",
+"ta": "படிவங்களைப் பதிவிறக்குக"
+},
+"Information Officers": {
+"en": "Information Officers",
+"si": "තොරතුරු නිලධාරීන්",
+"ta": "தகவல் உத்தியோகத்தர்கள்"
+},
+"Information available to the Public": {
+"en": "Information available to the Public",
+"si": "මහජනතාවට ලබාගත හැකි තොරතුරු",
+"ta": "பொதுமக்களுக்குக் கிடைக்கக்கூடிய தகவல்கள்"
+},
+"Information not available for Public Disclosure": {
+"en": "Information not available for Public Disclosure",
+"si": "මහජනතාවට හෙළි නොකෙරෙන තොරතුරු",
+"ta": "பொதுமக்களுக்கு வெளிப்படுத்தப்படாத தகவல்கள்"
+},
+"Progress of Complaints": {
+"en": "Progress of Complaints",
+"si": "පැමිණිලිවල ප්‍රගතිය",
+"ta": "முறைப்பாடுகளின் முன்னேற்றம்"
+},
+"Daily Inquiry Schedule": {
+"en": "Daily Inquiry Schedule",
+"si": "දෛනික පරීක්ෂණ කාලසටහන",
+"ta": "தினசரி விசாரணை அட்டவணை"
+}
+};
+let LANG = 'en';
+function t(key){ const e = I18N[key]; return e ? (e[LANG] || e.en) : key; }
+function L(obj){ return obj ? (obj[LANG] || obj.en) : ''; }
+
+function setLang(lang){
+  LANG = lang;
+  document.documentElement.lang = lang;
+  document.title = t('ui.title');
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const e = I18N[el.getAttribute('data-i18n')];
+    if(e) el.innerHTML = e[lang] || e.en;
+  });
+  setSiteLangPill(lang);
+  renderDocs(); renderCarousels(); renderMembers();
+  if(currentStub) setStubTitle(currentStub);
+  refreshA11yLabels();
+  if(document.getElementById('bio-modal').classList.contains('open')) closeBio();
+}
+
+// ══════════════════════════════════════════════
+//  DOCUMENTS — all PDFs live in static/files/
+//  To add a translation later: put the PDF in static/files/
+//  and fill in the matching si / ta file name below.
+// ══════════════════════════════════════════════
+const FILES = 'static/files/';
+const DOCS = [
+{
+"id": "pdv-bill-2026",
+"type": "submission",
+"sort": "2026-08-21",
+"files": {
+"en": "ncw-pdv-bill-recommendations-2026-english.pdf",
+"si": null,
+"ta": null
+},
+"title": {
+"en": "Recommendations to Strengthen the Draft Prevention of Domestic Violence Bill",
+"si": "ගෘහස්ථ ප්‍රචණ්ඩත්වය වැළැක්වීමේ පනත් කෙටුම්පත ශක්තිමත් කිරීම සඳහා නිර්දේශ",
+"ta": "வீட்டு வன்முறையைத் தடுத்தல் சட்டமூல வரைவை வலுப்படுத்துவதற்கான விதப்புரைகள்"
+},
+"desc": {
+"en": "Recommendations by the Commission on the Draft Prevention of Domestic Violence Bill (version dated 14 January 2026), including a proposed new section on annual reporting and data collection.",
+"si": "ගෘහස්ථ ප්‍රචණ්ඩත්වය වැළැක්වීමේ පනත් කෙටුම්පත (2026 ජනවාරි 14 දිනැති පිටපත) සම්බන්ධයෙන් කොමිෂන් සභාවේ නිර්දේශ. වාර්ෂික වාර්තාකරණය සහ දත්ත රැස් කිරීම පිළිබඳ යෝජිත නව වගන්තියක් ද මෙයට ඇතුළත් වේ.",
+"ta": "வீட்டு வன்முறையைத் தடுத்தல் சட்டமூல வரைவு (2026 ஜனவரி 14 திகதியிடப்பட்ட பதிப்பு) தொடர்பான ஆணைக்குழுவின் விதப்புரைகள். வருடாந்த அறிக்கையிடல் மற்றும் தரவு சேகரிப்பு தொடர்பான புதிய பிரிவொன்றுக்கான முன்மொழிவும் இதில் அடங்கும்."
+},
+"date": {
+"en": "August 2026",
+"si": "2026 අගෝස්තු",
+"ta": "2026 ஓகஸ்ட்"
+}
+},
+{
+"id": "strategic-plan",
+"type": "publication",
+"sort": "2026-08-24",
+"files": {
+"en": "ncw-strategic-plan-2027-2031-english.pdf",
+"si": null,
+"ta": null
+},
+"title": {
+"en": "National Commission on Women Strategic Plan 2027–2031",
+"si": "කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවේ 2027–2031 උපායමාර්ගික සැලැස්ම",
+"ta": "பெண்கள் பற்றிய தேசிய ஆணைக்குழுவின் மூலோபாயத் திட்டம் 2027–2031"
+},
+"desc": {
+"en": "The Commission’s first five-year Strategic Plan, setting out its vision, mission, thematic areas and monitoring framework.",
+"si": "කොමිෂන් සභාවේ දැක්ම, මෙහෙවර, තේමාත්මක ක්ෂේත්‍ර සහ අධීක්ෂණ රාමුව දැක්වෙන ප්‍රථම පංච වාර්ෂික උපායමාර්ගික සැලැස්ම.",
+"ta": "ஆணைக்குழுவின் தூரநோக்கு, பணிக்கூற்று, கருப்பொருள் பரப்புகள் மற்றும் கண்காணிப்புச் சட்டகத்தை வரையறுக்கும் முதலாவது ஐந்தாண்டு மூலோபாயத் திட்டம்."
+},
+"date": {
+"en": "August 2026",
+"si": "2026 අගෝස්තු",
+"ta": "2026 ஓகஸ்ட்"
+}
+},
+{
+"id": "gender-brief",
+"type": "publication",
+"sort": "2026-07-01",
+"files": {
+"en": "ncw-gender-brief-2026-english.pdf",
+"si": null,
+"ta": null
+},
+"title": {
+"en": "Advancing Inclusion and Upholding Equality: A Brief on Gender and Related Terms",
+"si": "ඇතුළත් කිරීම ප්‍රවර්ධනය කිරීම සහ සමානාත්මතාවය සුරැකීම: ස්ත්‍රී පුරුෂ සමාජභාවය සහ ඊට අදාළ පද පිළිබඳ කෙටි සටහනක්",
+"ta": "உள்ளடக்கத்தை முன்னேற்றுதலும் சமத்துவத்தை நிலைநிறுத்தலும்: பால்நிலை மற்றும் தொடர்புடைய சொற்கள் பற்றிய சுருக்கக் குறிப்பு"
+},
+"desc": {
+"en": "A brief clarifying gender and related terms with reference to CEDAW, and outlining how these terms have developed in Sri Lanka’s laws and policies.",
+"si": "CEDAW සම්මුතිය ඇසුරින් ස්ත්‍රී පුරුෂ සමාජභාවය සහ ඊට අදාළ පද පැහැදිලි කරන අතර, එම පද ශ්‍රී ලංකාවේ නීති සහ ප්‍රතිපත්තිවල වර්ධනය වූ ආකාරය දක්වන කෙටි සටහනකි.",
+"ta": "CEDAW சமவாயத்தைக் குறிப்பிட்டு பால்நிலை மற்றும் தொடர்புடைய சொற்களைத் தெளிவுபடுத்துவதுடன், இலங்கையின் சட்டங்களிலும் கொள்கைகளிலும் இச்சொற்கள் வளர்ச்சியடைந்த விதத்தையும் விளக்கும் சுருக்கக் குறிப்பு."
+},
+"date": {
+"en": "2026",
+"si": "2026",
+"ta": "2026"
+}
+},
+{
+"id": "health-policy",
+"type": "submission",
+"sort": "2026-04-20",
+"files": {
+"en": "ncw-health-policy-submission-2026-english.pdf",
+"si": "ncw-health-policy-submission-2026-sinhala.pdf",
+"ta": null
+},
+"title": {
+"en": "Submission on the Draft National Policy on Health and Wellbeing Sri Lanka (2026–2035)",
+"si": "ශ්‍රී ලංකාවේ සෞඛ්‍ය හා යහපැවැත්ම පිළිබඳ ජාතික ප්‍රතිපත්තිය [කෙටුම්පත] (2026–2035) සම්බන්ධයෙන් කොමිෂන් සභාවේ යෝජනා",
+"ta": "இலங்கையின் சுகாதாரம் மற்றும் நல்வாழ்வு தொடர்பான தேசியக் கொள்கை வரைவு (2026–2035) குறித்த சமர்ப்பணம்"
+},
+"desc": {
+"en": "Six recommendations to strengthen the Draft Policy in line with the State’s obligations under CEDAW in relation to health and wellbeing.",
+"si": "සෞඛ්‍ය හා යහපැවැත්ම සම්බන්ධයෙන් CEDAW සම්මුතිය යටතේ රාජ්‍යයේ බැඳීම්වලට අනුකූලව ප්‍රතිපත්ති කෙටුම්පත ශක්තිමත් කිරීම සඳහා නිර්දේශ හයක්.",
+"ta": "சுகாதாரம் மற்றும் நல்வாழ்வு தொடர்பில் CEDAW சமவாயத்தின் கீழான அரசின் கடப்பாடுகளுக்கு அமைவாகக் கொள்கை வரைவை வலுப்படுத்துவதற்கான ஆறு விதப்புரைகள்."
+},
+"date": {
+"en": "20 April 2026",
+"si": "2026 අප්‍රේල් 20",
+"ta": "2026 ஏப்ரல் 20"
+}
+},
+{
+"id": "iwd-2026",
+"type": "statement",
+"sort": "2026-03-08",
+"files": {
+"en": "ncw-iwd-statement-2026-english.pdf",
+"si": "ncw-iwd-statement-2026-sinhala.pdf",
+"ta": "ncw-iwd-statement-2026-tamil.pdf"
+},
+"title": {
+"en": "Media Statement on International Women’s Day 2026",
+"si": "ජාත්‍යන්තර කාන්තා දින ප්‍රකාශය 2026",
+"ta": "சர்வதேச மகளிர் தினம் தொடர்பான அறிக்கை 2026"
+},
+"desc": {
+"en": "The Commission renews its commitment to protecting and promoting women’s rights, and sets out the functions it will commence.",
+"si": "කාන්තා අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම සඳහා වූ සිය කැපවීම කොමිෂන් සභාව යළි තහවුරු කරන අතර, ආරම්භ කරන කාර්යයන් දක්වයි.",
+"ta": "பெண்களின் உரிமைகளைப் பாதுகாத்து மேம்படுத்துவதற்கான தனது கடப்பாட்டை ஆணைக்குழு புதுப்பிப்பதுடன், தான் தொடங்கவுள்ள செயற்பாடுகளையும் குறிப்பிடுகின்றது."
+},
+"date": {
+"en": "8 March 2026",
+"si": "2026 මාර්තු 8",
+"ta": "2026 மார்ச் 8"
+}
+},
+{
+"id": "mmda-2026",
+"type": "submission",
+"sort": "2026-02-28",
+"files": {
+"en": "ncw-mmda-submission-2026-english.pdf",
+"si": "ncw-mmda-submission-2026-sinhala.pdf",
+"ta": null
+},
+"title": {
+"en": "Proposed Reforms to the Muslim Marriage and Divorce Act (MMDA)",
+"si": "මුස්ලිම් විවාහ සහ දික්කසාද පනතට (MMDA) යෝජිත ප්‍රතිසංස්කරණ",
+"ta": "முஸ்லிம் விவாக, விவாகரத்துச் சட்டத்திற்கு (MMDA) முன்மொழியப்பட்ட சீர்திருத்தங்கள்"
+},
+"desc": {
+"en": "The Commission’s proposals and recommendations submitted to the Advisory Committee on Muslim Law Reforms.",
+"si": "මුස්ලිම් නීති ප්‍රතිසංස්කරණ පිළිබඳ උපදේශක කමිටුවට ඉදිරිපත් කළ කොමිෂන් සභාවේ යෝජනා සහ නිර්දේශ.",
+"ta": "முஸ்லிம் சட்டச் சீர்திருத்தங்கள் தொடர்பான ஆலோசனைக் குழுவிற்குச் சமர்ப்பிக்கப்பட்ட ஆணைக்குழுவின் முன்மொழிவுகளும் விதப்புரைகளும்."
+},
+"date": {
+"en": "28 February 2026",
+"si": "2026 පෙබරවාරි 28",
+"ta": "2026 பெப்ரவரி 28"
+}
+},
+{
+"id": "child-protection-statement",
+"type": "statement",
+"sort": "2026-00-00",
+"files": {
+"en": "ncw-statement-child-protection-2026-english.pdf",
+"si": "ncw-statement-child-protection-2026-sinhala.pdf",
+"ta": "ncw-statement-child-protection-2026-tamil.pdf"
+},
+"title": {
+"en": "Media Statement on Protection and Access to Justice of the Child in Alleged Sexual Abuse Case",
+"si": "ලිංගික අපයෝජන චෝදනා සම්බන්ධ දරුවාගේ ආරක්ෂාව සහ යුක්තිය සඳහා ප්‍රවේශය පිළිබඳ මාධ්‍ය ප්‍රකාශය",
+"ta": "பாலியல் துஷ்பிரயோக வழக்கில் வன்கொடுமைக்கு ஆளான சிறுமியின் பாதுகாப்பு மற்றும் நீதிக்கான வழி குறித்த அறிக்கை"
+},
+"desc": {
+"en": "The Commission calls on the National Child Protection Authority, the Police, the Attorney General’s Department, the media and the public to protect the rights, privacy and wellbeing of the child survivor.",
+"si": "අපයෝජනයෙන් දිවි ගලවා ගත් දරුවාගේ අයිතිවාසිකම්, පෞද්ගලිකත්වය සහ යහපැවැත්ම ආරක්ෂා කරන ලෙස ජාතික ළමා ආරක්ෂක අධිකාරියෙන්, පොලීසියෙන්, නීතිපති දෙපාර්තමේන්තුවෙන්, මාධ්‍යයෙන් සහ මහජනතාවගෙන් කොමිෂන් සභාව ඉල්ලා සිටී.",
+"ta": "பாதிக்கப்பட்ட சிறுமியின் உரிமைகள், தனியுரிமை மற்றும் நல்வாழ்வைப் பாதுகாக்குமாறு தேசிய சிறுவர் பாதுகாப்பு அதிகாரசபை, பொலிஸார், சட்டமா அதிபர் திணைக்களம், ஊடகங்கள் மற்றும் பொதுமக்களிடம் ஆணைக்குழு கோருகின்றது."
+},
+"date": {
+"en": "",
+"si": "",
+"ta": ""
+}
+}
+];
+const LANGS = [
+  { key:'en', label:'English', lang:'en', name:'English' },
+  { key:'si', label:'සිංහල', lang:'si', name:'Sinhala' },
+  { key:'ta', label:'தமிழ்', lang:'ta', name:'Tamil' }
+];
+function typeLabel(type){ return t('ui.type.'+type); }
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function sortedDocs(){ return DOCS.slice().sort((a,b)=> b.sort.localeCompare(a.sort)); }
+function docLangLinks(d){
+  return LANGS.map(l=>{
+    const f = d.files[l.key];
+    if(f){
+      return '<a class="doc-lang" href="'+FILES+f+'" target="_blank" rel="noopener" hreflang="'+l.lang+'" aria-label="'+esc(d.title.en)+', '+l.name+' PDF"><span lang="'+l.lang+'">'+l.label+'</span><small>PDF</small></a>';
+    }
+    return '<span class="doc-lang na"><span lang="'+l.lang+'">'+l.label+'</span><small>'+esc(t('ui.forthcoming'))+'</small></span>';
+  }).join('');
+}
+function docItem(d, prefix){
+  const date = L(d.date);
+  return '<article class="doc-item" id="'+prefix+d.id+'" data-type="'+d.type+'">'
+    + '<div><span class="doc-type">'+esc(typeLabel(d.type))+'</span>'
+    + '<h3>'+esc(L(d.title))+'</h3><p>'+esc(L(d.desc))+'</p>'
+    + (date ? '<div class="doc-date">'+esc(date)+'</div>' : '')
+    + '</div><div class="doc-langs">'+docLangLinks(d)+'</div></article>';
+}
+let docFilter = 'all';
+function renderDocs(){
+  const list = sortedDocs().filter(d=> docFilter==='all' || d.type===docFilter);
+  document.getElementById('doc-list').innerHTML = list.length
+    ? list.map(d=>docItem(d,'doc-')).join('')
+    : '<p class="doc-empty">'+esc(t('ui.nodocs'))+'</p>';
+  document.getElementById('press-list').innerHTML =
+    sortedDocs().filter(d=>d.type==='statement').map(d=>docItem(d,'press-')).join('');
+}
+function setDocFilter(f){
+  docFilter = f;
+  document.querySelectorAll('.doc-filter button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.filter===f));
+  renderDocs();
+}
+function openDocs(f){ setDocFilter(f || 'all'); go('documentation'); }
+function openDoc(id){
+  setDocFilter('all');
+  go('documentation');
+  setTimeout(function(){
+    const el = document.getElementById('doc-'+id);
+    if(!el) return;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    el.classList.add('flash');
+    setTimeout(()=>el.classList.remove('flash'), 1800);
+  }, 350);
+}
+
+// ── HOME CAROUSELS (built from DOCS) ──
+function carCard(d, alt){
+  const date = L(d.date);
+  const meta = (date ? esc(date)+' · ' : '') + esc(typeLabel(d.type));
+  return '<div class="car-card" role="link" tabindex="0" onclick="openDoc(\''+d.id+'\')" onkeydown="if(event.key===\'Enter\')openDoc(\''+d.id+'\')">'
+    + '<div class="car-img'+(alt?' alt':'')+'"><img src="static/images/ncw-logo.png" alt=""><div class="ciw">'+esc(typeLabel(d.type))+'</div></div>'
+    + '<div class="car-body"><h4>'+esc(L(d.title))+'</h4><p>'+esc(L(d.desc))+'</p><div class="car-meta">'+meta+'</div></div></div>';
+}
+function renderCarousels(){
+  document.getElementById('newsTrack').innerHTML = sortedDocs().filter(d=>d.type!=='submission').map(d=>carCard(d,false)).join('');
+  document.getElementById('actTrack').innerHTML = sortedDocs().filter(d=>d.type==='submission').map(d=>carCard(d,true)).join('');
+  Object.keys(carState).forEach(function(id){ carState[id]=0; const tr=document.getElementById(id); if(tr) tr.style.transform='translateX(0)'; });
+}
+
+// ══════════════════════════════════════════════
+//  MEMBERS — photos live in static/images/commissioners/
+// ══════════════════════════════════════════════
+const MEMBERS = [
+{
+"photo": "static/images/commissioners/grace-asirwatham.jpg",
+"chair": true,
+"name": {
+"en": "Grace Asirwatham",
+"si": "ග්‍රේස් අසිර්වාතම්",
+"ta": "கிரேஸ் ஆசீர்வாதம்"
+},
+"short": {
+"en": "Retired Ambassador, Sri Lanka Foreign Service",
+"si": "විශ්‍රාමික තානාපතිවරිය, ශ්‍රී ලංකා විදේශ සේවය",
+"ta": "ஓய்வுபெற்ற தூதுவர், இலங்கை வெளிநாட்டுச் சேவை"
+},
+"bio": {
+"en": [
+"Grace Asirwatham is a retired Ambassador and member of the Sri Lanka Foreign Service, with 36 years of service as a diplomat and international civil servant. She has served as Sri Lanka’s Ambassador to Nepal, the Netherlands, Belgium, and Luxembourg. She also served as Permanent Representative to the Organisation for the Prohibition of Chemical Weapons (OPCW) and as Head of Mission of Sri Lanka to the European Union in Brussels. In addition, she has served in diplomatic postings in Bonn, Germany, and Islamabad, Pakistan.",
+"As an international civil servant, she served at the OPCW as Deputy Director-General with the United Nations rank of Assistant Secretary-General (ASG). She has also held several senior positions in the Ministry of Foreign Affairs in Colombo, including Secretary to the State Ministry of Foreign Affairs.",
+"Grace Asirwatham holds a Bachelor’s Degree in Business Administration (BSc) from the University of Jaffna and a Master’s Degree in International Relations from the University of Colombo.",
+"In recognition of her services as Ambassador to Nepal, she was conferred the honorary title “Sri Lankabimanya Deshabandhu Diriya Matha” by Sri Lanka Wiswa Samadhi Padanama. She has also been awarded a Gold Award in the State and Government Sector as part of the Top 50 Professional and Career Women Awards 2021 by Women in Management Sri Lanka, in collaboration with the International Finance Corporation (IFC) and Australian Aid (AusAID)."
+],
+"si": [
+"ග්‍රේස් අසිර්වාතම් මහත්මිය ශ්‍රී ලංකා විදේශ සේවයේ සාමාජිකාවක සහ විශ්‍රාමික තානාපතිවරියක වන අතර, රාජ්‍ය තාන්ත්‍රිකයෙකු සහ ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස වසර 36ක සේවා කාලයක් ඇත. ඇය නේපාලය, නෙදර්ලන්තය, බෙල්ජියම සහ ලක්සම්බර්ග් යන රටවල ශ්‍රී ලංකා තානාපතිවරිය ලෙස සේවය කර ඇත. රසායනික අවි තහනම් කිරීමේ සංවිධානයේ (OPCW) ස්ථිර නියෝජිතවරිය ලෙස සහ බ්‍රසල්ස් හි යුරෝපා සංගමය සඳහා වූ ශ්‍රී ලංකා දූත මණ්ඩල ප්‍රධානී ලෙස ද ඇය සේවය කළාය. ඊට අමතරව, ජර්මනියේ බොන් සහ පාකිස්තානයේ ඉස්ලාමාබාද් නගරවල රාජ්‍ය තාන්ත්‍රික තනතුරු ද දැරුවාය.",
+"ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස, ඇය එක්සත් ජාතීන්ගේ සහකාර මහලේකම් (ASG) නිලයෙන් යුතුව OPCW හි නියෝජ්‍ය අධ්‍යක්ෂ ජනරාල් ලෙස සේවය කළාය. රාජ්‍ය විදේශ කටයුතු අමාත්‍යාංශයේ ලේකම් ධුරය ඇතුළුව, කොළඹ විදේශ කටයුතු අමාත්‍යාංශයේ ජ්‍යෙෂ්ඨ තනතුරු කිහිපයක් ද ඇය දරා ඇත.",
+"ග්‍රේස් අසිර්වාතම් මහත්මිය යාපනය විශ්වවිද්‍යාලයෙන් ව්‍යාපාර පරිපාලනය පිළිබඳ උපාධියක් (BSc) සහ කොළඹ විශ්වවිද්‍යාලයෙන් ජාත්‍යන්තර සබඳතා පිළිබඳ ශාස්ත්‍රපති උපාධියක් ලබා ඇත.",
+"නේපාලයේ තානාපතිවරිය ලෙස කළ සේවය අගයමින්, ශ්‍රී ලංකා විශ්ව සමාධි පදනම විසින් ඇයට “ශ්‍රී ලංකාභිමාන්‍ය දේශබන්ධු දිරිය මාතා” ගෞරව නාමය පිරිනමන ලදී. ජාත්‍යන්තර මූල්‍ය සංස්ථාව (IFC) සහ ඕස්ට්‍රේලියානු ආධාර (AusAID) සමඟ එක්ව Women in Management Sri Lanka ආයතනය පැවැත්වූ Top 50 Professional and Career Women Awards 2021 හිදී, රාජ්‍ය සහ රජයේ අංශය යටතේ රන් සම්මානයක් ද ඇයට හිමි විය."
+],
+"ta": [
+"கிரேஸ் ஆசீர்வாதம் இலங்கை வெளிநாட்டுச் சேவையின் உறுப்பினரும் ஓய்வுபெற்ற தூதுவருமாவார். இராஜதந்திரியாகவும் சர்வதேச சிவில் சேவையாளராகவும் 36 வருட சேவை அனுபவம் கொண்டவர். நேபாளம், நெதர்லாந்து, பெல்ஜியம் மற்றும் லக்சம்பேர்க் ஆகிய நாடுகளுக்கான இலங்கைத் தூதுவராகப் பணியாற்றியுள்ளார். இரசாயன ஆயுதங்களைத் தடைசெய்வதற்கான அமைப்பின் (OPCW) நிரந்தரப் பிரதிநிதியாகவும், பிரசல்ஸிலுள்ள ஐரோப்பிய ஒன்றியத்திற்கான இலங்கைத் தூதுக்குழுவின் தலைவராகவும் பணியாற்றியுள்ளார். மேலும், ஜேர்மனியின் பொன் மற்றும் பாகிஸ்தானின் இஸ்லாமாபாத் ஆகிய இடங்களிலும் இராஜதந்திரப் பதவிகளை வகித்துள்ளார்.",
+"சர்வதேச சிவில் சேவையாளராக, ஐக்கிய நாடுகளின் உதவிச் செயலாளர் நாயகம் (ASG) தரத்துடன் OPCW இன் பிரதிப் பணிப்பாளர் நாயகமாகப் பணியாற்றினார். இராஜாங்க வெளிநாட்டலுவல்கள் அமைச்சின் செயலாளர் பதவி உட்பட, கொழும்பிலுள்ள வெளிநாட்டலுவல்கள் அமைச்சில் பல சிரேஷ்ட பதவிகளையும் வகித்துள்ளார்.",
+"கிரேஸ் ஆசீர்வாதம் யாழ்ப்பாணப் பல்கலைக்கழகத்தில் வியாபார நிர்வாகத்தில் இளமாணிப் பட்டத்தையும் (BSc), கொழும்புப் பல்கலைக்கழகத்தில் சர்வதேச உறவுகளில் முதுமாணிப் பட்டத்தையும் பெற்றுள்ளார்.",
+"நேபாளத்திற்கான தூதுவராக அவர் ஆற்றிய சேவையைப் பாராட்டி, ஸ்ரீ லங்கா விஷ்வ சமாதி பதனம அவருக்கு “ஸ்ரீ லங்காபிமான்ய தேசபந்து திரிய மாதா” என்ற கௌரவப் பட்டத்தை வழங்கியது. சர்வதேச நிதிக் கூட்டுத்தாபனம் (IFC) மற்றும் அவுஸ்திரேலிய உதவி (AusAID) ஆகியவற்றுடன் இணைந்து Women in Management Sri Lanka நடத்திய Top 50 Professional and Career Women Awards 2021 இல், அரச மற்றும் அரசாங்கத் துறைக்கான தங்க விருதையும் பெற்றுள்ளார்."
+]
+}
+},
+{
+"photo": "static/images/commissioners/padma-gunaratne.jpg",
+"chair": false,
+"name": {
+"en": "Dr Padma Sriyani Gunaratne",
+"si": "වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න",
+"ta": "வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன"
+},
+"short": {
+"en": "Specialist Neurologist",
+"si": "විශේෂඥ ස්නායු වෛද්‍ය",
+"ta": "விசேட நரம்பியல் வைத்திய நிபுணர்"
+},
+"bio": {
+"en": [
+"Dr Padma Sriyani Gunaratne MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO is a Board-certified Specialist Neurologist with vast experience in Clinical Neurology over 35 years in the Ministry of Health, with special interest in Stroke, Rehabilitation and Elder’s Care. She is an ardent advocate of public health and has carried out numerous health promotional activities towards the benefit of the Sri Lankan community while leading as the President in many national professional organizations such as Sri Lanka Medical Association (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians and Sri Lankan Association for Geriatric Medicine, as well as by representing the Board of Directors of the international organization such as World Stroke Organizations and Asia Pacific Stroke Organization. She is the founder of the Stroke Support Organization for Sri Lankans meant for stroke patients and she authored the book “Stroke Care” in all three languages.",
+"As the President of the SLMA in 2021, during which COVID-19 pandemic devastated Sri Lanka, she led the medical profession by providing advocacy on control of the pandemic to the profession, people and to the Government of Sri Lanka. Along with the Women’s Health Committee of the SLMA, she steered the professional Association on numerous occasions for safeguarding women’s rights.",
+"She is a recipient of Women in Management Top 50 Professional & Career Women Awards 2020–2021 in Health and Medical Sector.",
+"She was appointed to the National Commission on Women in September 2025 and she envisages to ensure mechanisms to safeguard rights and equality for every woman, leaving no one behind, in Sri Lanka."
+],
+"si": [
+"වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, සෞඛ්‍ය අමාත්‍යාංශයේ වසර 35කට අධික සායනික ස්නායු වෛද්‍ය විද්‍යා පළපුරුද්දක් ඇති, මණ්ඩල සහතිකලත් විශේෂඥ ස්නායු වෛද්‍යවරියකි. ආඝාතය, පුනරුත්ථාපනය සහ වැඩිහිටි සත්කාරය ඇයගේ විශේෂ උනන්දුව දක්වන ක්ෂේත්‍ර වේ. මහජන සෞඛ්‍යය වෙනුවෙන් කැපවී සිටින ඇය, ශ්‍රී ලංකා වෛද්‍ය සංගමය (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians සහ Sri Lankan Association for Geriatric Medicine වැනි ජාතික වෘත්තීය සංවිධාන රැසක සභාපතිනිය ලෙස නායකත්වය දෙමින් ද, World Stroke Organization සහ Asia Pacific Stroke Organization වැනි ජාත්‍යන්තර සංවිධානවල අධ්‍යක්ෂ මණ්ඩල නියෝජනය කරමින් ද, ශ්‍රී ලාංකික ප්‍රජාවේ යහපත උදෙසා සෞඛ්‍ය ප්‍රවර්ධන කටයුතු රැසක් සිදු කර ඇත. ආඝාත රෝගීන් සඳහා වූ Stroke Support Organization for Sri Lankans හි නිර්මාතෘවරිය වන ඇය, “Stroke Care” ග්‍රන්ථය භාෂා තුනෙන්ම රචනා කර ඇත.",
+"COVID-19 වසංගතය ශ්‍රී ලංකාවට දැඩි ලෙස බලපෑ 2021 වසරේ ශ්‍රී ලංකා වෛද්‍ය සංගමයේ සභාපතිනිය ලෙස, වසංගතය පාලනය කිරීම පිළිබඳව වෛද්‍ය වෘත්තිකයින්ට, ජනතාවට සහ ශ්‍රී ලංකා රජයට උපදේශනය ලබා දෙමින් ඇය වෛද්‍ය වෘත්තියට නායකත්වය දුන්නාය. ශ්‍රී ලංකා වෛද්‍ය සංගමයේ කාන්තා සෞඛ්‍ය කමිටුව සමඟ එක්ව, කාන්තා අයිතිවාසිකම් සුරැකීම සඳහා අවස්ථා රැසකදී ඇය එම වෘත්තීය සංගමයට මඟ පෙන්වූවාය.",
+"ඇය සෞඛ්‍ය හා වෛද්‍ය අංශයේ Women in Management Top 50 Professional & Career Women Awards 2020–2021 සම්මානලාභිනියකි.",
+"ඇය 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලද අතර, කිසිවෙකු අතපසු නොකර ශ්‍රී ලංකාවේ සෑම කාන්තාවකගේම අයිතිවාසිකම් සහ සමානාත්මතාවය සුරැකීමේ යාන්ත්‍රණ සහතික කිරීම ඇයගේ අපේක්ෂාවයි."
+],
+"ta": [
+"வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, சுகாதார அமைச்சில் 35 வருடங்களுக்கும் மேலான மருத்துவ நரம்பியல் அனுபவம் கொண்ட, சபைச் சான்றிதழ் பெற்ற விசேட நரம்பியல் வைத்திய நிபுணராவார். பக்கவாதம், புனர்வாழ்வு மற்றும் முதியோர் பராமரிப்பு ஆகியவை அவரது விசேட ஆர்வத்துக்குரிய துறைகளாகும். பொதுச் சுகாதாரத்தின் தீவிர ஆதரவாளரான அவர், இலங்கை மருத்துவ சங்கம் (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians, Sri Lankan Association for Geriatric Medicine போன்ற பல தேசிய தொழில்சார் அமைப்புகளின் தலைவராகவும், World Stroke Organization, Asia Pacific Stroke Organization போன்ற சர்வதேச அமைப்புகளின் பணிப்பாளர் சபைகளில் பிரதிநிதியாகவும் இருந்து, இலங்கைச் சமூகத்தின் நலனுக்காகப் பல சுகாதார மேம்பாட்டுச் செயற்பாடுகளை முன்னெடுத்துள்ளார். பக்கவாத நோயாளர்களுக்கான Stroke Support Organization for Sri Lankans அமைப்பின் ஸ்தாபகரான அவர், “Stroke Care” என்ற நூலை மும்மொழிகளிலும் எழுதியுள்ளார்.",
+"COVID-19 பெருந்தொற்று இலங்கையைக் கடுமையாகப் பாதித்த 2021 ஆம் ஆண்டில் இலங்கை மருத்துவ சங்கத்தின் தலைவராக இருந்த அவர், பெருந்தொற்றைக் கட்டுப்படுத்துவது குறித்து மருத்துவத் துறையினர், மக்கள் மற்றும் இலங்கை அரசாங்கத்திற்கு ஆலோசனைகளை வழங்கி மருத்துவத் துறைக்குத் தலைமை தாங்கினார். இலங்கை மருத்துவ சங்கத்தின் பெண்கள் சுகாதாரக் குழுவுடன் இணைந்து, பெண்களின் உரிமைகளைப் பாதுகாப்பதற்காகப் பல சந்தர்ப்பங்களில் அச்சங்கத்தை வழிநடத்தினார்.",
+"சுகாதார மற்றும் மருத்துவத் துறையில் Women in Management Top 50 Professional & Career Women Awards 2020–2021 விருதைப் பெற்றவர்.",
+"அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். எவரையும் கைவிடாது, இலங்கையிலுள்ள ஒவ்வொரு பெண்ணின் உரிமைகளையும் சமத்துவத்தையும் பாதுகாப்பதற்கான பொறிமுறைகளை உறுதிப்படுத்துவது அவரது நோக்கமாகும்."
+]
+}
+},
+{
+"photo": "static/images/commissioners/jayanthi-kuru-utumpala.jpg",
+"chair": false,
+"name": {
+"en": "Jayanthi Kuru-Utumpala",
+"si": "ජයන්ති කුරු-උතුම්පාල",
+"ta": "ஜயந்தி குரு-உதும்பால"
+},
+"short": {
+"en": "Women’s rights activist; independent consultant on gender and human rights",
+"si": "කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනිය; ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකා",
+"ta": "பெண்கள் உரிமைச் செயற்பாட்டாளர்; பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகர்"
+},
+"bio": {
+"en": [
+"Jayanthi Kuru-Utumpala is a women’s rights activist with over two decades of experience, and an accomplished mountaineer. Her work has focused on women’s rights, gender-based violence, diversity & inclusion, positive masculinities, and women’s participation in sports. In 2016, she became the first Sri Lankan to summit Mount Everest and was subsequently appointed as Goodwill Ambassador for Women’s Rights by the Ministry of Women and Child Affairs. She has since used her public platform to advocate for gender equality and challenge entrenched stereotypes.",
+"Her contributions to gender equality have been widely recognized. In 2017, she was included in BBC’s list of 100 inspiring and influential women worldwide. In 2019, she was awarded ‘National Honours’ and recognized by the Sri Lankan Parliament as one of the ‘12 Women Changemakers of Sri Lanka.’ In 2023, she received the International Olympic Committee’s Gender Equality, Diversity and Inclusion Champions Award for Asia.",
+"Jayanthi serves on several boards and is the former Chairperson of the Women and Media Collective and the International Centre for Ethnic Studies. She works as an independent consultant on gender and human rights and has been serving as a Commissioner on the National Commission on Women since September 2025. She holds a master’s degree in Gender Studies from the University of Sussex (UK) and a postgraduate diploma in Women’s Studies from the University of Colombo."
+],
+"si": [
+"ජයන්ති කුරු-උතුම්පාල දශක දෙකකට අධික පළපුරුද්දක් ඇති කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනියක් සහ දක්ෂ කඳු නගින්නියකි. ඇයගේ කාර්යය කාන්තා අයිතිවාසිකම්, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය, විවිධත්වය සහ ඇතුළත් කිරීම, ධනාත්මක පුරුෂත්වය සහ ක්‍රීඩාවේ කාන්තා සහභාගීත්වය කෙරෙහි යොමු වී ඇත. 2016 දී එවරස්ට් කඳු මුදුනට නැගි ප්‍රථම ශ්‍රී ලාංකිකයා බවට පත් වූ ඇය, පසුව කාන්තා හා ළමා කටයුතු අමාත්‍යාංශය විසින් කාන්තා අයිතිවාසිකම් සඳහා වූ සද්භාව තානාපතිනිය ලෙස පත් කරන ලදී. එතැන් සිට, ස්ත්‍රී පුරුෂ සමානාත්මතාවය වෙනුවෙන් පෙනී සිටීමට සහ මුල්බැසගත් ඒකාකෘතික අදහස්වලට අභියෝග කිරීමට ඇය සිය මහජන වේදිකාව භාවිත කර ඇත.",
+"ස්ත්‍රී පුරුෂ සමානාත්මතාවය සඳහා ඇයගේ දායකත්වය පුළුල් ලෙස පිළිගැනී ඇත. 2017 දී BBC ආයතනය ලොව පුරා ආශ්වාදජනක සහ බලපෑම් සහගත කාන්තාවන් 100 දෙනාගේ ලැයිස්තුවට ඇය ඇතුළත් කළේය. 2019 දී ඇයට ‘National Honours’ පිරිනමන ලද අතර, ශ්‍රී ලංකා පාර්ලිමේන්තුව විසින් ‘12 Women Changemakers of Sri Lanka’ අතරට ඇය නම් කරන ලදී. 2023 දී, ජාත්‍යන්තර ඔලිම්පික් කමිටුවේ ආසියාව සඳහා වූ ස්ත්‍රී පුරුෂ සමානාත්මතාවය, විවිධත්වය සහ ඇතුළත් කිරීමේ ශූරතා සම්මානය ඇයට හිමි විය.",
+"ජයන්ති පාලක මණ්ඩල කිහිපයක සේවය කරන අතර, Women and Media Collective සහ ජාත්‍යන්තර ජනවාර්ගික අධ්‍යයන කේන්ද්‍රයේ හිටපු සභාපතිනියයි. ඇය ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකාවක ලෙස කටයුතු කරන අතර, 2025 සැප්තැම්බර් සිට කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවේ කොමසාරිස්වරියක ලෙස සේවය කරයි. ඇය එක්සත් රාජධානියේ සසෙක්ස් විශ්වවිද්‍යාලයෙන් ස්ත්‍රී පුරුෂ සමාජභාවී අධ්‍යයනය පිළිබඳ ශාස්ත්‍රපති උපාධියක් සහ කොළඹ විශ්වවිද්‍යාලයෙන් කාන්තා අධ්‍යයනය පිළිබඳ පශ්චාත් උපාධි ඩිප්ලෝමාවක් ලබා ඇත."
+],
+"ta": [
+"ஜயந்தி குரு-உதும்பால இரு தசாப்தங்களுக்கும் மேலான அனுபவம் கொண்ட பெண்கள் உரிமைச் செயற்பாட்டாளரும் திறமைமிக்க மலையேறியுமாவார். பெண்களின் உரிமைகள், பால்நிலை அடிப்படையிலான வன்முறை, பன்முகத்தன்மை மற்றும் உள்ளடக்கம், நேர்மறையான ஆண்மைத்துவம், விளையாட்டில் பெண்களின் பங்கேற்பு ஆகியவற்றில் அவரது பணி கவனம் செலுத்தியுள்ளது. 2016 இல் எவரெஸ்ட் சிகரத்தை அடைந்த முதலாவது இலங்கையராகத் திகழ்ந்த அவர், பின்னர் மகளிர் மற்றும் சிறுவர் அலுவல்கள் அமைச்சினால் பெண்களின் உரிமைகளுக்கான நல்லெண்ணத் தூதுவராக நியமிக்கப்பட்டார். அன்றிலிருந்து பால்நிலை சமத்துவத்திற்காக வாதிடுவதற்கும் வேரூன்றிய ஒரே மாதிரியான கருத்துகளுக்குச் சவால் விடுவதற்கும் தனது பொதுத் தளத்தைப் பயன்படுத்தி வருகின்றார்.",
+"பால்நிலை சமத்துவத்திற்கான அவரது பங்களிப்பு பரவலாக அங்கீகரிக்கப்பட்டுள்ளது. 2017 இல், உலகளாவிய ரீதியில் உத்வேகமளிக்கும் மற்றும் செல்வாக்குமிக்க 100 பெண்கள் பட்டியலில் BBC அவரைச் சேர்த்தது. 2019 இல் அவருக்கு ‘National Honours’ வழங்கப்பட்டதுடன், இலங்கைப் பாராளுமன்றத்தினால் ‘12 Women Changemakers of Sri Lanka’ இல் ஒருவராக அங்கீகரிக்கப்பட்டார். 2023 இல், சர்வதேச ஒலிம்பிக் குழுவின் ஆசியாவுக்கான பால்நிலை சமத்துவம், பன்முகத்தன்மை மற்றும் உள்ளடக்கச் சாம்பியன் விருதைப் பெற்றார்.",
+"ஜயந்தி பல பணிப்பாளர் சபைகளில் அங்கம் வகிப்பதுடன், Women and Media Collective மற்றும் சர்வதேச இனத்துவக் கற்கைகளுக்கான நிலையம் ஆகியவற்றின் முன்னாள் தவிசாளருமாவார். பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகராகப் பணியாற்றும் அவர், 2025 செப்டெம்பர் முதல் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவின் ஆணையாளராகச் சேவையாற்றி வருகின்றார். அவர் ஐக்கிய இராச்சியத்தின் சசெக்ஸ் பல்கலைக்கழகத்தில் பால்நிலைக் கற்கைகளில் முதுமாணிப் பட்டத்தையும், கொழும்புப் பல்கலைக்கழகத்தில் பெண்கள் கற்கைகளில் பட்டப்பின் டிப்ளோமாவையும் பெற்றுள்ளார்."
+]
+}
+},
+{
+"photo": "static/images/commissioners/shreen-abdul-saroor.jpg",
+"chair": false,
+"name": {
+"en": "Shreen Abdul Saroor",
+"si": "ෂ්‍රීන් අබ්දුල් සරූර්",
+"ta": "ஷ்ரீன் அப்துல் சரூர்"
+},
+"short": {
+"en": "Co-founder, Women’s Action Network and Mannar Women’s Development Federation",
+"si": "Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘ",
+"ta": "Women’s Action Network மற்றும் Mannar Women’s Development Federation இன் இணை ஸ்தாபகர்"
+},
+"bio": {
+"en": [
+"Shreen Abdul Saroor’s work is rooted in defending and advancing women’s rights, particularly in post-war and marginalized communities. As a co-founder of the Women’s Action Network and the Mannar Women’s Development Federation, she has focused on addressing gender-based violence, promoting women’s economic empowerment, and improving access to justice for women affected by conflict.",
+"She has been a leading advocate for legal and policy reforms aimed at strengthening women’s rights, including efforts to address discriminatory laws, harmful cultural practices, and policies that undermine gender equality.",
+"Shreen is also widely recognized for her pioneering research on gender justice, transitional justice, and minority rights. Her influential studies on issues such as female genital mutilation/cutting, gendered impact of violations of freedom of religion or belief, violence against women in electoral processes, and the lived experiences of war-affected women have contributed significantly to national policy debates and international human rights advocacy.",
+"She has received several recognitions, including the International Bremen Peace Award, the N-Peace Award, and the Voices of Courage Award. She is also a recipient of the Echoing Green Fellowship, the Women Peacemakers Fellowship, and the Ashoka Fellowship, as well as the Franco-German Human Rights and Rule of Law Award."
+],
+"si": [
+"ෂ්‍රීන් අබ්දුල් සරූර්ගේ කාර්යය, විශේෂයෙන් යුද්ධයෙන් පසු සහ ආන්තිකකරණයට ලක් වූ ප්‍රජාවන් තුළ කාන්තා අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම මත පදනම් වේ. Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘවරියක ලෙස, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය ආමන්ත්‍රණය කිරීම, කාන්තාවන්ගේ ආර්ථික සවිබල ගැන්වීම ප්‍රවර්ධනය කිරීම සහ ගැටුම්වලින් පීඩාවට පත් කාන්තාවන්ට යුක්තිය සඳහා ප්‍රවේශය වැඩිදියුණු කිරීම කෙරෙහි ඇය අවධානය යොමු කර ඇත.",
+"වෙනස්කොට සලකන නීති, හානිකර සංස්කෘතික පිළිවෙත් සහ ස්ත්‍රී පුරුෂ සමානාත්මතාවයට හානි කරන ප්‍රතිපත්ති ආමන්ත්‍රණය කිරීමේ ප්‍රයත්න ඇතුළුව, කාන්තා අයිතිවාසිකම් ශක්තිමත් කිරීම අරමුණු කරගත් නීති සහ ප්‍රතිපත්ති ප්‍රතිසංස්කරණ වෙනුවෙන් ඇය ප්‍රමුඛ ලෙස පෙනී සිට ඇත.",
+"ස්ත්‍රී පුරුෂ සමාජභාවී යුක්තිය, සංක්‍රාන්ති යුක්තිය සහ සුළුතර අයිතිවාසිකම් පිළිබඳ පුරෝගාමී පර්යේෂණ සඳහා ද ෂ්‍රීන් පුළුල් ලෙස පිළිගැනේ. කාන්තා ලිංගවේදනය/කැපීම, ආගමික හෝ විශ්වාස නිදහස උල්ලංඝනය කිරීමේ ස්ත්‍රී පුරුෂ සමාජභාවී බලපෑම, මැතිවරණ ක්‍රියාවලිවල කාන්තාවන්ට එරෙහි ප්‍රචණ්ඩත්වය සහ යුද්ධයෙන් පීඩාවට පත් කාන්තාවන්ගේ ජීවිත අත්දැකීම් වැනි කරුණු පිළිබඳ ඇයගේ බලගතු අධ්‍යයන, ජාතික ප්‍රතිපත්ති සංවාදවලට සහ ජාත්‍යන්තර මානව හිමිකම් උපදේශනයට සැලකිය යුතු දායකත්වයක් ලබා දී ඇත.",
+"International Bremen Peace Award, N-Peace Award සහ Voices of Courage Award ඇතුළු පිළිගැනීම් කිහිපයක් ඇයට හිමි වී ඇත. Echoing Green Fellowship, Women Peacemakers Fellowship සහ Ashoka Fellowship මෙන්ම Franco-German Human Rights and Rule of Law Award ද ඇයට හිමි වී ඇත."
+],
+"ta": [
+"ஷ்ரீன் அப்துல் சரூரின் பணி, குறிப்பாகப் போருக்குப் பிந்திய மற்றும் ஓரங்கட்டப்பட்ட சமூகங்களில் பெண்களின் உரிமைகளைப் பாதுகாத்து முன்னேற்றுவதில் வேரூன்றியுள்ளது. Women’s Action Network மற்றும் Mannar Women’s Development Federation ஆகியவற்றின் இணை ஸ்தாபகர் என்ற வகையில், பால்நிலை அடிப்படையிலான வன்முறையைக் கையாளுதல், பெண்களின் பொருளாதார வலுவூட்டலை ஊக்குவித்தல் மற்றும் மோதலினால் பாதிக்கப்பட்ட பெண்களுக்கு நீதிக்கான அணுகலை மேம்படுத்துதல் ஆகியவற்றில் அவர் கவனம் செலுத்தியுள்ளார்.",
+"பாரபட்சமான சட்டங்கள், தீங்கான கலாசார நடைமுறைகள் மற்றும் பால்நிலை சமத்துவத்தைப் பலவீனப்படுத்தும் கொள்கைகளைக் கையாள்வதற்கான முயற்சிகள் உட்பட, பெண்களின் உரிமைகளை வலுப்படுத்தும் நோக்கிலான சட்ட மற்றும் கொள்கைச் சீர்திருத்தங்களுக்காக அவர் முன்னணியில் நின்று வாதாடி வருகின்றார்.",
+"பால்நிலை நீதி, நிலைமாறுகால நீதி மற்றும் சிறுபான்மையினர் உரிமைகள் தொடர்பான முன்னோடி ஆய்வுகளுக்காகவும் ஷ்ரீன் பரவலாக அறியப்பட்டவர். பெண் பிறப்புறுப்புச் சிதைப்பு/வெட்டுதல், மத அல்லது நம்பிக்கைச் சுதந்திர மீறல்களின் பால்நிலைத் தாக்கம், தேர்தல் செயன்முறைகளில் பெண்களுக்கு எதிரான வன்முறை, போரினால் பாதிக்கப்பட்ட பெண்களின் வாழ்வனுபவங்கள் போன்ற விடயங்கள் குறித்த அவரது செல்வாக்குமிக்க ஆய்வுகள், தேசியக் கொள்கை விவாதங்களுக்கும் சர்வதேச மனித உரிமைகள் வாதாடலுக்கும் குறிப்பிடத்தக்க பங்களிப்பைச் செய்துள்ளன.",
+"International Bremen Peace Award, N-Peace Award, Voices of Courage Award உள்ளிட்ட பல அங்கீகாரங்களை அவர் பெற்றுள்ளார். Echoing Green Fellowship, Women Peacemakers Fellowship, Ashoka Fellowship மற்றும் Franco-German Human Rights and Rule of Law Award ஆகியவற்றையும் பெற்றுள்ளார்."
+]
+}
+},
+{
+"photo": "static/images/commissioners/kalana-senaratne.jpg",
+"chair": false,
+"name": {
+"en": "Dr Kalana Senaratne",
+"si": "ආචාර්ය කලන සේනාරත්න",
+"ta": "கலாநிதி கலன சேனாரத்ன"
+},
+"short": {
+"en": "Senior Lecturer and Head, Department of Law, University of Peradeniya",
+"si": "ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී, නීති අධ්‍යයනාංශය, පේරාදෙණිය විශ්වවිද්‍යාලය",
+"ta": "சிரேஷ்ட விரிவுரையாளர் மற்றும் துறைத் தலைவர், சட்டத் துறை, பேராதனைப் பல்கலைக்கழகம்"
+},
+"bio": {
+"en": [
+"Kalana Senaratne is a legal academic specializing in the fields of international law, human rights and constitutional law. He holds an LLB from the University of London, an LLM from University College London, and a PhD from the University of Hong Kong. He is the author of Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021). He is a member of the Editorial Board of the Asian Journal of International Law. Senaratne is currently a Senior Lecturer and the Head of the Department of Law, University of Peradeniya. He was appointed to the National Commission on Women in September, 2025. Previously, he has worked as a legal officer at the Ministry of Foreign Affairs in Sri Lanka, the UNDP in Timor-Leste, and as a research associate at the Social Scientists’ Association (SSA)."
+],
+"si": [
+"කලන සේනාරත්න ජාත්‍යන්තර නීතිය, මානව හිමිකම් සහ ආණ්ඩුක්‍රම ව්‍යවස්ථා නීතිය යන ක්ෂේත්‍රවල විශේෂඥතාවක් ඇති නීති ශාස්ත්‍රඥයෙකි. ඔහු ලන්ඩන් විශ්වවිද්‍යාලයෙන් LLB උපාධියක්, University College London ආයතනයෙන් LLM උපාධියක් සහ හොංකොං විශ්වවිද්‍යාලයෙන් PhD උපාධියක් ලබා ඇත. ඔහු Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) ග්‍රන්ථයේ කතුවරයා වේ. ඔහු Asian Journal of International Law හි කතු මණ්ඩල සාමාජිකයෙකි. සේනාරත්න මහතා දැනට පේරාදෙණිය විශ්වවිද්‍යාලයේ නීති අධ්‍යයනාංශයේ ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී ලෙස සේවය කරයි. ඔහු 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලදී. මීට පෙර ඔහු ශ්‍රී ලංකා විදේශ කටයුතු අමාත්‍යාංශයේ සහ ටිමෝර්-ලෙස්ටේ හි UNDP ආයතනයේ නීති නිලධාරියෙකු ලෙස ද, සමාජ විද්‍යාඥයින්ගේ සංගමයේ (SSA) පර්යේෂණ සහායකයෙකු ලෙස ද සේවය කර ඇත."
+],
+"ta": [
+"கலன சேனாரத்ன சர்வதேச சட்டம், மனித உரிமைகள் மற்றும் அரசியலமைப்புச் சட்டம் ஆகிய துறைகளில் நிபுணத்துவம் பெற்ற சட்டக் கல்வியாளராவார். லண்டன் பல்கலைக்கழகத்தில் LLB பட்டத்தையும், University College London இல் LLM பட்டத்தையும், ஹொங்கொங் பல்கலைக்கழகத்தில் PhD பட்டத்தையும் பெற்றுள்ளார். Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) என்ற நூலின் ஆசிரியராவார். Asian Journal of International Law இன் ஆசிரியர் சபை உறுப்பினராகவும் உள்ளார். தற்போது பேராதனைப் பல்கலைக்கழகத்தின் சட்டத் துறையின் சிரேஷ்ட விரிவுரையாளராகவும் துறைத் தலைவராகவும் பணியாற்றுகின்றார். அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். இதற்கு முன்னர், இலங்கை வெளிநாட்டலுவல்கள் அமைச்சிலும் திமோர்-லெஸ்தேயிலுள்ள UNDP இலும் சட்ட அலுவலராகவும், சமூக விஞ்ஞானிகள் சங்கத்தில் (SSA) ஆய்வு உதவியாளராகவும் பணியாற்றியுள்ளார்."
+]
+}
+}
+];
+const VACANT = 2; // places still to be announced
+const PERSON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#672D62" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>';
+function renderMembers(){
+  let html = MEMBERS.map((m,i)=>{
+    const name = L(m.name);
+    const photo = m.photo ? '<img src="'+m.photo+'" alt="'+esc(name)+'" loading="lazy">' : PERSON_SVG;
+    return '<div class="comm-card"><div class="comm-photo">'+photo+'</div><div class="comm-info">'
+      + (m.chair ? '<span class="comm-badge">'+esc(t('ui.chair'))+'</span>' : '')
+      + '<div class="nm">'+esc(name)+'</div><div class="rl">'+esc(L(m.short))+'</div>'
+      + '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>'
+      + '</div></div>';
+  }).join('');
+  for(let k=0;k<VACANT;k++){
+    html += '<div class="comm-card"><div class="comm-photo">'+PERSON_SVG+'</div><div class="comm-info">'
+      + '<div class="nm">'+esc(t('ui.tba'))+'</div><div class="rl">'+esc(t('ui.tbadetail'))+'</div></div></div>';
+  }
+  document.getElementById('comm-grid').innerHTML = html;
+}
+let bioReturnFocus = null;
+function openBio(i){
+  const m = MEMBERS[i];
+  const name = L(m.name);
+  bioReturnFocus = document.activeElement;
+  document.getElementById('bio-photo-wrap').innerHTML = m.photo
+    ? '<img class="bio-photo" src="'+m.photo+'" alt="'+esc(name)+'">'
+    : '<div class="bio-photo" style="display:flex;align-items:center;justify-content:center">'+PERSON_SVG+'</div>';
+  document.getElementById('bio-name').textContent = name;
+  document.getElementById('bio-role').textContent = m.chair ? t('ui.chair') : t('ui.commissioner');
+  document.getElementById('bio-text').innerHTML = L(m.bio).map(p=>'<p>'+esc(p)+'</p>').join('');
+  document.getElementById('bio-modal').classList.add('open');
+  document.querySelector('#bio-modal .bio-close').focus();
+}
+function closeBio(){
+  document.getElementById('bio-modal').classList.remove('open');
+  if(bioReturnFocus) bioReturnFocus.focus();
+}
+
+// ── GATEWAY / LANGUAGE ──
+function chooseLang(lang){ enterSite(lang); }
+function closeLangModal(){ document.getElementById('lang-modal').classList.remove('open'); }
+function proceedInEnglish(){ closeLangModal(); enterSite('en'); }
+function enterSite(lang){
+  document.getElementById('page-gateway').classList.remove('active');
+  document.getElementById('page-site').classList.add('active');
+  setLang(lang);
+  go('home');
+}
+function switchLangFromSite(lang){ setLang(lang); }
+function setSiteLangPill(lang){
+  document.querySelectorAll('.util-lang').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+}
+
+// ── EXTERNAL LINK CONFIRMATION ──
+function openExternal(url, message){
+  document.getElementById('external-modal-msg').textContent = message || 'This link opens an external site in a new tab.';
+  document.getElementById('external-modal-go').onclick = function(){
+    window.open(url, '_blank', 'noopener,noreferrer');
+    closeExternalModal();
+  };
+  document.getElementById('external-modal').classList.add('open');
+}
+function closeExternalModal(){ document.getElementById('external-modal').classList.remove('open'); }
+
+// ── PAGE NAV ──
+function go(id){
+  document.querySelectorAll('#page-site .page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-toplink').forEach(b=>b.classList.remove('active'));
+  if(id.startsWith('about-')) document.getElementById('navtop-about').classList.add('active');
+  if(id==='divisions') document.getElementById('navtop-divisions').classList.add('active');
+  if(id==='documentation') document.getElementById('navtop-documentation').classList.add('active');
+  if(id==='press') document.getElementById('navtop-news').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(document.getElementById('mob-menu').classList.contains('open')) toggleMob();
+}
+let currentStub = null;
+function setStubTitle(title){
+  const v = STUB[title] ? (STUB[title][LANG] || title) : title;
+  document.getElementById('stub-title').textContent = v;
+  document.getElementById('stub-crumb').textContent = v;
+}
+function goStub(title){
+  currentStub = title;
+  setStubTitle(title);
+  go('stub');
+}
+
+// ── CAROUSELS ──
+const carState = {};
+function carMove(id, dir){
+  const track = document.getElementById(id);
+  const cards = track.children;
+  if(!cards.length) return;
+  const gap = parseFloat(getComputedStyle(track).gap) || 0;
+  const cardWidth = cards[0].getBoundingClientRect().width + gap;
+  const visible = Math.max(1, Math.round(track.parentElement.getBoundingClientRect().width / cardWidth));
+  const maxOffset = Math.max(0, (cards.length - visible)) * cardWidth;
+  let current = carState[id] || 0;
+  current = Math.min(maxOffset, Math.max(0, current + dir * cardWidth));
+  carState[id] = current;
+  track.style.transform = 'translateX(-' + current + 'px)';
+}
+window.addEventListener('resize', function(){
+  Object.keys(carState).forEach(function(id){
+    carState[id] = 0;
+    const track = document.getElementById(id);
+    if(track) track.style.transform = 'translateX(0)';
+  });
+});
+
+// ── MOBILE MENU ──
+function toggleMob(){
+  const m = document.getElementById('mob-menu');
+  m.classList.toggle('open');
+  document.getElementById('hamburger-btn').setAttribute('aria-expanded', m.classList.contains('open'));
+}
+
+// ── ACCORDIONS ──
+function toggleSummary(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// ── ACCESSIBILITY ──
+let fontPct = 100;
+function toggleA11y(){
+  const p = document.getElementById('a11y-panel');
+  p.classList.toggle('open');
+  document.getElementById('a11y-fab').setAttribute('aria-expanded', p.classList.contains('open'));
+}
+function fontStep(dir){
+  fontPct = Math.min(150, Math.max(80, fontPct + dir*10));
+  document.documentElement.style.fontSize = fontPct + '%';
+}
+function refreshA11yLabels(){
+  const kb = document.documentElement.classList.contains('a11y-kbdnav');
+  const rd = document.documentElement.classList.contains('a11y-readable');
+  document.getElementById('btn-kbdnav').textContent = kb ? t('ui.disable') : t('ui.enable');
+  document.getElementById('btn-readable').textContent = rd ? t('ui.disable') : t('ui.enable');
+}
+function toggleKbdNav(){
+  const on = document.documentElement.classList.toggle('a11y-kbdnav');
+  document.getElementById('btn-kbdnav').setAttribute('aria-pressed', on);
+  refreshA11yLabels();
+}
+function toggleReadable(){
+  const on = document.documentElement.classList.toggle('a11y-readable');
+  document.getElementById('btn-readable').setAttribute('aria-pressed', on);
+  refreshA11yLabels();
+}
+function setTheme(theme){
+  if(theme){ document.documentElement.setAttribute('data-theme', theme); }
+  else { document.documentElement.removeAttribute('data-theme'); }
+  document.querySelectorAll('#a11y-panel [data-theme]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.theme===theme));
+}
+function resetA11y(){
+  fontPct = 100;
+  document.documentElement.style.fontSize = '100%';
+  document.documentElement.classList.remove('a11y-kbdnav','a11y-readable');
+  document.documentElement.removeAttribute('data-theme');
+  document.getElementById('btn-kbdnav').setAttribute('aria-pressed','false');
+  document.getElementById('btn-readable').setAttribute('aria-pressed','false');
+  refreshA11yLabels();
+  document.querySelectorAll('#a11y-panel [data-theme]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.theme===''));
+}
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape'){ closeLangModal(); closeExternalModal(); if(document.getElementById('bio-modal').classList.contains('open')) closeBio(); }
+});
+
+// ── INITIAL RENDER ──
+renderDocs();
+renderCarousels();
+renderMembers();
+
+</script>
+</body>
+</html>
