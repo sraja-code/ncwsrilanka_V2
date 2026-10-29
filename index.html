@@ -439,7 +439,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 <a href="#main" class="skip-link" data-i18n="ui.skip">Skip to main content</a>
 
 <!-- ═══════════ GATEWAY ═══════════ -->
-<div id="page-gateway" class="page">
+<div id="page-gateway" class="page active">
   <div class="gw-wrap">
     <div class="ripple-bg" aria-hidden="true"></div>
     <div class="ripple-bg" aria-hidden="true"></div>
@@ -472,9 +472,9 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 <!-- language-not-ready modal -->
 <div id="lang-modal" class="lang-modal">
   <div class="lang-modal-box">
-    <h3>This language is still being prepared</h3>
+    <h3>Sinhala and Tamil versions will be announced</h3>
     <p class="lm-native" id="lm-native-msg"></p>
-    <p>We are sorry for the inconvenience. This section of the site is not yet available in the language you selected. You may continue in English, or go back and choose another language.</p>
+    <p>Only the English version is available at present.</p>
     <div class="lang-modal-actions">
       <button class="btn btn-outline btn-sm" onclick="closeLangModal()">Go Back</button>
       <button class="btn btn-purple btn-sm" onclick="proceedInEnglish()">Continue in English</button>
@@ -508,7 +508,15 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 </div>
 
 <!-- ═══════════ MAIN SITE ═══════════ -->
-<div id="page-site" class="active">
+<div id="page-site">
+
+  <div class="util-bar">
+    <div class="util-inner">
+      <button class="util-lang" data-lang="si" lang="si" onclick="switchLangFromSite('si')">සිංහල</button>
+      <button class="util-lang active" data-lang="en" onclick="switchLangFromSite('en')">English</button>
+      <button class="util-lang" data-lang="ta" lang="ta" onclick="switchLangFromSite('ta')">தமிழ்</button>
+    </div>
+  </div>
 
   <nav class="mainnav">
     <div class="nav-logo-row">
@@ -851,7 +859,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
         <div class="org-chart">
           <div class="org-box top" data-i18n="div.top">Chairperson and six Commissioners</div>
           <div class="org-line" aria-hidden="true"></div>
-          <div class="org-box"><span data-i18n="div.ed">Executive Director</span><div style="font-family:'Inter',sans-serif;font-weight:600;font-size:0.9rem;color:var(--tmid);margin-top:4px">Ms K.D.R. Olga</div></div>
+          <div class="org-box"><span data-i18n="div.ed">Executive Director</span><div style="font-family:'Inter',sans-serif;font-weight:600;font-size:0.9rem;color:var(--tmid);margin-top:4px">K.D.R. Olga</div></div>
           <div class="org-line" aria-hidden="true"></div>
           <div class="div-grid">
             <div class="div-card">
@@ -2611,197 +2619,14 @@ function renderCarousels(){
 // ══════════════════════════════════════════════
 //  MEMBERS — photos live in static/images/commissioners/
 // ══════════════════════════════════════════════
-const MEMBERS = [
-{
-"photo": "static/images/commissioners/grace-asirwatham.jpg",
-"chair": true,
-"name": {
-"en": "Grace Asirwatham",
-"si": "ග්‍රේස් අසිර්වාතම්",
-"ta": "கிரேஸ் ஆசீர்வாதம்"
-},
-"short": {
-"en": "Retired Ambassador, Sri Lanka Foreign Service",
-"si": "විශ්‍රාමික තානාපතිවරිය, ශ්‍රී ලංකා විදේශ සේවය",
-"ta": "ஓய்வுபெற்ற தூதுவர், இலங்கை வெளிநாட்டுச் சேவை"
-},
-"bio": {
-"en": [
-"Grace Asirwatham is a retired Ambassador and member of the Sri Lanka Foreign Service, with 36 years of service as a diplomat and international civil servant. She has served as Sri Lanka’s Ambassador to Nepal, the Netherlands, Belgium, and Luxembourg. She also served as Permanent Representative to the Organisation for the Prohibition of Chemical Weapons (OPCW) and as Head of Mission of Sri Lanka to the European Union in Brussels. In addition, she has served in diplomatic postings in Bonn, Germany, and Islamabad, Pakistan.",
-"As an international civil servant, she served at the OPCW as Deputy Director-General with the United Nations rank of Assistant Secretary-General (ASG). She has also held several senior positions in the Ministry of Foreign Affairs in Colombo, including Secretary to the State Ministry of Foreign Affairs.",
-"Grace Asirwatham holds a Bachelor’s Degree in Business Administration (BSc) from the University of Jaffna and a Master’s Degree in International Relations from the University of Colombo.",
-"In recognition of her services as Ambassador to Nepal, she was conferred the honorary title “Sri Lankabimanya Deshabandhu Diriya Matha” by Sri Lanka Wiswa Samadhi Padanama. She has also been awarded a Gold Award in the State and Government Sector as part of the Top 50 Professional and Career Women Awards 2021 by Women in Management Sri Lanka, in collaboration with the International Finance Corporation (IFC) and Australian Aid (AusAID)."
-],
-"si": [
-"ග්‍රේස් අසිර්වාතම් මහත්මිය ශ්‍රී ලංකා විදේශ සේවයේ සාමාජිකාවක සහ විශ්‍රාමික තානාපතිවරියක වන අතර, රාජ්‍ය තාන්ත්‍රිකයෙකු සහ ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස වසර 36ක සේවා කාලයක් ඇත. ඇය නේපාලය, නෙදර්ලන්තය, බෙල්ජියම සහ ලක්සම්බර්ග් යන රටවල ශ්‍රී ලංකා තානාපතිවරිය ලෙස සේවය කර ඇත. රසායනික අවි තහනම් කිරීමේ සංවිධානයේ (OPCW) ස්ථිර නියෝජිතවරිය ලෙස සහ බ්‍රසල්ස් හි යුරෝපා සංගමය සඳහා වූ ශ්‍රී ලංකා දූත මණ්ඩල ප්‍රධානී ලෙස ද ඇය සේවය කළාය. ඊට අමතරව, ජර්මනියේ බොන් සහ පාකිස්තානයේ ඉස්ලාමාබාද් නගරවල රාජ්‍ය තාන්ත්‍රික තනතුරු ද දැරුවාය.",
-"ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස, ඇය එක්සත් ජාතීන්ගේ සහකාර මහලේකම් (ASG) නිලයෙන් යුතුව OPCW හි නියෝජ්‍ය අධ්‍යක්ෂ ජනරාල් ලෙස සේවය කළාය. රාජ්‍ය විදේශ කටයුතු අමාත්‍යාංශයේ ලේකම් ධුරය ඇතුළුව, කොළඹ විදේශ කටයුතු අමාත්‍යාංශයේ ජ්‍යෙෂ්ඨ තනතුරු කිහිපයක් ද ඇය දරා ඇත.",
-"ග්‍රේස් අසිර්වාතම් මහත්මිය යාපනය විශ්වවිද්‍යාලයෙන් ව්‍යාපාර පරිපාලනය පිළිබඳ උපාධියක් (BSc) සහ කොළඹ විශ්වවිද්‍යාලයෙන් ජාත්‍යන්තර සබඳතා පිළිබඳ ශාස්ත්‍රපති උපාධියක් ලබා ඇත.",
-"නේපාලයේ තානාපතිවරිය ලෙස කළ සේවය අගයමින්, ශ්‍රී ලංකා විශ්ව සමාධි පදනම විසින් ඇයට “ශ්‍රී ලංකාභිමාන්‍ය දේශබන්ධු දිරිය මාතා” ගෞරව නාමය පිරිනමන ලදී. ජාත්‍යන්තර මූල්‍ය සංස්ථාව (IFC) සහ ඕස්ට්‍රේලියානු ආධාර (AusAID) සමඟ එක්ව Women in Management Sri Lanka ආයතනය පැවැත්වූ Top 50 Professional and Career Women Awards 2021 හිදී, රාජ්‍ය සහ රජයේ අංශය යටතේ රන් සම්මානයක් ද ඇයට හිමි විය."
-],
-"ta": [
-"கிரேஸ் ஆசீர்வாதம் இலங்கை வெளிநாட்டுச் சேவையின் உறுப்பினரும் ஓய்வுபெற்ற தூதுவருமாவார். இராஜதந்திரியாகவும் சர்வதேச சிவில் சேவையாளராகவும் 36 வருட சேவை அனுபவம் கொண்டவர். நேபாளம், நெதர்லாந்து, பெல்ஜியம் மற்றும் லக்சம்பேர்க் ஆகிய நாடுகளுக்கான இலங்கைத் தூதுவராகப் பணியாற்றியுள்ளார். இரசாயன ஆயுதங்களைத் தடைசெய்வதற்கான அமைப்பின் (OPCW) நிரந்தரப் பிரதிநிதியாகவும், பிரசல்ஸிலுள்ள ஐரோப்பிய ஒன்றியத்திற்கான இலங்கைத் தூதுக்குழுவின் தலைவராகவும் பணியாற்றியுள்ளார். மேலும், ஜேர்மனியின் பொன் மற்றும் பாகிஸ்தானின் இஸ்லாமாபாத் ஆகிய இடங்களிலும் இராஜதந்திரப் பதவிகளை வகித்துள்ளார்.",
-"சர்வதேச சிவில் சேவையாளராக, ஐக்கிய நாடுகளின் உதவிச் செயலாளர் நாயகம் (ASG) தரத்துடன் OPCW இன் பிரதிப் பணிப்பாளர் நாயகமாகப் பணியாற்றினார். இராஜாங்க வெளிநாட்டலுவல்கள் அமைச்சின் செயலாளர் பதவி உட்பட, கொழும்பிலுள்ள வெளிநாட்டலுவல்கள் அமைச்சில் பல சிரேஷ்ட பதவிகளையும் வகித்துள்ளார்.",
-"கிரேஸ் ஆசீர்வாதம் யாழ்ப்பாணப் பல்கலைக்கழகத்தில் வியாபார நிர்வாகத்தில் இளமாணிப் பட்டத்தையும் (BSc), கொழும்புப் பல்கலைக்கழகத்தில் சர்வதேச உறவுகளில் முதுமாணிப் பட்டத்தையும் பெற்றுள்ளார்.",
-"நேபாளத்திற்கான தூதுவராக அவர் ஆற்றிய சேவையைப் பாராட்டி, ஸ்ரீ லங்கா விஷ்வ சமாதி பதனம அவருக்கு “ஸ்ரீ லங்காபிமான்ய தேசபந்து திரிய மாதா” என்ற கௌரவப் பட்டத்தை வழங்கியது. சர்வதேச நிதிக் கூட்டுத்தாபனம் (IFC) மற்றும் அவுஸ்திரேலிய உதவி (AusAID) ஆகியவற்றுடன் இணைந்து Women in Management Sri Lanka நடத்திய Top 50 Professional and Career Women Awards 2021 இல், அரச மற்றும் அரசாங்கத் துறைக்கான தங்க விருதையும் பெற்றுள்ளார்."
-]
-}
-},
-{
-"photo": "static/images/commissioners/padma-gunaratne.jpg",
-"chair": false,
-"name": {
-"en": "Dr Padma Sriyani Gunaratne",
-"si": "වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න",
-"ta": "வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன"
-},
-"short": {
-"en": "Specialist Neurologist",
-"si": "විශේෂඥ ස්නායු වෛද්‍ය",
-"ta": "விசேட நரம்பியல் வைத்திய நிபுணர்"
-},
-"bio": {
-"en": [
-"Dr Padma Sriyani Gunaratne MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO is a Board-certified Specialist Neurologist with vast experience in Clinical Neurology over 35 years in the Ministry of Health, with special interest in Stroke, Rehabilitation and Elder’s Care. She is an ardent advocate of public health and has carried out numerous health promotional activities towards the benefit of the Sri Lankan community while leading as the President in many national professional organizations such as Sri Lanka Medical Association (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians and Sri Lankan Association for Geriatric Medicine, as well as by representing the Board of Directors of the international organization such as World Stroke Organizations and Asia Pacific Stroke Organization. She is the founder of the Stroke Support Organization for Sri Lankans meant for stroke patients and she authored the book “Stroke Care” in all three languages.",
-"As the President of the SLMA in 2021, during which COVID-19 pandemic devastated Sri Lanka, she led the medical profession by providing advocacy on control of the pandemic to the profession, people and to the Government of Sri Lanka. Along with the Women’s Health Committee of the SLMA, she steered the professional Association on numerous occasions for safeguarding women’s rights.",
-"She is a recipient of Women in Management Top 50 Professional & Career Women Awards 2020–2021 in Health and Medical Sector.",
-"She was appointed to the National Commission on Women in September 2025 and she envisages to ensure mechanisms to safeguard rights and equality for every woman, leaving no one behind, in Sri Lanka."
-],
-"si": [
-"වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, සෞඛ්‍ය අමාත්‍යාංශයේ වසර 35කට අධික සායනික ස්නායු වෛද්‍ය විද්‍යා පළපුරුද්දක් ඇති, මණ්ඩල සහතිකලත් විශේෂඥ ස්නායු වෛද්‍යවරියකි. ආඝාතය, පුනරුත්ථාපනය සහ වැඩිහිටි සත්කාරය ඇයගේ විශේෂ උනන්දුව දක්වන ක්ෂේත්‍ර වේ. මහජන සෞඛ්‍යය වෙනුවෙන් කැපවී සිටින ඇය, ශ්‍රී ලංකා වෛද්‍ය සංගමය (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians සහ Sri Lankan Association for Geriatric Medicine වැනි ජාතික වෘත්තීය සංවිධාන රැසක සභාපතිනිය ලෙස නායකත්වය දෙමින් ද, World Stroke Organization සහ Asia Pacific Stroke Organization වැනි ජාත්‍යන්තර සංවිධානවල අධ්‍යක්ෂ මණ්ඩල නියෝජනය කරමින් ද, ශ්‍රී ලාංකික ප්‍රජාවේ යහපත උදෙසා සෞඛ්‍ය ප්‍රවර්ධන කටයුතු රැසක් සිදු කර ඇත. ආඝාත රෝගීන් සඳහා වූ Stroke Support Organization for Sri Lankans හි නිර්මාතෘවරිය වන ඇය, “Stroke Care” ග්‍රන්ථය භාෂා තුනෙන්ම රචනා කර ඇත.",
-"COVID-19 වසංගතය ශ්‍රී ලංකාවට දැඩි ලෙස බලපෑ 2021 වසරේ ශ්‍රී ලංකා වෛද්‍ය සංගමයේ සභාපතිනිය ලෙස, වසංගතය පාලනය කිරීම පිළිබඳව වෛද්‍ය වෘත්තිකයින්ට, ජනතාවට සහ ශ්‍රී ලංකා රජයට උපදේශනය ලබා දෙමින් ඇය වෛද්‍ය වෘත්තියට නායකත්වය දුන්නාය. ශ්‍රී ලංකා වෛද්‍ය සංගමයේ කාන්තා සෞඛ්‍ය කමිටුව සමඟ එක්ව, කාන්තා අයිතිවාසිකම් සුරැකීම සඳහා අවස්ථා රැසකදී ඇය එම වෘත්තීය සංගමයට මඟ පෙන්වූවාය.",
-"ඇය සෞඛ්‍ය හා වෛද්‍ය අංශයේ Women in Management Top 50 Professional & Career Women Awards 2020–2021 සම්මානලාභිනියකි.",
-"ඇය 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලද අතර, කිසිවෙකු අතපසු නොකර ශ්‍රී ලංකාවේ සෑම කාන්තාවකගේම අයිතිවාසිකම් සහ සමානාත්මතාවය සුරැකීමේ යාන්ත්‍රණ සහතික කිරීම ඇයගේ අපේක්ෂාවයි."
-],
-"ta": [
-"வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, சுகாதார அமைச்சில் 35 வருடங்களுக்கும் மேலான மருத்துவ நரம்பியல் அனுபவம் கொண்ட, சபைச் சான்றிதழ் பெற்ற விசேட நரம்பியல் வைத்திய நிபுணராவார். பக்கவாதம், புனர்வாழ்வு மற்றும் முதியோர் பராமரிப்பு ஆகியவை அவரது விசேட ஆர்வத்துக்குரிய துறைகளாகும். பொதுச் சுகாதாரத்தின் தீவிர ஆதரவாளரான அவர், இலங்கை மருத்துவ சங்கம் (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians, Sri Lankan Association for Geriatric Medicine போன்ற பல தேசிய தொழில்சார் அமைப்புகளின் தலைவராகவும், World Stroke Organization, Asia Pacific Stroke Organization போன்ற சர்வதேச அமைப்புகளின் பணிப்பாளர் சபைகளில் பிரதிநிதியாகவும் இருந்து, இலங்கைச் சமூகத்தின் நலனுக்காகப் பல சுகாதார மேம்பாட்டுச் செயற்பாடுகளை முன்னெடுத்துள்ளார். பக்கவாத நோயாளர்களுக்கான Stroke Support Organization for Sri Lankans அமைப்பின் ஸ்தாபகரான அவர், “Stroke Care” என்ற நூலை மும்மொழிகளிலும் எழுதியுள்ளார்.",
-"COVID-19 பெருந்தொற்று இலங்கையைக் கடுமையாகப் பாதித்த 2021 ஆம் ஆண்டில் இலங்கை மருத்துவ சங்கத்தின் தலைவராக இருந்த அவர், பெருந்தொற்றைக் கட்டுப்படுத்துவது குறித்து மருத்துவத் துறையினர், மக்கள் மற்றும் இலங்கை அரசாங்கத்திற்கு ஆலோசனைகளை வழங்கி மருத்துவத் துறைக்குத் தலைமை தாங்கினார். இலங்கை மருத்துவ சங்கத்தின் பெண்கள் சுகாதாரக் குழுவுடன் இணைந்து, பெண்களின் உரிமைகளைப் பாதுகாப்பதற்காகப் பல சந்தர்ப்பங்களில் அச்சங்கத்தை வழிநடத்தினார்.",
-"சுகாதார மற்றும் மருத்துவத் துறையில் Women in Management Top 50 Professional & Career Women Awards 2020–2021 விருதைப் பெற்றவர்.",
-"அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். எவரையும் கைவிடாது, இலங்கையிலுள்ள ஒவ்வொரு பெண்ணின் உரிமைகளையும் சமத்துவத்தையும் பாதுகாப்பதற்கான பொறிமுறைகளை உறுதிப்படுத்துவது அவரது நோக்கமாகும்."
-]
-}
-},
-{
-"photo": "static/images/commissioners/jayanthi-kuru-utumpala.jpg",
-"chair": false,
-"name": {
-"en": "Jayanthi Kuru-Utumpala",
-"si": "ජයන්ති කුරු-උතුම්පාල",
-"ta": "ஜயந்தி குரு-உதும்பால"
-},
-"short": {
-"en": "Women’s rights activist; independent consultant on gender and human rights",
-"si": "කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනිය; ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකා",
-"ta": "பெண்கள் உரிமைச் செயற்பாட்டாளர்; பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகர்"
-},
-"bio": {
-"en": [
-"Jayanthi Kuru-Utumpala is a women’s rights activist with over two decades of experience, and an accomplished mountaineer. Her work has focused on women’s rights, gender-based violence, diversity & inclusion, positive masculinities, and women’s participation in sports. In 2016, she became the first Sri Lankan to summit Mount Everest and was subsequently appointed as Goodwill Ambassador for Women’s Rights by the Ministry of Women and Child Affairs. She has since used her public platform to advocate for gender equality and challenge entrenched stereotypes.",
-"Her contributions to gender equality have been widely recognized. In 2017, she was included in BBC’s list of 100 inspiring and influential women worldwide. In 2019, she was awarded ‘National Honours’ and recognized by the Sri Lankan Parliament as one of the ‘12 Women Changemakers of Sri Lanka.’ In 2023, she received the International Olympic Committee’s Gender Equality, Diversity and Inclusion Champions Award for Asia.",
-"Jayanthi serves on several boards and is the former Chairperson of the Women and Media Collective and the International Centre for Ethnic Studies. She works as an independent consultant on gender and human rights and has been serving as a Commissioner on the National Commission on Women since September 2025. She holds a master’s degree in Gender Studies from the University of Sussex (UK) and a postgraduate diploma in Women’s Studies from the University of Colombo."
-],
-"si": [
-"ජයන්ති කුරු-උතුම්පාල දශක දෙකකට අධික පළපුරුද්දක් ඇති කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනියක් සහ දක්ෂ කඳු නගින්නියකි. ඇයගේ කාර්යය කාන්තා අයිතිවාසිකම්, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය, විවිධත්වය සහ ඇතුළත් කිරීම, ධනාත්මක පුරුෂත්වය සහ ක්‍රීඩාවේ කාන්තා සහභාගීත්වය කෙරෙහි යොමු වී ඇත. 2016 දී එවරස්ට් කඳු මුදුනට නැගි ප්‍රථම ශ්‍රී ලාංකිකයා බවට පත් වූ ඇය, පසුව කාන්තා හා ළමා කටයුතු අමාත්‍යාංශය විසින් කාන්තා අයිතිවාසිකම් සඳහා වූ සද්භාව තානාපතිනිය ලෙස පත් කරන ලදී. එතැන් සිට, ස්ත්‍රී පුරුෂ සමානාත්මතාවය වෙනුවෙන් පෙනී සිටීමට සහ මුල්බැසගත් ඒකාකෘතික අදහස්වලට අභියෝග කිරීමට ඇය සිය මහජන වේදිකාව භාවිත කර ඇත.",
-"ස්ත්‍රී පුරුෂ සමානාත්මතාවය සඳහා ඇයගේ දායකත්වය පුළුල් ලෙස පිළිගැනී ඇත. 2017 දී BBC ආයතනය ලොව පුරා ආශ්වාදජනක සහ බලපෑම් සහගත කාන්තාවන් 100 දෙනාගේ ලැයිස්තුවට ඇය ඇතුළත් කළේය. 2019 දී ඇයට ‘National Honours’ පිරිනමන ලද අතර, ශ්‍රී ලංකා පාර්ලිමේන්තුව විසින් ‘12 Women Changemakers of Sri Lanka’ අතරට ඇය නම් කරන ලදී. 2023 දී, ජාත්‍යන්තර ඔලිම්පික් කමිටුවේ ආසියාව සඳහා වූ ස්ත්‍රී පුරුෂ සමානාත්මතාවය, විවිධත්වය සහ ඇතුළත් කිරීමේ ශූරතා සම්මානය ඇයට හිමි විය.",
-"ජයන්ති පාලක මණ්ඩල කිහිපයක සේවය කරන අතර, Women and Media Collective සහ ජාත්‍යන්තර ජනවාර්ගික අධ්‍යයන කේන්ද්‍රයේ හිටපු සභාපතිනියයි. ඇය ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකාවක ලෙස කටයුතු කරන අතර, 2025 සැප්තැම්බර් සිට කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවේ කොමසාරිස්වරියක ලෙස සේවය කරයි. ඇය එක්සත් රාජධානියේ සසෙක්ස් විශ්වවිද්‍යාලයෙන් ස්ත්‍රී පුරුෂ සමාජභාවී අධ්‍යයනය පිළිබඳ ශාස්ත්‍රපති උපාධියක් සහ කොළඹ විශ්වවිද්‍යාලයෙන් කාන්තා අධ්‍යයනය පිළිබඳ පශ්චාත් උපාධි ඩිප්ලෝමාවක් ලබා ඇත."
-],
-"ta": [
-"ஜயந்தி குரு-உதும்பால இரு தசாப்தங்களுக்கும் மேலான அனுபவம் கொண்ட பெண்கள் உரிமைச் செயற்பாட்டாளரும் திறமைமிக்க மலையேறியுமாவார். பெண்களின் உரிமைகள், பால்நிலை அடிப்படையிலான வன்முறை, பன்முகத்தன்மை மற்றும் உள்ளடக்கம், நேர்மறையான ஆண்மைத்துவம், விளையாட்டில் பெண்களின் பங்கேற்பு ஆகியவற்றில் அவரது பணி கவனம் செலுத்தியுள்ளது. 2016 இல் எவரெஸ்ட் சிகரத்தை அடைந்த முதலாவது இலங்கையராகத் திகழ்ந்த அவர், பின்னர் மகளிர் மற்றும் சிறுவர் அலுவல்கள் அமைச்சினால் பெண்களின் உரிமைகளுக்கான நல்லெண்ணத் தூதுவராக நியமிக்கப்பட்டார். அன்றிலிருந்து பால்நிலை சமத்துவத்திற்காக வாதிடுவதற்கும் வேரூன்றிய ஒரே மாதிரியான கருத்துகளுக்குச் சவால் விடுவதற்கும் தனது பொதுத் தளத்தைப் பயன்படுத்தி வருகின்றார்.",
-"பால்நிலை சமத்துவத்திற்கான அவரது பங்களிப்பு பரவலாக அங்கீகரிக்கப்பட்டுள்ளது. 2017 இல், உலகளாவிய ரீதியில் உத்வேகமளிக்கும் மற்றும் செல்வாக்குமிக்க 100 பெண்கள் பட்டியலில் BBC அவரைச் சேர்த்தது. 2019 இல் அவருக்கு ‘National Honours’ வழங்கப்பட்டதுடன், இலங்கைப் பாராளுமன்றத்தினால் ‘12 Women Changemakers of Sri Lanka’ இல் ஒருவராக அங்கீகரிக்கப்பட்டார். 2023 இல், சர்வதேச ஒலிம்பிக் குழுவின் ஆசியாவுக்கான பால்நிலை சமத்துவம், பன்முகத்தன்மை மற்றும் உள்ளடக்கச் சாம்பியன் விருதைப் பெற்றார்.",
-"ஜயந்தி பல பணிப்பாளர் சபைகளில் அங்கம் வகிப்பதுடன், Women and Media Collective மற்றும் சர்வதேச இனத்துவக் கற்கைகளுக்கான நிலையம் ஆகியவற்றின் முன்னாள் தவிசாளருமாவார். பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகராகப் பணியாற்றும் அவர், 2025 செப்டெம்பர் முதல் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவின் ஆணையாளராகச் சேவையாற்றி வருகின்றார். அவர் ஐக்கிய இராச்சியத்தின் சசெக்ஸ் பல்கலைக்கழகத்தில் பால்நிலைக் கற்கைகளில் முதுமாணிப் பட்டத்தையும், கொழும்புப் பல்கலைக்கழகத்தில் பெண்கள் கற்கைகளில் பட்டப்பின் டிப்ளோமாவையும் பெற்றுள்ளார்."
-]
-}
-},
-{
-"photo": "static/images/commissioners/shreen-abdul-saroor.jpg",
-"chair": false,
-"name": {
-"en": "Shreen Abdul Saroor",
-"si": "ෂ්‍රීන් අබ්දුල් සරූර්",
-"ta": "ஷ்ரீன் அப்துல் சரூர்"
-},
-"short": {
-"en": "Co-founder, Women’s Action Network and Mannar Women’s Development Federation",
-"si": "Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘ",
-"ta": "Women’s Action Network மற்றும் Mannar Women’s Development Federation இன் இணை ஸ்தாபகர்"
-},
-"bio": {
-"en": [
-"Shreen Abdul Saroor’s work is rooted in defending and advancing women’s rights, particularly in post-war and marginalized communities. As a co-founder of the Women’s Action Network and the Mannar Women’s Development Federation, she has focused on addressing gender-based violence, promoting women’s economic empowerment, and improving access to justice for women affected by conflict.",
-"She has been a leading advocate for legal and policy reforms aimed at strengthening women’s rights, including efforts to address discriminatory laws, harmful cultural practices, and policies that undermine gender equality.",
-"Shreen is also widely recognized for her pioneering research on gender justice, transitional justice, and minority rights. Her influential studies on issues such as female genital mutilation/cutting, gendered impact of violations of freedom of religion or belief, violence against women in electoral processes, and the lived experiences of war-affected women have contributed significantly to national policy debates and international human rights advocacy.",
-"She has received several recognitions, including the International Bremen Peace Award, the N-Peace Award, and the Voices of Courage Award. She is also a recipient of the Echoing Green Fellowship, the Women Peacemakers Fellowship, and the Ashoka Fellowship, as well as the Franco-German Human Rights and Rule of Law Award."
-],
-"si": [
-"ෂ්‍රීන් අබ්දුල් සරූර්ගේ කාර්යය, විශේෂයෙන් යුද්ධයෙන් පසු සහ ආන්තිකකරණයට ලක් වූ ප්‍රජාවන් තුළ කාන්තා අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම මත පදනම් වේ. Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘවරියක ලෙස, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය ආමන්ත්‍රණය කිරීම, කාන්තාවන්ගේ ආර්ථික සවිබල ගැන්වීම ප්‍රවර්ධනය කිරීම සහ ගැටුම්වලින් පීඩාවට පත් කාන්තාවන්ට යුක්තිය සඳහා ප්‍රවේශය වැඩිදියුණු කිරීම කෙරෙහි ඇය අවධානය යොමු කර ඇත.",
-"වෙනස්කොට සලකන නීති, හානිකර සංස්කෘතික පිළිවෙත් සහ ස්ත්‍රී පුරුෂ සමානාත්මතාවයට හානි කරන ප්‍රතිපත්ති ආමන්ත්‍රණය කිරීමේ ප්‍රයත්න ඇතුළුව, කාන්තා අයිතිවාසිකම් ශක්තිමත් කිරීම අරමුණු කරගත් නීති සහ ප්‍රතිපත්ති ප්‍රතිසංස්කරණ වෙනුවෙන් ඇය ප්‍රමුඛ ලෙස පෙනී සිට ඇත.",
-"ස්ත්‍රී පුරුෂ සමාජභාවී යුක්තිය, සංක්‍රාන්ති යුක්තිය සහ සුළුතර අයිතිවාසිකම් පිළිබඳ පුරෝගාමී පර්යේෂණ සඳහා ද ෂ්‍රීන් පුළුල් ලෙස පිළිගැනේ. කාන්තා ලිංගවේදනය/කැපීම, ආගමික හෝ විශ්වාස නිදහස උල්ලංඝනය කිරීමේ ස්ත්‍රී පුරුෂ සමාජභාවී බලපෑම, මැතිවරණ ක්‍රියාවලිවල කාන්තාවන්ට එරෙහි ප්‍රචණ්ඩත්වය සහ යුද්ධයෙන් පීඩාවට පත් කාන්තාවන්ගේ ජීවිත අත්දැකීම් වැනි කරුණු පිළිබඳ ඇයගේ බලගතු අධ්‍යයන, ජාතික ප්‍රතිපත්ති සංවාදවලට සහ ජාත්‍යන්තර මානව හිමිකම් උපදේශනයට සැලකිය යුතු දායකත්වයක් ලබා දී ඇත.",
-"International Bremen Peace Award, N-Peace Award සහ Voices of Courage Award ඇතුළු පිළිගැනීම් කිහිපයක් ඇයට හිමි වී ඇත. Echoing Green Fellowship, Women Peacemakers Fellowship සහ Ashoka Fellowship මෙන්ම Franco-German Human Rights and Rule of Law Award ද ඇයට හිමි වී ඇත."
-],
-"ta": [
-"ஷ்ரீன் அப்துல் சரூரின் பணி, குறிப்பாகப் போருக்குப் பிந்திய மற்றும் ஓரங்கட்டப்பட்ட சமூகங்களில் பெண்களின் உரிமைகளைப் பாதுகாத்து முன்னேற்றுவதில் வேரூன்றியுள்ளது. Women’s Action Network மற்றும் Mannar Women’s Development Federation ஆகியவற்றின் இணை ஸ்தாபகர் என்ற வகையில், பால்நிலை அடிப்படையிலான வன்முறையைக் கையாளுதல், பெண்களின் பொருளாதார வலுவூட்டலை ஊக்குவித்தல் மற்றும் மோதலினால் பாதிக்கப்பட்ட பெண்களுக்கு நீதிக்கான அணுகலை மேம்படுத்துதல் ஆகியவற்றில் அவர் கவனம் செலுத்தியுள்ளார்.",
-"பாரபட்சமான சட்டங்கள், தீங்கான கலாசார நடைமுறைகள் மற்றும் பால்நிலை சமத்துவத்தைப் பலவீனப்படுத்தும் கொள்கைகளைக் கையாள்வதற்கான முயற்சிகள் உட்பட, பெண்களின் உரிமைகளை வலுப்படுத்தும் நோக்கிலான சட்ட மற்றும் கொள்கைச் சீர்திருத்தங்களுக்காக அவர் முன்னணியில் நின்று வாதாடி வருகின்றார்.",
-"பால்நிலை நீதி, நிலைமாறுகால நீதி மற்றும் சிறுபான்மையினர் உரிமைகள் தொடர்பான முன்னோடி ஆய்வுகளுக்காகவும் ஷ்ரீன் பரவலாக அறியப்பட்டவர். பெண் பிறப்புறுப்புச் சிதைப்பு/வெட்டுதல், மத அல்லது நம்பிக்கைச் சுதந்திர மீறல்களின் பால்நிலைத் தாக்கம், தேர்தல் செயன்முறைகளில் பெண்களுக்கு எதிரான வன்முறை, போரினால் பாதிக்கப்பட்ட பெண்களின் வாழ்வனுபவங்கள் போன்ற விடயங்கள் குறித்த அவரது செல்வாக்குமிக்க ஆய்வுகள், தேசியக் கொள்கை விவாதங்களுக்கும் சர்வதேச மனித உரிமைகள் வாதாடலுக்கும் குறிப்பிடத்தக்க பங்களிப்பைச் செய்துள்ளன.",
-"International Bremen Peace Award, N-Peace Award, Voices of Courage Award உள்ளிட்ட பல அங்கீகாரங்களை அவர் பெற்றுள்ளார். Echoing Green Fellowship, Women Peacemakers Fellowship, Ashoka Fellowship மற்றும் Franco-German Human Rights and Rule of Law Award ஆகியவற்றையும் பெற்றுள்ளார்."
-]
-}
-},
-{
-"photo": "static/images/commissioners/kalana-senaratne.jpg",
-"chair": false,
-"name": {
-"en": "Dr Kalana Senaratne",
-"si": "ආචාර්ය කලන සේනාරත්න",
-"ta": "கலாநிதி கலன சேனாரத்ன"
-},
-"short": {
-"en": "Senior Lecturer and Head, Department of Law, University of Peradeniya",
-"si": "ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී, නීති අධ්‍යයනාංශය, පේරාදෙණිය විශ්වවිද්‍යාලය",
-"ta": "சிரேஷ்ட விரிவுரையாளர் மற்றும் துறைத் தலைவர், சட்டத் துறை, பேராதனைப் பல்கலைக்கழகம்"
-},
-"bio": {
-"en": [
-"Kalana Senaratne is a legal academic specializing in the fields of international law, human rights and constitutional law. He holds an LLB from the University of London, an LLM from University College London, and a PhD from the University of Hong Kong. He is the author of Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021). He is a member of the Editorial Board of the Asian Journal of International Law. Senaratne is currently a Senior Lecturer and the Head of the Department of Law, University of Peradeniya. He was appointed to the National Commission on Women in September, 2025. Previously, he has worked as a legal officer at the Ministry of Foreign Affairs in Sri Lanka, the UNDP in Timor-Leste, and as a research associate at the Social Scientists’ Association (SSA)."
-],
-"si": [
-"කලන සේනාරත්න ජාත්‍යන්තර නීතිය, මානව හිමිකම් සහ ආණ්ඩුක්‍රම ව්‍යවස්ථා නීතිය යන ක්ෂේත්‍රවල විශේෂඥතාවක් ඇති නීති ශාස්ත්‍රඥයෙකි. ඔහු ලන්ඩන් විශ්වවිද්‍යාලයෙන් LLB උපාධියක්, University College London ආයතනයෙන් LLM උපාධියක් සහ හොංකොං විශ්වවිද්‍යාලයෙන් PhD උපාධියක් ලබා ඇත. ඔහු Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) ග්‍රන්ථයේ කතුවරයා වේ. ඔහු Asian Journal of International Law හි කතු මණ්ඩල සාමාජිකයෙකි. සේනාරත්න මහතා දැනට පේරාදෙණිය විශ්වවිද්‍යාලයේ නීති අධ්‍යයනාංශයේ ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී ලෙස සේවය කරයි. ඔහු 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලදී. මීට පෙර ඔහු ශ්‍රී ලංකා විදේශ කටයුතු අමාත්‍යාංශයේ සහ ටිමෝර්-ලෙස්ටේ හි UNDP ආයතනයේ නීති නිලධාරියෙකු ලෙස ද, සමාජ විද්‍යාඥයින්ගේ සංගමයේ (SSA) පර්යේෂණ සහායකයෙකු ලෙස ද සේවය කර ඇත."
-],
-"ta": [
-"கலன சேனாரத்ன சர்வதேச சட்டம், மனித உரிமைகள் மற்றும் அரசியலமைப்புச் சட்டம் ஆகிய துறைகளில் நிபுணத்துவம் பெற்ற சட்டக் கல்வியாளராவார். லண்டன் பல்கலைக்கழகத்தில் LLB பட்டத்தையும், University College London இல் LLM பட்டத்தையும், ஹொங்கொங் பல்கலைக்கழகத்தில் PhD பட்டத்தையும் பெற்றுள்ளார். Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) என்ற நூலின் ஆசிரியராவார். Asian Journal of International Law இன் ஆசிரியர் சபை உறுப்பினராகவும் உள்ளார். தற்போது பேராதனைப் பல்கலைக்கழகத்தின் சட்டத் துறையின் சிரேஷ்ட விரிவுரையாளராகவும் துறைத் தலைவராகவும் பணியாற்றுகின்றார். அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். இதற்கு முன்னர், இலங்கை வெளிநாட்டலுவல்கள் அமைச்சிலும் திமோர்-லெஸ்தேயிலுள்ள UNDP இலும் சட்ட அலுவலராகவும், சமூக விஞ்ஞானிகள் சங்கத்தில் (SSA) ஆய்வு உதவியாளராகவும் பணியாற்றியுள்ளார்."
-]
-}
-},
-{
-"photo": "static/images/commissioners/gayani.jpg",
-"chair": false,
-"name": {"en": "M. U. Gayani"},
-"short": {"en": "Chairperson, Kithul Development Board"},
-"bio": {"en": [
-"M. U. Gayani holds a Master of Business Administration (MBA) from the University of Colombo and a B.Sc. (Special) Degree in Chemistry from the University of Colombo. She is also an ISO 22000:2018 Lead Auditor.",
-"Professionally, she brings over 20 years of cross-functional experience across the industrial, R&D, and academic sectors. At present, she serves as a Commissioner of the National Commission on Women and as the Chairperson of the Kithul Development Board. Previously, she served as an Enterprise Promotion Manager and Assistant Director at the Industrial Development Board of Ceylon (IDB). Throughout her career, she has spearheaded national-level programs to empower women-led enterprises and drive sector growth. Additionally, she works as an independent consultant specializing in women's entrepreneurship and business development, providing expert guidance to help industries upgrade and successfully obtain required certifications."
-]}
-},
-{
-"photo": "static/images/commissioners/janaha-selvaras.jpg",
-"chair": false,
-"name": {"en": "Janaha Selvaras"},
-"short": {"en": "Attorney-at-Law; Senior Lecturer, Department of Legal Studies, The Open University of Sri Lanka"},
-"bio": {"en": [
-"Janaha Selvaras was appointed as a Full-Time Commissioner of the National Commission on Women of Sri Lanka in September 2025. She is an Attorney-at-Law and legal academic with expertise in international law, human rights, environmental law, and open and distance learning.",
-"She holds a Bachelor of Laws with Honours from the Faculty of Law, University of Colombo, and a Master of Laws specialising in International Legal Studies from South Asian University (SAARC University), New Delhi. She also holds postgraduate diplomas in International Law and Diplomacy from the Indian Society of International Law and Human Resource Management from the University of Colombo.",
-"She serves as a Senior Lecturer in the Department of Legal Studies at the Open University of Sri Lanka. She is also a Board Member of the National Youth Services Council of Sri Lanka."
-]}
-},
-{
-"photo": "static/images/commissioners/olga.jpg",
-"ed": true,
-"name": {"en": "K.D.R. Olga"},
-"short": {"en": "Retired public servant; former Secretary to the Ministry of Women and Child Affairs"},
-"bio": {"en": [
-"Ms. K.D.R. Olga is a retired public servant with over 35 years of service. She began her career as a Government Accountant. When she was getting retired, she was the Secretary to the Ministry of Women and Child Affairs. From August 2020 to May 2022, she also served as the Secretary to the Ministry of Energy.",
-"A significant portion of her career was dedicated to the General Treasury, where she gained extensive experience in key areas such as budgeting, cash management, government accounting, and public procurement. During her tenure at the General Treasury, she also served as the Treasury’s representative on the Boards of Directors of several State-Owned Enterprises."
-]}
-}
-];
+const MEMBERS = [{"photo":"static/images/commissioners/grace-asirwatham.jpg","chair":true,"name":{"en":"Grace Asirwatham","si":"ග්‍රේස් අසිර්වාතම්","ta":"கிரேஸ் ஆசீர்வாதம்"},"short":{"en":"Retired Ambassador, Sri Lanka Foreign Service","si":"විශ්‍රාමික තානාපතිවරිය, ශ්‍රී ලංකා විදේශ සේවය","ta":"ஓய்வுபெற்ற தூதுவர், இலங்கை வெளிநாட்டுச் சேவை"},"bio":{"en":["Grace Asirwatham is a retired Ambassador and member of the Sri Lanka Foreign Service, with 36 years of service as a diplomat and international civil servant. She has served as Sri Lanka’s Ambassador to Nepal, the Netherlands, Belgium, and Luxembourg. She also served as Permanent Representative to the Organisation for the Prohibition of Chemical Weapons (OPCW) and as Head of Mission of Sri Lanka to the European Union in Brussels. In addition, she has served in diplomatic postings in Bonn, Germany, and Islamabad, Pakistan.","As an international civil servant, she served at the OPCW as Deputy Director-General with the United Nations rank of Assistant Secretary-General (ASG). She has also held several senior positions in the Ministry of Foreign Affairs in Colombo, including Secretary to the State Ministry of Foreign Affairs.","Grace Asirwatham holds a Bachelor’s Degree in Business Administration (BSc) from the University of Jaffna and a Master’s Degree in International Relations from the University of Colombo.","In recognition of her services as Ambassador to Nepal, she was conferred the honorary title “Sri Lankabimanya Deshabandhu Diriya Matha” by Sri Lanka Wiswa Samadhi Padanama. She has also been awarded a Gold Award in the State and Government Sector as part of the Top 50 Professional and Career Women Awards 2021 by Women in Management Sri Lanka, in collaboration with the International Finance Corporation (IFC) and Australian Aid (AusAID)."],"si":["ග්‍රේස් අසිර්වාතම් මහත්මිය ශ්‍රී ලංකා විදේශ සේවයේ සාමාජිකාවක සහ විශ්‍රාමික තානාපතිවරියක වන අතර, රාජ්‍ය තාන්ත්‍රිකයෙකු සහ ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස වසර 36ක සේවා කාලයක් ඇත. ඇය නේපාලය, නෙදර්ලන්තය, බෙල්ජියම සහ ලක්සම්බර්ග් යන රටවල ශ්‍රී ලංකා තානාපතිවරිය ලෙස සේවය කර ඇත. රසායනික අවි තහනම් කිරීමේ සංවිධානයේ (OPCW) ස්ථිර නියෝජිතවරිය ලෙස සහ බ්‍රසල්ස් හි යුරෝපා සංගමය සඳහා වූ ශ්‍රී ලංකා දූත මණ්ඩල ප්‍රධානී ලෙස ද ඇය සේවය කළාය. ඊට අමතරව, ජර්මනියේ බොන් සහ පාකිස්තානයේ ඉස්ලාමාබාද් නගරවල රාජ්‍ය තාන්ත්‍රික තනතුරු ද දැරුවාය.","ජාත්‍යන්තර සිවිල් සේවකයෙකු ලෙස, ඇය එක්සත් ජාතීන්ගේ සහකාර මහලේකම් (ASG) නිලයෙන් යුතුව OPCW හි නියෝජ්‍ය අධ්‍යක්ෂ ජනරාල් ලෙස සේවය කළාය. රාජ්‍ය විදේශ කටයුතු අමාත්‍යාංශයේ ලේකම් ධුරය ඇතුළුව, කොළඹ විදේශ කටයුතු අමාත්‍යාංශයේ ජ්‍යෙෂ්ඨ තනතුරු කිහිපයක් ද ඇය දරා ඇත.","ග්‍රේස් අසිර්වාතම් මහත්මිය යාපනය විශ්වවිද්‍යාලයෙන් ව්‍යාපාර පරිපාලනය පිළිබඳ උපාධියක් (BSc) සහ කොළඹ විශ්වවිද්‍යාලයෙන් ජාත්‍යන්තර සබඳතා පිළිබඳ ශාස්ත්‍රපති උපාධියක් ලබා ඇත.","නේපාලයේ තානාපතිවරිය ලෙස කළ සේවය අගයමින්, ශ්‍රී ලංකා විශ්ව සමාධි පදනම විසින් ඇයට “ශ්‍රී ලංකාභිමාන්‍ය දේශබන්ධු දිරිය මාතා” ගෞරව නාමය පිරිනමන ලදී. ජාත්‍යන්තර මූල්‍ය සංස්ථාව (IFC) සහ ඕස්ට්‍රේලියානු ආධාර (AusAID) සමඟ එක්ව Women in Management Sri Lanka ආයතනය පැවැත්වූ Top 50 Professional and Career Women Awards 2021 හිදී, රාජ්‍ය සහ රජයේ අංශය යටතේ රන් සම්මානයක් ද ඇයට හිමි විය."],"ta":["கிரேஸ் ஆசீர்வாதம் இலங்கை வெளிநாட்டுச் சேவையின் உறுப்பினரும் ஓய்வுபெற்ற தூதுவருமாவார். இராஜதந்திரியாகவும் சர்வதேச சிவில் சேவையாளராகவும் 36 வருட சேவை அனுபவம் கொண்டவர். நேபாளம், நெதர்லாந்து, பெல்ஜியம் மற்றும் லக்சம்பேர்க் ஆகிய நாடுகளுக்கான இலங்கைத் தூதுவராகப் பணியாற்றியுள்ளார். இரசாயன ஆயுதங்களைத் தடைசெய்வதற்கான அமைப்பின் (OPCW) நிரந்தரப் பிரதிநிதியாகவும், பிரசல்ஸிலுள்ள ஐரோப்பிய ஒன்றியத்திற்கான இலங்கைத் தூதுக்குழுவின் தலைவராகவும் பணியாற்றியுள்ளார். மேலும், ஜேர்மனியின் பொன் மற்றும் பாகிஸ்தானின் இஸ்லாமாபாத் ஆகிய இடங்களிலும் இராஜதந்திரப் பதவிகளை வகித்துள்ளார்.","சர்வதேச சிவில் சேவையாளராக, ஐக்கிய நாடுகளின் உதவிச் செயலாளர் நாயகம் (ASG) தரத்துடன் OPCW இன் பிரதிப் பணிப்பாளர் நாயகமாகப் பணியாற்றினார். இராஜாங்க வெளிநாட்டலுவல்கள் அமைச்சின் செயலாளர் பதவி உட்பட, கொழும்பிலுள்ள வெளிநாட்டலுவல்கள் அமைச்சில் பல சிரேஷ்ட பதவிகளையும் வகித்துள்ளார்.","கிரேஸ் ஆசீர்வாதம் யாழ்ப்பாணப் பல்கலைக்கழகத்தில் வியாபார நிர்வாகத்தில் இளமாணிப் பட்டத்தையும் (BSc), கொழும்புப் பல்கலைக்கழகத்தில் சர்வதேச உறவுகளில் முதுமாணிப் பட்டத்தையும் பெற்றுள்ளார்.","நேபாளத்திற்கான தூதுவராக அவர் ஆற்றிய சேவையைப் பாராட்டி, ஸ்ரீ லங்கா விஷ்வ சமாதி பதனம அவருக்கு “ஸ்ரீ லங்காபிமான்ய தேசபந்து திரிய மாதா” என்ற கௌரவப் பட்டத்தை வழங்கியது. சர்வதேச நிதிக் கூட்டுத்தாபனம் (IFC) மற்றும் அவுஸ்திரேலிய உதவி (AusAID) ஆகியவற்றுடன் இணைந்து Women in Management Sri Lanka நடத்திய Top 50 Professional and Career Women Awards 2021 இல், அரச மற்றும் அரசாங்கத் துறைக்கான தங்க விருதையும் பெற்றுள்ளார்."]}},
+{"fulltime":true,"photo":"static/images/commissioners/shreen-abdul-saroor.jpg","chair":false,"name":{"en":"Shreen Abdul Saroor","si":"ෂ්‍රීන් අබ්දුල් සරූර්","ta":"ஷ்ரீன் அப்துல் சரூர்"},"short":{"en":"Co-founder, Women’s Action Network and Mannar Women’s Development Federation","si":"Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘ","ta":"Women’s Action Network மற்றும் Mannar Women’s Development Federation இன் இணை ஸ்தாபகர்"},"bio":{"en":["Shreen Abdul Saroor’s work is rooted in defending and advancing women’s rights, particularly in post-war and marginalized communities. As a co-founder of the Women’s Action Network and the Mannar Women’s Development Federation, she has focused on addressing gender-based violence, promoting women’s economic empowerment, and improving access to justice for women affected by conflict.","She has been a leading advocate for legal and policy reforms aimed at strengthening women’s rights, including efforts to address discriminatory laws, harmful cultural practices, and policies that undermine gender equality.","Shreen is also widely recognized for her pioneering research on gender justice, transitional justice, and minority rights. Her influential studies on issues such as female genital mutilation/cutting, gendered impact of violations of freedom of religion or belief, violence against women in electoral processes, and the lived experiences of war-affected women have contributed significantly to national policy debates and international human rights advocacy.","She has received several recognitions, including the International Bremen Peace Award, the N-Peace Award, and the Voices of Courage Award. She is also a recipient of the Echoing Green Fellowship, the Women Peacemakers Fellowship, and the Ashoka Fellowship, as well as the Franco-German Human Rights and Rule of Law Award."],"si":["ෂ්‍රීන් අබ්දුල් සරූර්ගේ කාර්යය, විශේෂයෙන් යුද්ධයෙන් පසු සහ ආන්තිකකරණයට ලක් වූ ප්‍රජාවන් තුළ කාන්තා අයිතිවාසිකම් ආරක්ෂා කිරීම සහ ප්‍රවර්ධනය කිරීම මත පදනම් වේ. Women’s Action Network සහ Mannar Women’s Development Federation හි සම-නිර්මාතෘවරියක ලෙස, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය ආමන්ත්‍රණය කිරීම, කාන්තාවන්ගේ ආර්ථික සවිබල ගැන්වීම ප්‍රවර්ධනය කිරීම සහ ගැටුම්වලින් පීඩාවට පත් කාන්තාවන්ට යුක්තිය සඳහා ප්‍රවේශය වැඩිදියුණු කිරීම කෙරෙහි ඇය අවධානය යොමු කර ඇත.","වෙනස්කොට සලකන නීති, හානිකර සංස්කෘතික පිළිවෙත් සහ ස්ත්‍රී පුරුෂ සමානාත්මතාවයට හානි කරන ප්‍රතිපත්ති ආමන්ත්‍රණය කිරීමේ ප්‍රයත්න ඇතුළුව, කාන්තා අයිතිවාසිකම් ශක්තිමත් කිරීම අරමුණු කරගත් නීති සහ ප්‍රතිපත්ති ප්‍රතිසංස්කරණ වෙනුවෙන් ඇය ප්‍රමුඛ ලෙස පෙනී සිට ඇත.","ස්ත්‍රී පුරුෂ සමාජභාවී යුක්තිය, සංක්‍රාන්ති යුක්තිය සහ සුළුතර අයිතිවාසිකම් පිළිබඳ පුරෝගාමී පර්යේෂණ සඳහා ද ෂ්‍රීන් පුළුල් ලෙස පිළිගැනේ. කාන්තා ලිංගවේදනය/කැපීම, ආගමික හෝ විශ්වාස නිදහස උල්ලංඝනය කිරීමේ ස්ත්‍රී පුරුෂ සමාජභාවී බලපෑම, මැතිවරණ ක්‍රියාවලිවල කාන්තාවන්ට එරෙහි ප්‍රචණ්ඩත්වය සහ යුද්ධයෙන් පීඩාවට පත් කාන්තාවන්ගේ ජීවිත අත්දැකීම් වැනි කරුණු පිළිබඳ ඇයගේ බලගතු අධ්‍යයන, ජාතික ප්‍රතිපත්ති සංවාදවලට සහ ජාත්‍යන්තර මානව හිමිකම් උපදේශනයට සැලකිය යුතු දායකත්වයක් ලබා දී ඇත.","International Bremen Peace Award, N-Peace Award සහ Voices of Courage Award ඇතුළු පිළිගැනීම් කිහිපයක් ඇයට හිමි වී ඇත. Echoing Green Fellowship, Women Peacemakers Fellowship සහ Ashoka Fellowship මෙන්ම Franco-German Human Rights and Rule of Law Award ද ඇයට හිමි වී ඇත."],"ta":["ஷ்ரீன் அப்துல் சரூரின் பணி, குறிப்பாகப் போருக்குப் பிந்திய மற்றும் ஓரங்கட்டப்பட்ட சமூகங்களில் பெண்களின் உரிமைகளைப் பாதுகாத்து முன்னேற்றுவதில் வேரூன்றியுள்ளது. Women’s Action Network மற்றும் Mannar Women’s Development Federation ஆகியவற்றின் இணை ஸ்தாபகர் என்ற வகையில், பால்நிலை அடிப்படையிலான வன்முறையைக் கையாளுதல், பெண்களின் பொருளாதார வலுவூட்டலை ஊக்குவித்தல் மற்றும் மோதலினால் பாதிக்கப்பட்ட பெண்களுக்கு நீதிக்கான அணுகலை மேம்படுத்துதல் ஆகியவற்றில் அவர் கவனம் செலுத்தியுள்ளார்.","பாரபட்சமான சட்டங்கள், தீங்கான கலாசார நடைமுறைகள் மற்றும் பால்நிலை சமத்துவத்தைப் பலவீனப்படுத்தும் கொள்கைகளைக் கையாள்வதற்கான முயற்சிகள் உட்பட, பெண்களின் உரிமைகளை வலுப்படுத்தும் நோக்கிலான சட்ட மற்றும் கொள்கைச் சீர்திருத்தங்களுக்காக அவர் முன்னணியில் நின்று வாதாடி வருகின்றார்.","பால்நிலை நீதி, நிலைமாறுகால நீதி மற்றும் சிறுபான்மையினர் உரிமைகள் தொடர்பான முன்னோடி ஆய்வுகளுக்காகவும் ஷ்ரீன் பரவலாக அறியப்பட்டவர். பெண் பிறப்புறுப்புச் சிதைப்பு/வெட்டுதல், மத அல்லது நம்பிக்கைச் சுதந்திர மீறல்களின் பால்நிலைத் தாக்கம், தேர்தல் செயன்முறைகளில் பெண்களுக்கு எதிரான வன்முறை, போரினால் பாதிக்கப்பட்ட பெண்களின் வாழ்வனுபவங்கள் போன்ற விடயங்கள் குறித்த அவரது செல்வாக்குமிக்க ஆய்வுகள், தேசியக் கொள்கை விவாதங்களுக்கும் சர்வதேச மனித உரிமைகள் வாதாடலுக்கும் குறிப்பிடத்தக்க பங்களிப்பைச் செய்துள்ளன.","International Bremen Peace Award, N-Peace Award, Voices of Courage Award உள்ளிட்ட பல அங்கீகாரங்களை அவர் பெற்றுள்ளார். Echoing Green Fellowship, Women Peacemakers Fellowship, Ashoka Fellowship மற்றும் Franco-German Human Rights and Rule of Law Award ஆகியவற்றையும் பெற்றுள்ளார்."]}},
+{"fulltime":true,"photo":"static/images/commissioners/janaha-selvaras.jpg","chair":false,"name":{"en":"Janaha Selvaras"},"short":{"en":"Attorney-at-Law; Senior Lecturer, Department of Legal Studies, The Open University of Sri Lanka"},"bio":{"en":["Janaha Selvaras was appointed as a Full-Time Commissioner of the National Commission on Women of Sri Lanka in September 2025. She is an Attorney-at-Law and legal academic with expertise in international law, human rights, environmental law, and open and distance learning.","She holds a Bachelor of Laws with Honours from the Faculty of Law, University of Colombo, and a Master of Laws specialising in International Legal Studies from South Asian University (SAARC University), New Delhi. She also holds postgraduate diplomas in International Law and Diplomacy from the Indian Society of International Law and Human Resource Management from the University of Colombo.","She serves as a Senior Lecturer in the Department of Legal Studies at the Open University of Sri Lanka. She is also a Board Member of the National Youth Services Council of Sri Lanka."]}},
+{"photo":"static/images/commissioners/padma-gunaratne.jpg","chair":false,"name":{"en":"Dr Padma Sriyani Gunaratne","si":"වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න","ta":"வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன"},"short":{"en":"Specialist Neurologist","si":"විශේෂඥ ස්නායු වෛද්‍ය","ta":"விசேட நரம்பியல் வைத்திய நிபுணர்"},"bio":{"en":["Dr Padma Sriyani Gunaratne MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO is a Board-certified Specialist Neurologist with vast experience in Clinical Neurology over 35 years in the Ministry of Health, with special interest in Stroke, Rehabilitation and Elder’s Care. She is an ardent advocate of public health and has carried out numerous health promotional activities towards the benefit of the Sri Lankan community while leading as the President in many national professional organizations such as Sri Lanka Medical Association (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians and Sri Lankan Association for Geriatric Medicine, as well as by representing the Board of Directors of the international organization such as World Stroke Organizations and Asia Pacific Stroke Organization. She is the founder of the Stroke Support Organization for Sri Lankans meant for stroke patients and she authored the book “Stroke Care” in all three languages.","As the President of the SLMA in 2021, during which COVID-19 pandemic devastated Sri Lanka, she led the medical profession by providing advocacy on control of the pandemic to the profession, people and to the Government of Sri Lanka. Along with the Women’s Health Committee of the SLMA, she steered the professional Association on numerous occasions for safeguarding women’s rights.","She is a recipient of Women in Management Top 50 Professional & Career Women Awards 2020–2021 in Health and Medical Sector.","She was appointed to the National Commission on Women in September 2025 and she envisages to ensure mechanisms to safeguard rights and equality for every woman, leaving no one behind, in Sri Lanka."],"si":["වෛද්‍ය පද්මා ශ්‍රියානි ගුණරත්න MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, සෞඛ්‍ය අමාත්‍යාංශයේ වසර 35කට අධික සායනික ස්නායු වෛද්‍ය විද්‍යා පළපුරුද්දක් ඇති, මණ්ඩල සහතිකලත් විශේෂඥ ස්නායු වෛද්‍යවරියකි. ආඝාතය, පුනරුත්ථාපනය සහ වැඩිහිටි සත්කාරය ඇයගේ විශේෂ උනන්දුව දක්වන ක්ෂේත්‍ර වේ. මහජන සෞඛ්‍යය වෙනුවෙන් කැපවී සිටින ඇය, ශ්‍රී ලංකා වෛද්‍ය සංගමය (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians සහ Sri Lankan Association for Geriatric Medicine වැනි ජාතික වෘත්තීය සංවිධාන රැසක සභාපතිනිය ලෙස නායකත්වය දෙමින් ද, World Stroke Organization සහ Asia Pacific Stroke Organization වැනි ජාත්‍යන්තර සංවිධානවල අධ්‍යක්ෂ මණ්ඩල නියෝජනය කරමින් ද, ශ්‍රී ලාංකික ප්‍රජාවේ යහපත උදෙසා සෞඛ්‍ය ප්‍රවර්ධන කටයුතු රැසක් සිදු කර ඇත. ආඝාත රෝගීන් සඳහා වූ Stroke Support Organization for Sri Lankans හි නිර්මාතෘවරිය වන ඇය, “Stroke Care” ග්‍රන්ථය භාෂා තුනෙන්ම රචනා කර ඇත.","COVID-19 වසංගතය ශ්‍රී ලංකාවට දැඩි ලෙස බලපෑ 2021 වසරේ ශ්‍රී ලංකා වෛද්‍ය සංගමයේ සභාපතිනිය ලෙස, වසංගතය පාලනය කිරීම පිළිබඳව වෛද්‍ය වෘත්තිකයින්ට, ජනතාවට සහ ශ්‍රී ලංකා රජයට උපදේශනය ලබා දෙමින් ඇය වෛද්‍ය වෘත්තියට නායකත්වය දුන්නාය. ශ්‍රී ලංකා වෛද්‍ය සංගමයේ කාන්තා සෞඛ්‍ය කමිටුව සමඟ එක්ව, කාන්තා අයිතිවාසිකම් සුරැකීම සඳහා අවස්ථා රැසකදී ඇය එම වෘත්තීය සංගමයට මඟ පෙන්වූවාය.","ඇය සෞඛ්‍ය හා වෛද්‍ය අංශයේ Women in Management Top 50 Professional & Career Women Awards 2020–2021 සම්මානලාභිනියකි.","ඇය 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලද අතර, කිසිවෙකු අතපසු නොකර ශ්‍රී ලංකාවේ සෑම කාන්තාවකගේම අයිතිවාසිකම් සහ සමානාත්මතාවය සුරැකීමේ යාන්ත්‍රණ සහතික කිරීම ඇයගේ අපේක්ෂාවයි."],"ta":["வைத்தியர் பத்மா ஸ்ரீயானி குணரத்ன MBBS(SL), MD(SL), FRCP(Edin, Glasg, Lond), FCCP, Hon FRACP, FAAN, FWSO, சுகாதார அமைச்சில் 35 வருடங்களுக்கும் மேலான மருத்துவ நரம்பியல் அனுபவம் கொண்ட, சபைச் சான்றிதழ் பெற்ற விசேட நரம்பியல் வைத்திய நிபுணராவார். பக்கவாதம், புனர்வாழ்வு மற்றும் முதியோர் பராமரிப்பு ஆகியவை அவரது விசேட ஆர்வத்துக்குரிய துறைகளாகும். பொதுச் சுகாதாரத்தின் தீவிர ஆதரவாளரான அவர், இலங்கை மருத்துவ சங்கம் (SLMA), National Stroke Association of Sri Lanka, Association of Sri Lankan Neurologists, Ceylon College of Physicians, Sri Lankan Association for Geriatric Medicine போன்ற பல தேசிய தொழில்சார் அமைப்புகளின் தலைவராகவும், World Stroke Organization, Asia Pacific Stroke Organization போன்ற சர்வதேச அமைப்புகளின் பணிப்பாளர் சபைகளில் பிரதிநிதியாகவும் இருந்து, இலங்கைச் சமூகத்தின் நலனுக்காகப் பல சுகாதார மேம்பாட்டுச் செயற்பாடுகளை முன்னெடுத்துள்ளார். பக்கவாத நோயாளர்களுக்கான Stroke Support Organization for Sri Lankans அமைப்பின் ஸ்தாபகரான அவர், “Stroke Care” என்ற நூலை மும்மொழிகளிலும் எழுதியுள்ளார்.","COVID-19 பெருந்தொற்று இலங்கையைக் கடுமையாகப் பாதித்த 2021 ஆம் ஆண்டில் இலங்கை மருத்துவ சங்கத்தின் தலைவராக இருந்த அவர், பெருந்தொற்றைக் கட்டுப்படுத்துவது குறித்து மருத்துவத் துறையினர், மக்கள் மற்றும் இலங்கை அரசாங்கத்திற்கு ஆலோசனைகளை வழங்கி மருத்துவத் துறைக்குத் தலைமை தாங்கினார். இலங்கை மருத்துவ சங்கத்தின் பெண்கள் சுகாதாரக் குழுவுடன் இணைந்து, பெண்களின் உரிமைகளைப் பாதுகாப்பதற்காகப் பல சந்தர்ப்பங்களில் அச்சங்கத்தை வழிநடத்தினார்.","சுகாதார மற்றும் மருத்துவத் துறையில் Women in Management Top 50 Professional & Career Women Awards 2020–2021 விருதைப் பெற்றவர்.","அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். எவரையும் கைவிடாது, இலங்கையிலுள்ள ஒவ்வொரு பெண்ணின் உரிமைகளையும் சமத்துவத்தையும் பாதுகாப்பதற்கான பொறிமுறைகளை உறுதிப்படுத்துவது அவரது நோக்கமாகும்."]}},
+{"photo":"static/images/commissioners/jayanthi-kuru-utumpala.jpg","chair":false,"name":{"en":"Jayanthi Kuru-Utumpala","si":"ජයන්ති කුරු-උතුම්පාල","ta":"ஜயந்தி குரு-உதும்பால"},"short":{"en":"Women’s rights activist; independent consultant on gender and human rights","si":"කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනිය; ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකා","ta":"பெண்கள் உரிமைச் செயற்பாட்டாளர்; பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகர்"},"bio":{"en":["Jayanthi Kuru-Utumpala is a women’s rights activist with over two decades of experience, and an accomplished mountaineer. Her work has focused on women’s rights, gender-based violence, diversity & inclusion, positive masculinities, and women’s participation in sports. In 2016, she became the first Sri Lankan to summit Mount Everest and was subsequently appointed as Goodwill Ambassador for Women’s Rights by the Ministry of Women and Child Affairs. She has since used her public platform to advocate for gender equality and challenge entrenched stereotypes.","Her contributions to gender equality have been widely recognized. In 2017, she was included in BBC’s list of 100 inspiring and influential women worldwide. In 2019, she was awarded ‘National Honours’ and recognized by the Sri Lankan Parliament as one of the ‘12 Women Changemakers of Sri Lanka.’ In 2023, she received the International Olympic Committee’s Gender Equality, Diversity and Inclusion Champions Award for Asia.","Jayanthi serves on several boards and is the former Chairperson of the Women and Media Collective and the International Centre for Ethnic Studies. She works as an independent consultant on gender and human rights and has been serving as a Commissioner on the National Commission on Women since September 2025. She holds a master’s degree in Gender Studies from the University of Sussex (UK) and a postgraduate diploma in Women’s Studies from the University of Colombo."],"si":["ජයන්ති කුරු-උතුම්පාල දශක දෙකකට අධික පළපුරුද්දක් ඇති කාන්තා අයිතිවාසිකම් ක්‍රියාකාරිනියක් සහ දක්ෂ කඳු නගින්නියකි. ඇයගේ කාර්යය කාන්තා අයිතිවාසිකම්, ස්ත්‍රී පුරුෂ සමාජභාවය මත පදනම් වූ ප්‍රචණ්ඩත්වය, විවිධත්වය සහ ඇතුළත් කිරීම, ධනාත්මක පුරුෂත්වය සහ ක්‍රීඩාවේ කාන්තා සහභාගීත්වය කෙරෙහි යොමු වී ඇත. 2016 දී එවරස්ට් කඳු මුදුනට නැගි ප්‍රථම ශ්‍රී ලාංකිකයා බවට පත් වූ ඇය, පසුව කාන්තා හා ළමා කටයුතු අමාත්‍යාංශය විසින් කාන්තා අයිතිවාසිකම් සඳහා වූ සද්භාව තානාපතිනිය ලෙස පත් කරන ලදී. එතැන් සිට, ස්ත්‍රී පුරුෂ සමානාත්මතාවය වෙනුවෙන් පෙනී සිටීමට සහ මුල්බැසගත් ඒකාකෘතික අදහස්වලට අභියෝග කිරීමට ඇය සිය මහජන වේදිකාව භාවිත කර ඇත.","ස්ත්‍රී පුරුෂ සමානාත්මතාවය සඳහා ඇයගේ දායකත්වය පුළුල් ලෙස පිළිගැනී ඇත. 2017 දී BBC ආයතනය ලොව පුරා ආශ්වාදජනක සහ බලපෑම් සහගත කාන්තාවන් 100 දෙනාගේ ලැයිස්තුවට ඇය ඇතුළත් කළේය. 2019 දී ඇයට ‘National Honours’ පිරිනමන ලද අතර, ශ්‍රී ලංකා පාර්ලිමේන්තුව විසින් ‘12 Women Changemakers of Sri Lanka’ අතරට ඇය නම් කරන ලදී. 2023 දී, ජාත්‍යන්තර ඔලිම්පික් කමිටුවේ ආසියාව සඳහා වූ ස්ත්‍රී පුරුෂ සමානාත්මතාවය, විවිධත්වය සහ ඇතුළත් කිරීමේ ශූරතා සම්මානය ඇයට හිමි විය.","ජයන්ති පාලක මණ්ඩල කිහිපයක සේවය කරන අතර, Women and Media Collective සහ ජාත්‍යන්තර ජනවාර්ගික අධ්‍යයන කේන්ද්‍රයේ හිටපු සභාපතිනියයි. ඇය ස්ත්‍රී පුරුෂ සමාජභාවය සහ මානව හිමිකම් පිළිබඳ ස්වාධීන උපදේශිකාවක ලෙස කටයුතු කරන අතර, 2025 සැප්තැම්බර් සිට කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවේ කොමසාරිස්වරියක ලෙස සේවය කරයි. ඇය එක්සත් රාජධානියේ සසෙක්ස් විශ්වවිද්‍යාලයෙන් ස්ත්‍රී පුරුෂ සමාජභාවී අධ්‍යයනය පිළිබඳ ශාස්ත්‍රපති උපාධියක් සහ කොළඹ විශ්වවිද්‍යාලයෙන් කාන්තා අධ්‍යයනය පිළිබඳ පශ්චාත් උපාධි ඩිප්ලෝමාවක් ලබා ඇත."],"ta":["ஜயந்தி குரு-உதும்பால இரு தசாப்தங்களுக்கும் மேலான அனுபவம் கொண்ட பெண்கள் உரிமைச் செயற்பாட்டாளரும் திறமைமிக்க மலையேறியுமாவார். பெண்களின் உரிமைகள், பால்நிலை அடிப்படையிலான வன்முறை, பன்முகத்தன்மை மற்றும் உள்ளடக்கம், நேர்மறையான ஆண்மைத்துவம், விளையாட்டில் பெண்களின் பங்கேற்பு ஆகியவற்றில் அவரது பணி கவனம் செலுத்தியுள்ளது. 2016 இல் எவரெஸ்ட் சிகரத்தை அடைந்த முதலாவது இலங்கையராகத் திகழ்ந்த அவர், பின்னர் மகளிர் மற்றும் சிறுவர் அலுவல்கள் அமைச்சினால் பெண்களின் உரிமைகளுக்கான நல்லெண்ணத் தூதுவராக நியமிக்கப்பட்டார். அன்றிலிருந்து பால்நிலை சமத்துவத்திற்காக வாதிடுவதற்கும் வேரூன்றிய ஒரே மாதிரியான கருத்துகளுக்குச் சவால் விடுவதற்கும் தனது பொதுத் தளத்தைப் பயன்படுத்தி வருகின்றார்.","பால்நிலை சமத்துவத்திற்கான அவரது பங்களிப்பு பரவலாக அங்கீகரிக்கப்பட்டுள்ளது. 2017 இல், உலகளாவிய ரீதியில் உத்வேகமளிக்கும் மற்றும் செல்வாக்குமிக்க 100 பெண்கள் பட்டியலில் BBC அவரைச் சேர்த்தது. 2019 இல் அவருக்கு ‘National Honours’ வழங்கப்பட்டதுடன், இலங்கைப் பாராளுமன்றத்தினால் ‘12 Women Changemakers of Sri Lanka’ இல் ஒருவராக அங்கீகரிக்கப்பட்டார். 2023 இல், சர்வதேச ஒலிம்பிக் குழுவின் ஆசியாவுக்கான பால்நிலை சமத்துவம், பன்முகத்தன்மை மற்றும் உள்ளடக்கச் சாம்பியன் விருதைப் பெற்றார்.","ஜயந்தி பல பணிப்பாளர் சபைகளில் அங்கம் வகிப்பதுடன், Women and Media Collective மற்றும் சர்வதேச இனத்துவக் கற்கைகளுக்கான நிலையம் ஆகியவற்றின் முன்னாள் தவிசாளருமாவார். பால்நிலை மற்றும் மனித உரிமைகள் தொடர்பான சுயாதீன ஆலோசகராகப் பணியாற்றும் அவர், 2025 செப்டெம்பர் முதல் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவின் ஆணையாளராகச் சேவையாற்றி வருகின்றார். அவர் ஐக்கிய இராச்சியத்தின் சசெக்ஸ் பல்கலைக்கழகத்தில் பால்நிலைக் கற்கைகளில் முதுமாணிப் பட்டத்தையும், கொழும்புப் பல்கலைக்கழகத்தில் பெண்கள் கற்கைகளில் பட்டப்பின் டிப்ளோமாவையும் பெற்றுள்ளார்."]}},
+{"photo":"static/images/commissioners/gayani.jpg","chair":false,"name":{"en":"M. U. Gayani"},"short":{"en":"Chairperson, Kithul Development Board"},"bio":{"en":["M. U. Gayani holds a Master of Business Administration (MBA) from the University of Colombo and a B.Sc. (Special) Degree in Chemistry from the University of Colombo. She is also an ISO 22000:2018 Lead Auditor.","Professionally, she brings over 20 years of cross-functional experience across the industrial, R&D, and academic sectors. At present, she serves as a Commissioner of the National Commission on Women and as the Chairperson of the Kithul Development Board. Previously, she served as an Enterprise Promotion Manager and Assistant Director at the Industrial Development Board of Ceylon (IDB). Throughout her career, she has spearheaded national-level programs to empower women-led enterprises and drive sector growth. Additionally, she works as an independent consultant specializing in women's entrepreneurship and business development, providing expert guidance to help industries upgrade and successfully obtain required certifications."]}},
+{"photo":"static/images/commissioners/kalana-senaratne.jpg","chair":false,"name":{"en":"Dr Kalana Senaratne","si":"ආචාර්ය කලන සේනාරත්න","ta":"கலாநிதி கலன சேனாரத்ன"},"short":{"en":"Senior Lecturer and Head, Department of Law, University of Peradeniya","si":"ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී, නීති අධ්‍යයනාංශය, පේරාදෙණිය විශ්වවිද්‍යාලය","ta":"சிரேஷ்ட விரிவுரையாளர் மற்றும் துறைத் தலைவர், சட்டத் துறை, பேராதனைப் பல்கலைக்கழகம்"},"bio":{"en":["Kalana Senaratne is a legal academic specializing in the fields of international law, human rights and constitutional law. He holds an LLB from the University of London, an LLM from University College London, and a PhD from the University of Hong Kong. He is the author of Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021). He is a member of the Editorial Board of the Asian Journal of International Law. Senaratne is currently a Senior Lecturer and the Head of the Department of Law, University of Peradeniya. He was appointed to the National Commission on Women in September, 2025. Previously, he has worked as a legal officer at the Ministry of Foreign Affairs in Sri Lanka, the UNDP in Timor-Leste, and as a research associate at the Social Scientists’ Association (SSA)."],"si":["කලන සේනාරත්න ජාත්‍යන්තර නීතිය, මානව හිමිකම් සහ ආණ්ඩුක්‍රම ව්‍යවස්ථා නීතිය යන ක්ෂේත්‍රවල විශේෂඥතාවක් ඇති නීති ශාස්ත්‍රඥයෙකි. ඔහු ලන්ඩන් විශ්වවිද්‍යාලයෙන් LLB උපාධියක්, University College London ආයතනයෙන් LLM උපාධියක් සහ හොංකොං විශ්වවිද්‍යාලයෙන් PhD උපාධියක් ලබා ඇත. ඔහු Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) ග්‍රන්ථයේ කතුවරයා වේ. ඔහු Asian Journal of International Law හි කතු මණ්ඩල සාමාජිකයෙකි. සේනාරත්න මහතා දැනට පේරාදෙණිය විශ්වවිද්‍යාලයේ නීති අධ්‍යයනාංශයේ ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී ලෙස සේවය කරයි. ඔහු 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලදී. මීට පෙර ඔහු ශ්‍රී ලංකා විදේශ කටයුතු අමාත්‍යාංශයේ සහ ටිමෝර්-ලෙස්ටේ හි UNDP ආයතනයේ නීති නිලධාරියෙකු ලෙස ද, සමාජ විද්‍යාඥයින්ගේ සංගමයේ (SSA) පර්යේෂණ සහායකයෙකු ලෙස ද සේවය කර ඇත."],"ta":["கலன சேனாரத்ன சர்வதேச சட்டம், மனித உரிமைகள் மற்றும் அரசியலமைப்புச் சட்டம் ஆகிய துறைகளில் நிபுணத்துவம் பெற்ற சட்டக் கல்வியாளராவார். லண்டன் பல்கலைக்கழகத்தில் LLB பட்டத்தையும், University College London இல் LLM பட்டத்தையும், ஹொங்கொங் பல்கலைக்கழகத்தில் PhD பட்டத்தையும் பெற்றுள்ளார். Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) என்ற நூலின் ஆசிரியராவார். Asian Journal of International Law இன் ஆசிரியர் சபை உறுப்பினராகவும் உள்ளார். தற்போது பேராதனைப் பல்கலைக்கழகத்தின் சட்டத் துறையின் சிரேஷ்ட விரிவுரையாளராகவும் துறைத் தலைவராகவும் பணியாற்றுகின்றார். அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். இதற்கு முன்னர், இலங்கை வெளிநாட்டலுவல்கள் அமைச்சிலும் திமோர்-லெஸ்தேயிலுள்ள UNDP இலும் சட்ட அலுவலராகவும், சமூக விஞ்ஞானிகள் சங்கத்தில் (SSA) ஆய்வு உதவியாளராகவும் பணியாற்றியுள்ளார்."]}},
+{"photo":"static/images/commissioners/olga.jpg","ed":true,"name":{"en":"K.D.R. Olga"},"short":{"en":"Retired public servant; former Secretary to the Ministry of Women and Child Affairs"},"bio":{"en":["K.D.R. Olga is a retired public servant with over 35 years of service. She began her career as a Government Accountant. When she was getting retired, she was the Secretary to the Ministry of Women and Child Affairs. From August 2020 to May 2022, she also served as the Secretary to the Ministry of Energy.","A significant portion of her career was dedicated to the General Treasury, where she gained extensive experience in key areas such as budgeting, cash management, government accounting, and public procurement. During her tenure at the General Treasury, she also served as the Treasury’s representative on the Boards of Directors of several State-Owned Enterprises."]}}];
 const VACANT = 0; // places still to be announced
 const PERSON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#672D62" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>';
 function renderMembers(){
@@ -2811,7 +2636,7 @@ function renderMembers(){
     return '<div class="comm-card"><div class="comm-photo">'+photo+'</div><div class="comm-info">'
       + (m.chair ? '<span class="comm-badge">'+esc(t('ui.chair'))+'</span>' : '')
       + (m.ed ? '<span class="comm-badge">Executive Director</span>' : '')
-      + (!m.chair && !m.ed ? '<span class="comm-badge">'+esc(t('ui.commissioner'))+'</span>' : '')
+      + (!m.chair && !m.ed ? '<span class="comm-badge">'+(m.fulltime ? 'Full-Time Commissioner' : esc(t('ui.commissioner')))+'</span>' : '')
       + '<div class="nm">'+esc(name)+'</div>'
       + (m.bio ? '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>' : '')
       + '</div></div>';
@@ -2831,7 +2656,7 @@ function openBio(i){
     ? '<img class="bio-photo" src="'+m.photo+'" alt="'+esc(name)+'">'
     : '<div class="bio-photo" style="display:flex;align-items:center;justify-content:center">'+PERSON_SVG+'</div>';
   document.getElementById('bio-name').textContent = name;
-  document.getElementById('bio-role').textContent = m.ed ? 'Executive Director' : (m.chair ? t('ui.chair') : t('ui.commissioner'));
+  document.getElementById('bio-role').textContent = m.ed ? 'Executive Director' : (m.chair ? t('ui.chair') : (m.fulltime ? 'Full-Time Commissioner' : t('ui.commissioner')));
   document.getElementById('bio-text').innerHTML = L(m.bio).map(p=>'<p>'+esc(p)+'</p>').join('');
   document.getElementById('bio-modal').classList.add('open');
   document.querySelector('#bio-modal .bio-close').focus();
@@ -2842,16 +2667,17 @@ function closeBio(){
 }
 
 // ── GATEWAY / LANGUAGE ──
-function chooseLang(lang){ enterSite(lang); }
+function openLangModal(){ document.getElementById('lang-modal').classList.add('open'); }
+function chooseLang(lang){ if(lang==='en'){ enterSite('en'); } else { openLangModal(); } }
 function closeLangModal(){ document.getElementById('lang-modal').classList.remove('open'); }
-function proceedInEnglish(){ closeLangModal(); enterSite('en'); }
+function proceedInEnglish(){ closeLangModal(); if(!document.getElementById('page-site').classList.contains('active')) enterSite('en'); }
 function enterSite(lang){
   document.getElementById('page-gateway').classList.remove('active');
   document.getElementById('page-site').classList.add('active');
   setLang(lang);
   go('home');
 }
-function switchLangFromSite(lang){ setLang(lang); }
+function switchLangFromSite(lang){ if(lang!=='en') openLangModal(); }
 function setSiteLangPill(lang){
   document.querySelectorAll('.util-lang').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
 }
@@ -2982,7 +2808,9 @@ document.addEventListener('keydown', function(e){
 });
 
 // ── INITIAL RENDER (English-only draft for review) ──
-enterSite('en');
+renderDocs();
+renderCarousels();
+renderMembers();
 
 </script>
 </body>
