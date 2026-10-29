@@ -311,29 +311,26 @@ html[data-theme="gray"] body{filter:grayscale(1)}
 
 .history-text{max-width:780px}
 .history-text p{color:var(--tmid);line-height:1.9;margin-bottom:18px}
-/* ── org tree (structure page) ── */
-.ot{display:flex;flex-direction:column;align-items:center}
-.ot-box{background:#fff;border:1px solid var(--border);padding:12px 14px;text-align:center;font-size:0.86rem;font-weight:600;color:var(--text);line-height:1.4;width:100%;max-width:230px}
-.ot-box.top{background:var(--purple);border-color:var(--purple);color:#fff;font-family:'Noto Serif',serif;font-weight:700;font-size:1rem;max-width:300px}
-.ot-box.top2{background:var(--purple-lt);border-color:var(--purple);border-top:3px solid var(--purple);color:var(--purple);font-family:'Noto Serif',serif;font-weight:700;font-size:1rem;max-width:300px}
-.ot-box.head{background:var(--purple-lt);border-top:3px solid var(--purple);color:var(--purple);font-weight:700;min-height:66px;display:flex;align-items:center;justify-content:center}
-.ot-v{width:2px;height:24px;background:var(--line);flex-shrink:0}
-.ot-cols{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;width:100%;padding-top:24px}
-.ot-cols::before{content:'';position:absolute;top:0;left:calc((100% - 54px)/8);right:calc((100% - 54px)/8);height:2px;background:var(--line)}
-.ot-col{position:relative;display:flex;flex-direction:column;align-items:center}
-.ot-col::before{content:'';position:absolute;top:-24px;left:50%;width:2px;height:24px;background:var(--line);transform:translateX(-1px)}
-.ot-sub{width:100%;max-width:230px;margin-top:0;padding-left:22px;position:relative}
+/* ── org tree (structure page): compact boxes ── */
+.ot-scroll{overflow-x:auto;padding-bottom:8px}
+.ot{--bw:124px;--gap:26px;--fs:0.76rem;display:flex;flex-direction:column;align-items:center;width:max-content;margin:0 auto}
+.ot-box{width:var(--bw);min-height:58px;padding:8px 5px;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--purple-lt2);color:var(--purple-dk);font-size:var(--fs);font-weight:700;line-height:1.3;hyphens:auto;-webkit-hyphens:auto}
+.ot-box.top{background:var(--purple);color:#fff}
+.ot-box.top2{background:var(--purple-dk);color:#fff}
+.ot-box.head{background:var(--purple);color:#fff}
+.ot-v{width:2px;height:20px;background:var(--purple);flex-shrink:0}
+.ot-cols{position:relative;display:grid;grid-template-columns:repeat(4,var(--bw));column-gap:var(--gap);padding-top:20px}
+.ot-cols::before{content:'';position:absolute;top:0;left:calc(var(--bw)/2);right:calc(var(--bw)/2);height:2px;background:var(--purple)}
+.ot-col{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.ot-col>.ot-v{margin-left:calc(var(--bw)/2 - 1px)}
+.ot-col::before{content:'';position:absolute;top:-20px;left:calc(var(--bw)/2 - 1px);width:2px;height:20px;background:var(--purple)}
+.ot-sub{position:relative;padding-left:26px}
 .ot-item{position:relative;padding-top:14px}
-.ot-item::before{content:'';position:absolute;left:-12px;top:36px;width:12px;height:2px;background:var(--line)}
-.ot-item::after{content:'';position:absolute;left:-12px;top:0;width:2px;height:100%;background:var(--line)}
-.ot-item:last-child::after{height:38px}
-@media(max-width:860px){
-  .ot-cols{grid-template-columns:1fr 1fr;row-gap:36px}
-  .ot-cols::before{display:none}
-  .ot-col::before{display:none}
-}
+.ot-item::before{content:'';position:absolute;left:-16px;top:43px;width:16px;height:2px;background:var(--purple)}
+.ot-item::after{content:'';position:absolute;left:-16px;top:0;width:2px;height:100%;background:var(--purple)}
+.ot-item:last-child::after{height:45px}
+@media(max-width:600px){.ot{--bw:80px;--gap:6px;--fs:0.58rem}.ot-sub{padding-left:14px}.ot-item::before{left:-9px;width:9px}.ot-item::after{left:-9px}.ot-box.top,.ot-box.top2{width:150px}}
 @media(max-width:460px){h1{font-size:1.85rem;overflow-wrap:anywhere}}
-@media(max-width:520px){.ot-cols{grid-template-columns:1fr}.ot-box{max-width:none}.ot-sub{max-width:none}}
 /* ── structure ── */
 .tier-list{position:relative;margin-top:32px;padding-left:32px;border-left:2px solid var(--purple-lt2)}
 .tier{position:relative;padding-bottom:34px}
@@ -543,7 +540,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             </div>
           </div>
           <div class="nav-item">
-            <button class="nav-toplink" id="navtop-acts" onclick="go('acts-laws')">Acts &amp; Laws</button>
+            <button class="nav-toplink" id="navtop-acts" onclick="go('acts-laws')">Resources</button>
           </div>
           <div class="nav-item">
             <button class="nav-toplink" id="navtop-divisions" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</button>
@@ -586,7 +583,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
         <a onclick="go('about-structure')" data-i18n="nav.structure">Organisational Structure</a>
         <a onclick="go('about-strategic')" data-i18n="nav.strategic">Strategic Plan</a>
       </div>
-      <a class="mob-flat" onclick="go('acts-laws')">Acts &amp; Laws</a>
+      <a class="mob-flat" onclick="go('acts-laws')">Resources</a>
       <a class="mob-flat" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</a>
       <a class="mob-flat" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</a>
       <a class="mob-flat" onclick="goStub('Recommendations')">Recommendations</a>
@@ -694,32 +691,85 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     </section>
   </div>
 
-  <!-- ═══ ACTS & LAWS ═══ -->
+  <!-- ═══ RESOURCES ═══ -->
   <div id="page-acts-laws" class="page">
     <div class="page-hero-plain container">
-      <p class="crumb"><a onclick="go('home')">Home</a> / Acts &amp; Laws</p>
-      <h1>Acts &amp; Laws</h1>
+      <p class="crumb"><a onclick="go('home')">Home</a> / Resources</p>
+      <h1>Resources</h1>
     </div>
-    <section class="section" style="padding-top:40px">
+    <section class="section" style="padding-top:8px">
       <div class="container">
+        <h2 style="margin:48px 0 18px">International Law</h2>
         <div class="doc-list">
           <div class="doc-item">
-            <div>
-              <span class="doc-type">International Convention</span>
-              <h3>Convention on the Elimination of All Forms of Discrimination against Women (CEDAW)</h3>
-            </div>
-            <div class="doc-langs">
-              <a class="doc-lang" href="static/files/cedaw-convention.pdf" target="_blank" rel="noopener">English <small>PDF</small></a>
-            </div>
+            <div><h3>Convention on the Elimination of All Forms of Discrimination against Women (CEDAW)</h3></div>
+            <div class="doc-langs"><a class="doc-lang" href="static/files/cedaw-convention.pdf" target="_blank" rel="noopener">English <small>PDF</small></a></div>
           </div>
           <div class="doc-item">
-            <div>
-              <span class="doc-type">International Convention</span>
-              <h3>CEDAW Concluding Observations on the Ninth Periodic Report of Sri Lanka (28 February 2025)</h3>
-            </div>
-            <div class="doc-langs">
-              <a class="doc-lang" href="static/files/cedaw-concluding-observations-sri-lanka-2025.pdf" target="_blank" rel="noopener">English <small>PDF</small></a>
-            </div>
+            <div><h3>CEDAW Concluding Observations on the Ninth Periodic Report of Sri Lanka (28 February 2025)</h3></div>
+            <div class="doc-langs"><a class="doc-lang" href="static/files/cedaw-concluding-observations-sri-lanka-2025.pdf" target="_blank" rel="noopener">English <small>PDF</small></a></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>CEDAW General Recommendations</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>ILO C-190 on Preventing Sexual Harassment at the Workplace</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>ILO-189 on Rights of Domestic Workers</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>UNSCR 1325 on WPS</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+        </div>
+        <h2 style="margin:48px 0 18px">National Laws</h2>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div><h3>Prevention of Domestic Violence Act No. 24 of 2005</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Victim &amp; Witness Protection Act</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Right to Information Act</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Anti-Corruption Act No. 9 of 2023</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Local Authorities Election (Amendment) Act No. 16 of 2017</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+        </div>
+        <h2 style="margin:48px 0 18px">Policies</h2>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div><h3>National Policy on Women’s Empowerment and Gender Equality 2023-2033</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Multi-sectoral National Action Plan to Address Sexual and Gender-Based Violence in Sri Lanka 2024-2028</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>National Action Plan on Women, Peace and Security 2023-2027</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>Mid Term Review of National Action Plan on WPS 2025</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
+          </div>
+          <div class="doc-item">
+            <div><h3>NPP National Policy Framework 2025</h3></div>
+            <div class="doc-langs"><span class="doc-lang na">Will be announced</span></div>
           </div>
         </div>
       </div>
@@ -750,18 +800,18 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     </div>
     <section class="section">
       <div class="container">
-        <div class="ot">
-          <div class="ot-box top">Chairperson and 6 Commissioners</div>
+        <div class="ot-scroll"><div class="ot">
+          <div class="ot-box top">Chairperson &amp; 6 Commissioners</div>
           <div class="ot-v"></div>
           <div class="ot-box top2">Executive Director</div>
           <div class="ot-v"></div>
           <div class="ot-cols">
-            <div class="ot-col"><div class="ot-box head">Assistant Director (Admin)</div><div class="ot-v"></div><div class="ot-box">Administrative Officer</div><div class="ot-v"></div><div class="ot-box">Management Assistant</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Drivers (2)</div></div><div class="ot-item"><div class="ot-box">Office Assistants (2)</div></div></div></div>
-            <div class="ot-col"><div class="ot-box head">Director Finance</div><div class="ot-v"></div><div class="ot-box">Development Officers (2)</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
-            <div class="ot-col"><div class="ot-box head">Director Research and Development</div><div class="ot-v"></div><div class="ot-box">Development Officer</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
-            <div class="ot-col"><div class="ot-box head">Director Legal Affairs</div><div class="ot-v"></div><div class="ot-box">Assistant Director (Legal Affairs)</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Development Officer</div></div><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Assistant Director - Admin</div><div class="ot-v"></div><div class="ot-box">Administrative Officer</div><div class="ot-v"></div><div class="ot-box">Management Assistant</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">2 x Drivers</div></div><div class="ot-item"><div class="ot-box">2 x Office Assistants</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Finance</div><div class="ot-v"></div><div class="ot-box">2 x Development Officers</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Research &amp; Development</div><div class="ot-v"></div><div class="ot-box">Development Officer</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Legal Affairs</div><div class="ot-v"></div><div class="ot-box">Assistant Director - Legal Affairs</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Development Officer</div></div><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
           </div>
-        </div>
+        </div></div>
       </div>
     </section>
   </div>
@@ -928,9 +978,8 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     <section class="section">
       <div class="container">
         <div class="stub-wrap">
-          <span class="si">🚧</span>
           <h2 id="stub-title">Page</h2>
-          <p data-i18n="stub.p">This section is being prepared. Content will be published here as it becomes available.<br>In the meantime, you can contact the Commission directly at <strong>contact.ncw@gmail.com</strong>.</p>
+          <p data-i18n="stub.p">Will be announced.</p>
           <button class="btn btn-outline" onclick="go('home')" data-i18n="stub.back">← Back to Home</button>
         </div>
       </div>
@@ -963,7 +1012,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
           <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
           <a onclick="go('about-strategic')" data-i18n="sp.h1">Strategic Plan 2027–2031</a>
           <a onclick="goStub('Download the Forms')" data-i18n="nav.rti">Right to Information</a>
-          <a onclick="go('acts-laws')">Acts &amp; Laws</a>
+          <a onclick="go('acts-laws')">Resources</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -2081,7 +2130,7 @@ const I18N = {
 "ta": "முறைப்பாடு தொடர்பில் தீர்மானித்த பின்னர், மேற்கொண்ட நடவடிக்கை குறித்துத் தீர்மானத் திகதியிலிருந்து 14 நாட்களுக்குள் ஆணைக்குழு பாதிக்கப்பட்ட நபருக்கு அறிவிக்க வேண்டும்."
 },
 "stub.p": {
-"en": "This section is being prepared. Content will be published here as it becomes available.<br>In the meantime, you can contact the Commission directly at <strong>contact.ncw@gmail.com</strong>.",
+"en": "Will be announced.",
 "si": "මෙම කොටස සකස් කරමින් පවතී. අන්තර්ගතය ලැබෙන පරිදි මෙහි පළ කරනු ලැබේ.<br>මේ අතරතුර, ඔබට <strong>contact.ncw@gmail.com</strong> හරහා කොමිෂන් සභාව සෘජුවම සම්බන්ධ කර ගත හැකිය.",
 "ta": "இப்பகுதி தயாரிக்கப்பட்டு வருகின்றது. உள்ளடக்கம் கிடைக்கப்பெறும்போது இங்கு வெளியிடப்படும்.<br>இதற்கிடையில், <strong>contact.ncw@gmail.com</strong> ஊடாக ஆணைக்குழுவை நேரடியாகத் தொடர்புகொள்ளலாம்."
 },
@@ -2191,7 +2240,7 @@ const I18N = {
 "ta": "நிறுத்துக"
 },
 "ui.forthcoming": {
-"en": "Forthcoming",
+"en": "Will be announced",
 "si": "ඉදිරියේදී",
 "ta": "விரைவில்"
 },
