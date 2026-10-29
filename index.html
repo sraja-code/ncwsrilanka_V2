@@ -565,7 +565,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             <button class="nav-toplink" id="navtop-documentation" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</button>
           </div>
           <div class="nav-item">
-            <button class="nav-toplink" onclick="goStub('Recommendations')">Recommendations</button>
+            <button class="nav-toplink" onclick="go('recommendations')">Recommendations</button>
           </div>
           <div class="nav-item">
             <button class="nav-toplink" id="navtop-news" data-i18n="nav.news.btn">News <span class="caret">▾</span></button>
@@ -602,7 +602,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
       <a class="mob-flat" onclick="go('acts-laws')">Resources</a>
       <a class="mob-flat" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</a>
       <a class="mob-flat" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</a>
-      <a class="mob-flat" onclick="goStub('Recommendations')">Recommendations</a>
+      <a class="mob-flat" onclick="go('recommendations')">Recommendations</a>
       <div class="mob-group"><a class="mob-group-hd" onclick="go('press')" data-i18n="nav.news">News</a>
         <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
         <a onclick="goStub('Events')" data-i18n="nav.events">Events</a>
@@ -912,6 +912,19 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
           <button data-filter="publication" aria-pressed="false" onclick="setDocFilter('publication')" data-i18n="docs.f.pub">Publications</button>
         </div>
         <div class="doc-list" id="doc-list"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══ RECOMMENDATIONS ═══ -->
+  <div id="page-recommendations" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb"><a onclick="go('home')">Home</a> / Recommendations</p>
+      <h1>Recommendations</h1>
+    </div>
+    <section class="section" style="padding-top:40px">
+      <div class="container">
+        <div class="doc-list" id="rec-list"></div>
       </div>
     </section>
   </div>
@@ -2383,6 +2396,24 @@ function setLang(lang){
 const FILES = 'static/files/';
 const DOCS = [
 {
+"id": "pc-election-reforms-2026",
+"type": "submission",
+"sort": "2026-07-27",
+"files": {"en": "ncw-provincial-council-election-law-reforms-2026-english.pdf", "si": null, "ta": null},
+"title": {"en": "Recommendations to the Parliamentary Select Committee on Electoral System Reforms for Provincial Council Elections"},
+"desc": {"en": ""},
+"date": {"en": "27 July 2026"}
+},
+{
+"id": "parliament-election-reforms-2026",
+"type": "submission",
+"sort": "2026-07-15",
+"files": {"en": "ncw-parliament-election-law-reforms-2026-english.pdf", "si": null, "ta": null},
+"title": {"en": "Electoral Reforms to Increase Women's Representation in Parliament"},
+"desc": {"en": ""},
+"date": {"en": "15 July 2026"}
+},
+{
 "id": "pdv-bill-2026",
 "type": "submission",
 "sort": "2026-08-21",
@@ -2566,6 +2597,8 @@ const LANGS = [
 function typeLabel(type){ return t('ui.type.'+type); }
 function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function sortedDocs(){ return DOCS.slice().sort((a,b)=> b.sort.localeCompare(a.sort)); }
+const REC_IDS = ['pc-election-reforms-2026','parliament-election-reforms-2026'];
+function listedDocs(){ return sortedDocs().filter(d=>!REC_IDS.includes(d.id)); }
 function docLangLinks(d){
   return LANGS.map(l=>{
     const f = d.files[l.key];
@@ -2585,10 +2618,12 @@ function docItem(d, prefix){
 }
 let docFilter = 'all';
 function renderDocs(){
-  const list = sortedDocs().filter(d=> docFilter==='all' || d.type===docFilter);
+  const list = listedDocs().filter(d=> docFilter==='all' || d.type===docFilter);
   document.getElementById('doc-list').innerHTML = list.length
     ? list.map(d=>docItem(d,'doc-')).join('')
     : '<p class="doc-empty">'+esc(t('ui.nodocs'))+'</p>';
+  document.getElementById('rec-list').innerHTML =
+    sortedDocs().filter(d=>REC_IDS.includes(d.id)).map(d=>docItem(d,'rec-')).join('');
   document.getElementById('press-list').innerHTML =
     sortedDocs().filter(d=>d.type==='statement').map(d=>docItem(d,'press-')).join('');
 }
@@ -2619,8 +2654,8 @@ function carCard(d, alt){
     + '<div class="car-body"><h4>'+esc(L(d.title))+'</h4><div class="car-meta">'+meta+'</div></div></div>';
 }
 function renderCarousels(){
-  document.getElementById('newsTrack').innerHTML = sortedDocs().filter(d=>d.type!=='submission').map(d=>carCard(d,false)).join('');
-  document.getElementById('actTrack').innerHTML = sortedDocs().filter(d=>d.type==='submission').map(d=>carCard(d,true)).join('');
+  document.getElementById('newsTrack').innerHTML = listedDocs().filter(d=>d.type!=='submission').map(d=>carCard(d,false)).join('');
+  document.getElementById('actTrack').innerHTML = listedDocs().filter(d=>d.type==='submission').map(d=>carCard(d,true)).join('');
   Object.keys(carState).forEach(function(id){ carState[id]=0; const tr=document.getElementById(id); if(tr) tr.style.transform='translateX(0)'; });
 }
 
