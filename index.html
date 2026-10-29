@@ -1026,6 +1026,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 
   <button class="fab-complaint" onclick="go('contact-head')" data-i18n="act.fab">📋 Make a Complaint</button>
 
+
 </div><!-- /page-site -->
 
 <!-- ═══ ACCESSIBILITY WIDGET (site-wide) ═══ -->
@@ -2675,7 +2676,7 @@ function closeBio(){
 
 // ── GATEWAY / LANGUAGE ──
 function openLangModal(){ document.getElementById('lang-modal').classList.add('open'); }
-function chooseLang(lang){ if(lang==='en'){ enterSite('en'); } else { openLangModal(); } }
+function chooseLang(lang){ enterSite('en'); }
 function closeLangModal(){ document.getElementById('lang-modal').classList.remove('open'); }
 function proceedInEnglish(){ closeLangModal(); if(!document.getElementById('page-site').classList.contains('active')) enterSite('en'); }
 function enterSite(lang){
