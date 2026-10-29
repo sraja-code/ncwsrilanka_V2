@@ -26,6 +26,7 @@
   --tlt:#8B7C89;
   --border:#E3DCE2;
   --focus:#0B4E05;
+  --line:#B58FB0;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:100%}
@@ -307,6 +308,32 @@ html[data-theme="gray"] body{filter:grayscale(1)}
 .bio-box .bio-close{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.5rem;line-height:1;color:var(--tmid);cursor:pointer;padding:6px}
 @media(max-width:640px){.bio-box{grid-template-columns:1fr}.bio-box .bio-photo{max-width:170px}}
 
+
+.history-text{max-width:780px}
+.history-text p{color:var(--tmid);line-height:1.9;margin-bottom:18px}
+/* ── org tree (structure page) ── */
+.ot{display:flex;flex-direction:column;align-items:center}
+.ot-box{background:#fff;border:1px solid var(--border);padding:12px 14px;text-align:center;font-size:0.86rem;font-weight:600;color:var(--text);line-height:1.4;width:100%;max-width:230px}
+.ot-box.top{background:var(--purple);border-color:var(--purple);color:#fff;font-family:'Noto Serif',serif;font-weight:700;font-size:1rem;max-width:300px}
+.ot-box.top2{background:var(--purple-lt);border-color:var(--purple);border-top:3px solid var(--purple);color:var(--purple);font-family:'Noto Serif',serif;font-weight:700;font-size:1rem;max-width:300px}
+.ot-box.head{background:var(--purple-lt);border-top:3px solid var(--purple);color:var(--purple);font-weight:700;min-height:66px;display:flex;align-items:center;justify-content:center}
+.ot-v{width:2px;height:24px;background:var(--line);flex-shrink:0}
+.ot-cols{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;width:100%;padding-top:24px}
+.ot-cols::before{content:'';position:absolute;top:0;left:calc((100% - 54px)/8);right:calc((100% - 54px)/8);height:2px;background:var(--line)}
+.ot-col{position:relative;display:flex;flex-direction:column;align-items:center}
+.ot-col::before{content:'';position:absolute;top:-24px;left:50%;width:2px;height:24px;background:var(--line);transform:translateX(-1px)}
+.ot-sub{width:100%;max-width:230px;margin-top:0;padding-left:22px;position:relative}
+.ot-item{position:relative;padding-top:14px}
+.ot-item::before{content:'';position:absolute;left:-12px;top:36px;width:12px;height:2px;background:var(--line)}
+.ot-item::after{content:'';position:absolute;left:-12px;top:0;width:2px;height:100%;background:var(--line)}
+.ot-item:last-child::after{height:38px}
+@media(max-width:860px){
+  .ot-cols{grid-template-columns:1fr 1fr;row-gap:36px}
+  .ot-cols::before{display:none}
+  .ot-col::before{display:none}
+}
+@media(max-width:460px){h1{font-size:1.85rem;overflow-wrap:anywhere}}
+@media(max-width:520px){.ot-cols{grid-template-columns:1fr}.ot-box{max-width:none}.ot-sub{max-width:none}}
 /* ── structure ── */
 .tier-list{position:relative;margin-top:32px;padding-left:32px;border-left:2px solid var(--purple-lt2)}
 .tier{position:relative;padding-bottom:34px}
@@ -415,7 +442,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 <a href="#main" class="skip-link" data-i18n="ui.skip">Skip to main content</a>
 
 <!-- ═══════════ GATEWAY ═══════════ -->
-<div id="page-gateway" class="page active">
+<div id="page-gateway" class="page">
   <div class="gw-wrap">
     <div class="ripple-bg" aria-hidden="true"></div>
     <div class="ripple-bg" aria-hidden="true"></div>
@@ -484,15 +511,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
 </div>
 
 <!-- ═══════════ MAIN SITE ═══════════ -->
-<div id="page-site">
-
-  <div class="util-bar">
-    <div class="util-inner">
-      <button class="util-lang" data-lang="si" lang="si" onclick="switchLangFromSite('si')">සිංහල</button>
-      <button class="util-lang active" data-lang="en" onclick="switchLangFromSite('en')">English</button>
-      <button class="util-lang" data-lang="ta" lang="ta" onclick="switchLangFromSite('ta')">தமிழ்</button>
-    </div>
-  </div>
+<div id="page-site" class="active">
 
   <nav class="mainnav">
     <div class="nav-logo-row">
@@ -517,11 +536,14 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             <button class="nav-toplink" id="navtop-about" data-i18n="nav.about.btn">About Us <span class="caret">▾</span></button>
             <div class="nav-dropdown">
               <a onclick="go('about-history')" data-i18n="nav.history">History</a>
-              <a onclick="go('about-act')" data-i18n="nav.act">Act</a>
+              <a onclick="go('about-act')">Women Empowerment Act</a>
               <a onclick="go('about-members')" data-i18n="nav.members">Members of the Commission</a>
               <a onclick="go('about-structure')" data-i18n="nav.structure">Organisational Structure</a>
               <a onclick="go('about-strategic')" data-i18n="nav.strategic">Strategic Plan</a>
             </div>
+          </div>
+          <div class="nav-item">
+            <button class="nav-toplink" id="navtop-acts" onclick="go('acts-laws')">Acts &amp; Laws</button>
           </div>
           <div class="nav-item">
             <button class="nav-toplink" id="navtop-divisions" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</button>
@@ -530,11 +552,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             <button class="nav-toplink" id="navtop-documentation" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</button>
           </div>
           <div class="nav-item">
-            <button class="nav-toplink" data-i18n="nav.recmed.btn">Recommendations &amp; Mediation <span class="caret">▾</span></button>
-            <div class="nav-dropdown">
-              <a onclick="goStub('Case Recommendations')" data-i18n="nav.caserec">Case Recommendations</a>
-              <a onclick="goStub('Mediations')" data-i18n="nav.mediations">Mediations</a>
-            </div>
+            <button class="nav-toplink" onclick="goStub('Recommendations')">Recommendations</button>
           </div>
           <div class="nav-item">
             <button class="nav-toplink" id="navtop-news" data-i18n="nav.news.btn">News <span class="caret">▾</span></button>
@@ -547,17 +565,13 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             <button class="nav-toplink" data-i18n="nav.contact.btn">Contact Us <span class="caret">▾</span></button>
             <div class="nav-dropdown">
               <a onclick="go('contact-head')" data-i18n="nav.head">Head Office</a>
-              <a onclick="goStub('Regional Offices')" data-i18n="nav.regional">Regional Offices</a>
-              <a onclick="goStub('Sub Offices')" data-i18n="nav.sub">Sub Offices</a>
+              <a onclick="go('contact-regional')" data-i18n="nav.regional">Regional Offices</a>
             </div>
           </div>
           <div class="nav-item">
             <button class="nav-toplink" data-i18n="nav.rti.btn">Right to Information <span class="caret">▾</span></button>
             <div class="nav-dropdown">
               <a onclick="goStub('Download the Forms')" data-i18n="nav.forms">Download the Forms</a>
-              <a onclick="goStub('Information Officers')" data-i18n="nav.infoofficers">Information Officers</a>
-              <a onclick="goStub('Information available to the Public')" data-i18n="nav.infopublic">Information available to the Public</a>
-              <a onclick="goStub('Information not available for Public Disclosure')" data-i18n="nav.infonot">Information not available for Public Disclosure</a>
             </div>
           </div>
         </div>
@@ -567,31 +581,25 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     <div class="mob-menu" id="mob-menu">
       <div class="mob-group"><a class="mob-group-hd" onclick="go('about-history')" data-i18n="nav.about">About Us</a>
         <a onclick="go('about-history')" data-i18n="nav.history">History</a>
-        <a onclick="go('about-act')" data-i18n="nav.act">Act</a>
+        <a onclick="go('about-act')">Women Empowerment Act</a>
         <a onclick="go('about-members')" data-i18n="nav.members">Members of the Commission</a>
         <a onclick="go('about-structure')" data-i18n="nav.structure">Organisational Structure</a>
         <a onclick="go('about-strategic')" data-i18n="nav.strategic">Strategic Plan</a>
       </div>
+      <a class="mob-flat" onclick="go('acts-laws')">Acts &amp; Laws</a>
       <a class="mob-flat" onclick="go('divisions')" data-i18n="nav.divisions">Divisions</a>
       <a class="mob-flat" onclick="openDocs('all')" data-i18n="nav.docs">Documentation</a>
-      <div class="mob-group"><a class="mob-group-hd" onclick="goStub('Case Recommendations')" data-i18n="nav.recmed">Recommendations &amp; Mediation</a>
-        <a onclick="goStub('Case Recommendations')" data-i18n="nav.caserec">Case Recommendations</a>
-        <a onclick="goStub('Mediations')" data-i18n="nav.mediations">Mediations</a>
-      </div>
+      <a class="mob-flat" onclick="goStub('Recommendations')">Recommendations</a>
       <div class="mob-group"><a class="mob-group-hd" onclick="go('press')" data-i18n="nav.news">News</a>
         <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
         <a onclick="goStub('Events')" data-i18n="nav.events">Events</a>
       </div>
       <div class="mob-group"><a class="mob-group-hd" onclick="go('contact-head')" data-i18n="nav.contact">Contact Us</a>
         <a onclick="go('contact-head')" data-i18n="nav.head">Head Office</a>
-        <a onclick="goStub('Regional Offices')" data-i18n="nav.regional">Regional Offices</a>
-        <a onclick="goStub('Sub Offices')" data-i18n="nav.sub">Sub Offices</a>
+        <a onclick="go('contact-regional')" data-i18n="nav.regional">Regional Offices</a>
       </div>
       <div class="mob-group"><a class="mob-group-hd" onclick="goStub('Download the Forms')" data-i18n="nav.rti">Right to Information</a>
         <a onclick="goStub('Download the Forms')" data-i18n="nav.forms">Download the Forms</a>
-        <a onclick="goStub('Information Officers')" data-i18n="nav.infoofficers">Information Officers</a>
-        <a onclick="goStub('Information available to the Public')" data-i18n="nav.infopublic">Information available to the Public</a>
-        <a onclick="goStub('Information not available for Public Disclosure')" data-i18n="nav.infonot">Information not available for Public Disclosure</a>
       </div>
     </div>
   </nav>
@@ -604,8 +612,6 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     <div class="action-bar">
       <div class="container action-bar-inner">
         <button class="pill-btn" onclick="go('contact-head')" data-i18n="act.complaint">Make a Complaint</button>
-        <button class="pill-btn alt" onclick="goStub('Progress of Complaints')" data-i18n="act.progress">Progress of Complaints</button>
-        <button class="pill-btn alt" onclick="goStub('Daily Inquiry Schedule')" data-i18n="act.schedule">Daily Inquiry Schedule</button>
       </div>
     </div>
 
@@ -638,39 +644,25 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
   <!-- ═══ ABOUT: HISTORY ═══ -->
   <div id="page-about-history" class="page">
     <div class="page-hero-plain container">
-      <p class="crumb" data-i18n="crumb.history"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / History</p>
-      <span class="eyebrow" data-i18n="nav.about">About Us</span>
-      <h1 data-i18n="hist.h1">Our History</h1>
-      <p class="lead" data-i18n="hist.lead">How the National Commission on Women came to be established, and what it now oversees.</p>
+      <p class="crumb"><a onclick="go('home')">Home</a> / About Us / History</p>
+      <span class="eyebrow">About Us</span>
+      <h1>History</h1>
     </div>
     <div class="action-bar">
       <div class="container action-bar-inner">
-        <button class="pill-btn" onclick="go('contact-head')" data-i18n="act.complaint">Make a Complaint</button>
-        <button class="pill-btn alt" onclick="goStub('Progress of Complaints')" data-i18n="act.progress">Progress of Complaints</button>
-        <button class="pill-btn alt" onclick="goStub('Daily Inquiry Schedule')" data-i18n="act.schedule">Daily Inquiry Schedule</button>
+        <button class="pill-btn" onclick="go('contact-head')">Make a Complaint</button>
       </div>
     </div>
     <section class="section">
       <div class="container">
-        <div class="about-grid">
-          <div>
-            <p data-i18n="hist.p1">The National Commission on Women was established under the Women Empowerment Act No. 37 of 2024, certified on 2 July 2024 and published in the Government Gazette.</p>
-            <p data-i18n="hist.p2">The Commission is the result of decades of work by women's rights groups and organisations across Sri Lanka, who campaigned for a national body dedicated to protecting and advancing women's rights.</p>
-            <p data-i18n="hist.p3">The first Commissioners were appointed by H.E. the President Anura Kumara Dissanayake in September 2025, based on the recommendations of the Constitutional Council and the Women Parliamentarians' Caucus.</p>
-            <p data-i18n="hist.p4">The Commission has oversight powers in relation to all Government Ministries, and a mandate to monitor how the National Policy on Gender Equality and Women's Empowerment is being implemented.</p>
-          </div>
-          <div>
-            <div class="info-block">
-              <div class="info-block-hd" data-i18n="hist.keydates">Key Dates</div>
-              <div class="info-block-bd" style="padding:0;background:#fff">
-                <ul class="key-dates">
-                  <li><span class="kd-date" data-i18n="hist.d1">2 Jul 2024</span><span class="kd-txt" data-i18n="hist.d1t">Women Empowerment Act No. 37 of 2024 certified</span></li>
-                  <li><span class="kd-date" data-i18n="hist.d2">Sep 2025</span><span class="kd-txt" data-i18n="hist.d2t">First Commissioners appointed by H.E. the President</span></li>
-                  <li><span class="kd-date" data-i18n="hist.d3">Aug 2026</span><span class="kd-txt" data-i18n="hist.d3t">Strategic Plan 2027–2031 finalised</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="history-text">
+            <p>Sri Lanka has made steady progress in advancing women’s rights, beginning with the introduction of universal adult franchise in 1931, which enabled women’s equal participation in the democratic process. After independence, constitutional guarantees on equality and non-discrimination were strengthened, along with legal reforms covering employment rights, maternity protection, education, and protections against sexual harassment, domestic violence, trafficking, and other forms of gender-based violence. This commitment is also supported through international obligations, including under the UN Convention on the Elimination of All Forms of Discrimination against Women (CEDAW).</p>
+            <p>Sri Lanka’s institutional focus on women’s rights gained momentum following the International Women’s Year in 1975 and the UN Decade for Women (1975–1985). The establishment of the Women’s Bureau in 1978 marked an important step in creating a national mechanism for women’s affairs and promoting women’s participation and empowerment.</p>
+            <p>Following Sri Lanka’s ratification of CEDAW in 1981, the approach increasingly shifted towards a rights-based focus on equality and the elimination of discrimination against women. The Sri Lanka Women’s Charter, adopted in 1993, and the establishment of the National Committee on Women further reflected the recognition of women’s rights and gender equality.</p>
+            <p>The 1995 Beijing Declaration and Platform for Action marked a shift towards addressing the structural and social factors underlying inequality. Since then, Sri Lanka’s policy framework has increasingly expanded to include concepts such as gender equality, gender mainstreaming, gender-responsive budgeting and sexual and gender-based violence.</p>
+            <p>Despite this progress, gaps remain in the implementation and enforcement of laws. Women continue to face structural barriers, inconsistent application of laws, limited institutional responsiveness to sexual and gender-based violence, and weak coordination among responsible agencies, which together affect the effectiveness of protections and slow progress toward substantive equality.</p>
+            <p>In this context, while existing institutions working on women’s rights often operate with sector-specific mandates and limited coordination, the National Commission on Women (NCW), established under the Women Empowerment Act, No. 37 of 2024, provides a dedicated statutory framework with clear authority to address women’s rights in a more integrated and coordinated manner.</p>
+            <p>The NCW is empowered and authorised to inquire into and investigate infringements or imminent infringements of women’s rights, receive and examine complaints, conduct inquiries where necessary, and facilitate mediation or refer matters to relevant authorities. It is also empowered to intervene in legal proceedings with the permission of court, initiate actions before competent courts in relation to violations of women’s rights, and monitor compliance with relevant laws, policies, and constitutional provisions. Furthermore, the Commission is mandated to review existing laws and programmes, make recommendations for legal and policy reforms, and advise the Government on measures to strengthen protection and equality for women, functioning both as a mechanism for addressing individual grievances and as a national-level institution for systemic reform and accountability.</p>
         </div>
       </div>
     </section>
@@ -679,79 +671,56 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
   <!-- ═══ ABOUT: ACT ═══ -->
   <div id="page-about-act" class="page">
     <div class="page-hero-plain container">
-      <p class="crumb" data-i18n="crumb.act"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Act</p>
-      <span class="eyebrow" data-i18n="nav.about">About Us</span>
-      <h1 data-i18n="act.h1">Women Empowerment Act No. 37 of 2024</h1>
-      <p class="lead" data-i18n="act.lead">The law that establishes the National Commission on Women and sets out its powers and duties. Certified on 2 July 2024.</p>
-      <div class="lang-btns-row">
-        <a class="btn btn-purple btn-sm" href="static/files/we-act-english.pdf" target="_blank" rel="noopener" data-i18n="act.viewen">📄 View in English</a>
-        <a class="btn btn-outline btn-sm" href="static/files/we-act-sinhala.pdf" target="_blank" rel="noopener" hreflang="si">📄 <span lang="si">සිංහල</span></a>
-        <a class="btn btn-outline btn-sm" href="static/files/we-act-tamil.pdf" target="_blank" rel="noopener" hreflang="ta">📄 <span lang="ta">தமிழ்</span></a>
-      </div>
-      <div class="summary-acc">
-        <button class="summary-toggle" onclick="toggleSummary(this)" data-i18n="act.sumbtn">💡 Plain Language Summary — What does this Act mean for you? <span class="sa">▼</span></button>
-        <div class="summary-body">
-          <p data-i18n="act.sum.p">This is the law that created the National Commission on Women. It came into effect in July 2024.</p>
-          <ul>
-            <li data-i18n="act.sum.1">Every woman in Sri Lanka has rights that cannot be taken away from her.</li>
-            <li data-i18n="act.sum.2">A commission of seven independent people has been set up to protect those rights.</li>
-            <li data-i18n="act.sum.3">If your rights have been violated, or are about to be, you or someone acting for you can apply to the NCW within one month.</li>
-            <li data-i18n="act.sum.4">Once the NCW decides on your complaint, it must tell you what action it has taken within 14 days.</li>
-            <li data-i18n="act.sum.5">If your case is sent to mediation, the mediation must be concluded within 60 days.</li>
-            <li data-i18n="act.sum.6">If you are not satisfied with the NCW's decision, you can appeal to the Court of Appeal within one month.</li>
-            <li data-i18n="act.sum.7">The NCW can also investigate problems on its own, without a complaint being made first.</li>
-          </ul>
-        </div>
-      </div>
+      <p class="crumb"><a onclick="go('home')">Home</a> / About Us / Women Empowerment Act</p>
+      <span class="eyebrow">About Us</span>
+      <h1>Women Empowerment Act</h1>
     </div>
-
-    <section class="section" style="padding-top:56px">
+    <section class="section" style="padding-top:40px">
       <div class="container">
-        <span class="eyebrow" data-i18n="act.obj.eyebrow">Section 2 · Objectives of the Act</span>
-        <h2 data-i18n="act.obj.h2">What the Act Sets Out to Achieve</h2>
-        <div class="obj-grid">
-          <div class="obj-item"><span class="obj-num">01</span><p data-i18n="act.obj.1">Introduce ways to protect women's rights under the Constitution</p></div>
-          <div class="obj-item"><span class="obj-num">02</span><p data-i18n="act.obj.2">Carry out Sri Lanka's obligations under CEDAW and related laws</p></div>
-          <div class="obj-item"><span class="obj-num">03</span><p data-i18n="act.obj.3">Formulate and implement the national policy for the advancement and empowerment of women</p></div>
-          <div class="obj-item"><span class="obj-num">04</span><p data-i18n="act.obj.4">Protect women from discrimination based on gender and sexual orientation</p></div>
-          <div class="obj-item"><span class="obj-num">05</span><p data-i18n="act.obj.5">Prevent discrimination, marginalisation, sexual harassment and violence against women</p></div>
-          <div class="obj-item"><span class="obj-num">06</span><p data-i18n="act.obj.6">Recommend law reforms to stop discrimination and support women's empowerment</p></div>
-          <div class="obj-item"><span class="obj-num">07</span><p data-i18n="act.obj.7">Support women's participation in justice and equal representation in decision-making</p></div>
-          <div class="obj-item"><span class="obj-num">08</span><p data-i18n="act.obj.8">Ensure women's economic empowerment, with special attention to women with disabilities</p></div>
-          <div class="obj-item"><span class="obj-num">09</span><p data-i18n="act.obj.9">Run public education programmes on all aspects of women's empowerment</p></div>
-          <div class="obj-item"><span class="obj-num">10</span><p data-i18n="act.obj.10">Promote equal pay for men and women in employment of equal value</p></div>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div>
+              <span class="doc-type">National Law</span>
+              <h3>Women Empowerment Act, No. 37 of 2024</h3>
+            </div>
+            <div class="doc-langs">
+              <a class="doc-lang" href="static/files/we-act-english.pdf" target="_blank" rel="noopener">English <small>PDF</small></a>
+              <a class="doc-lang" href="static/files/we-act-sinhala.pdf" target="_blank" rel="noopener"><span lang="si">සිංහල</span> <small>PDF</small></a>
+              <a class="doc-lang" href="static/files/we-act-tamil.pdf" target="_blank" rel="noopener"><span lang="ta">தமிழ்</span> <small>PDF</small></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+  </div>
 
-    <section class="section" style="padding-top:0">
+  <!-- ═══ ACTS & LAWS ═══ -->
+  <div id="page-acts-laws" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb"><a onclick="go('home')">Home</a> / Acts &amp; Laws</p>
+      <h1>Acts &amp; Laws</h1>
+    </div>
+    <section class="section" style="padding-top:40px">
       <div class="container">
-        <span class="eyebrow" data-i18n="act.pow.eyebrow">Section 6 · Powers of the Commission</span>
-        <h2 data-i18n="act.pow.h2">What the NCW Can Do</h2>
-        <div class="pow-grid">
-          <div class="pow-item"><h4 data-i18n="act.pow.1h">Investigate Violations</h4><p data-i18n="act.pow.1p">Look into rights violations, on its own initiative or when a complaint is received.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.2h">Go to Court</h4><p data-i18n="act.pow.2p">Intervene in court cases about women's rights and take action in any competent court.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.3h">Mediation</h4><p data-i18n="act.pow.3p">Refer cases of discrimination to the Panel of Mediators, either on a complaint or on its own motion.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.4h">Monitor Compliance</h4><p data-i18n="act.pow.4p">Monitor how private persons and non-state institutions follow policies and practices relating to women's rights.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.5h">Policy Formulation</h4><p data-i18n="act.pow.5p">Develop the National Policy on women's advancement and empowerment.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.6h">Recommend Law Changes</h4><p data-i18n="act.pow.6p">Advise the Government on updating laws to meet international standards.</p></div>
-          <div class="pow-item"><h4 data-i18n="nav.regional">Regional Offices</h4><p data-i18n="act.pow.7p">Open offices in provinces and regions across Sri Lanka for easier access.</p></div>
-          <div class="pow-item"><h4 data-i18n="act.pow.8h">Complaint Expenses</h4><p data-i18n="act.pow.8p">Award an aggrieved person a sum to meet the expenses reasonably incurred in making a complaint.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="padding-top:0">
-      <div class="container">
-        <span class="eyebrow" data-i18n="act.tl.eyebrow">Part II · Inquiry &amp; Enforcement</span>
-        <h2 data-i18n="act.tl.h2">Key Timelines</h2>
-        <div class="enf-grid">
-          <div class="enf-card"><div class="enf-lbl"><span class="t">1</span><span class="u" data-i18n="act.tl.month">Month</span></div><div class="enf-body"><h4 data-i18n="act.tl.1h">Making a Complaint</h4><p data-i18n="act.tl.1p">An application must be made within one month of the infringement, or of becoming aware of it (Section 19).</p></div></div>
-          <div class="enf-card"><div class="enf-lbl"><span class="t" data-i18n="act.tl.own">Own</span><span class="u" data-i18n="act.tl.motion">Motion</span></div><div class="enf-body"><h4 data-i18n="act.tl.2h">Inquiry and Investigation</h4><p data-i18n="act.tl.2p">The Commission may act on a complaint or on its own motion. A Committee appointed by the Commission conducts the inquiry within one month of receiving the application or information (Section 18).</p></div></div>
-          <div class="enf-card"><div class="enf-lbl"><span class="t">14</span><span class="u" data-i18n="act.tl.days">Days</span></div><div class="enf-body"><h4 data-i18n="act.tl.3h">Informing the Aggrieved Person</h4><p data-i18n="act.tl.3p">After deciding on a complaint, the Commission must inform the aggrieved person of the action taken within 14 days of the decision (Section 21).</p></div></div>
-          <div class="enf-card"><div class="enf-lbl"><span class="t">60</span><span class="u" data-i18n="act.tl.days">Days</span></div><div class="enf-body"><h4 data-i18n="act.pow.3h">Mediation</h4><p data-i18n="act.tl.4p">The Panel of Mediators must conclude mediation within 60 days of the referral (Section 22).</p></div></div>
-          <div class="enf-card span2"><div class="enf-lbl"><span class="t">1</span><span class="u" data-i18n="act.tl.month">Month</span></div><div class="enf-body"><h4 data-i18n="act.tl.5h">Right of Appeal</h4><p data-i18n="act.tl.5p">A person aggrieved by a decision of the Commission may appeal to the Court of Appeal within one month of being informed of it (Section 26).</p></div></div>
-          <div class="enf-card span2"><div class="enf-lbl"><span class="t" data-i18n="act.tl.sc">SC</span><span class="u" data-i18n="act.tl.referral">Referral</span></div><div class="enf-body"><h4 data-i18n="act.tl.6h">Supreme Court References</h4><p data-i18n="act.tl.6p">The Commission receives references from the Supreme Court on women's rights matters under Article 126, and may refer questions on the scope of women's rights to the Supreme Court during an inquiry (Section 17).</p></div></div>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div>
+              <span class="doc-type">International Convention</span>
+              <h3>Convention on the Elimination of All Forms of Discrimination against Women (CEDAW)</h3>
+            </div>
+            <div class="doc-langs">
+              <a class="doc-lang" href="static/files/cedaw-convention.pdf" target="_blank" rel="noopener">English <small>PDF</small></a>
+            </div>
+          </div>
+          <div class="doc-item">
+            <div>
+              <span class="doc-type">International Convention</span>
+              <h3>CEDAW Concluding Observations on the Ninth Periodic Report of Sri Lanka (28 February 2025)</h3>
+            </div>
+            <div class="doc-langs">
+              <a class="doc-lang" href="static/files/cedaw-concluding-observations-sri-lanka-2025.pdf" target="_blank" rel="noopener">English <small>PDF</small></a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -763,17 +732,10 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
       <p class="crumb" data-i18n="crumb.members"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Members of the Commission</p>
       <span class="eyebrow" data-i18n="nav.about">About Us</span>
       <h1 data-i18n="nav.members">Members of the Commission</h1>
-      <p class="lead" data-i18n="mem.lead">The Commission has seven members, including the Chairperson, appointed by H.E. the President.</p>
     </div>
     <section class="section">
       <div class="container">
-        <div class="about-grid" style="margin-bottom:8px">
-          <div>
-            <p data-i18n="mem.p1">Five members are appointed on the recommendation of the Constitutional Council, and two on the recommendation of the Women Parliamentarians' Caucus.</p>
-            <p data-i18n="mem.p2">At least five members, including the Chairperson, must be women. Members hold office for four years and must have proven knowledge and experience in fields such as law, trade unionism, management, economic development, health, education or women's empowerment.</p>
-          </div>
-        </div>
-        <div class="comm-grid" id="comm-grid"></div>
+        <div class="comm-grid" id="comm-grid" style="margin-top:0"></div>
       </div>
     </section>
   </div>
@@ -784,17 +746,21 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
       <p class="crumb" data-i18n="crumb.structure"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Organisational Structure</p>
       <span class="eyebrow" data-i18n="nav.about">About Us</span>
       <h1 data-i18n="nav.structure">Organisational Structure</h1>
-      <p class="lead" data-i18n="str.lead">How the Commission is organised under the Women Empowerment Act No. 37 of 2024.</p>
+      <p class="lead">National Commission on Women: Phase 1 Approved Structure (4 April 2026)</p>
     </div>
     <section class="section">
       <div class="container">
-        <div class="tier-list">
-          <div class="tier"><h4 data-i18n="str.1h">The Commission</h4><p data-i18n="str.1p">Seven members, including the Chairperson, appointed for a term of four years. The Commission sets the direction of the NCW and makes decisions on inquiries, mediation and policy.</p></div>
-          <div class="tier"><h4 data-i18n="str.2h">The Secretariat</h4><p data-i18n="str.2p">Headed by the Executive Director, the Secretariat supports the Commission's day-to-day work.</p></div>
-          <div class="tier"><h4 data-i18n="nav.divisions">Divisions</h4><p data-i18n="str.3p">The Secretariat is organised into four divisions: Administration, Finance, Research and Development, and Legal Affairs. <a onclick="go('divisions')">View the Divisions</a>.</p></div>
-          <div class="tier"><h4 data-i18n="str.4h">Regional and Provincial Offices</h4><p data-i18n="str.4p">The Act empowers the Commission to open offices across Sri Lanka's provinces and regions, for easier access outside Colombo.</p></div>
-          <div class="tier"><h4 data-i18n="str.5h">The Ombuds for Women's Rights</h4><p data-i18n="str.5p">An office provided for under the Act that can receive complaints about gender-based violence or rights violations and forward recommendations to the Commission.</p></div>
-          <div class="tier"><h4 data-i18n="str.6h">National Fund for Women</h4><p data-i18n="str.6p">Managed by the Commission, the Fund receives money from Parliament and can accept donations from local and international sources.</p></div>
+        <div class="ot">
+          <div class="ot-box top">Chairperson and 6 Commissioners</div>
+          <div class="ot-v"></div>
+          <div class="ot-box top2">Executive Director</div>
+          <div class="ot-v"></div>
+          <div class="ot-cols">
+            <div class="ot-col"><div class="ot-box head">Assistant Director (Admin)</div><div class="ot-v"></div><div class="ot-box">Administrative Officer</div><div class="ot-v"></div><div class="ot-box">Management Assistant</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Drivers (2)</div></div><div class="ot-item"><div class="ot-box">Office Assistants (2)</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Finance</div><div class="ot-v"></div><div class="ot-box">Development Officers (2)</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Research and Development</div><div class="ot-v"></div><div class="ot-box">Development Officer</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+            <div class="ot-col"><div class="ot-box head">Director Legal Affairs</div><div class="ot-v"></div><div class="ot-box">Assistant Director (Legal Affairs)</div><div class="ot-sub"><div class="ot-item"><div class="ot-box">Development Officer</div></div><div class="ot-item"><div class="ot-box">Management Assistant</div></div></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -806,10 +772,8 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
       <p class="crumb" data-i18n="crumb.strategic"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Strategic Plan</p>
       <span class="eyebrow" data-i18n="nav.about">About Us</span>
       <h1 data-i18n="sp.h1">Strategic Plan 2027–2031</h1>
-      <p class="lead" data-i18n="sp.lead">The Commission's first five-year Strategic Plan sets out its vision, mission and priorities for 2027 to 2031. It was developed with all seven Commissioners and the Executive Director, and through consultations with women's rights organisations and other stakeholders.</p>
       <div class="lang-btns-row">
         <a class="btn btn-purple btn-sm" href="static/files/ncw-strategic-plan-2027-2031-english.pdf" target="_blank" rel="noopener" data-i18n="sp.view">📄 View the full Plan (English)</a>
-        <span class="btn btn-outline btn-sm" style="border-style:dashed;cursor:default;opacity:.75" data-i18n="sp.forth">Sinhala and Tamil versions forthcoming</span>
       </div>
     </div>
     <section class="section" style="padding-top:56px">
@@ -819,54 +783,6 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
           <div><h3 data-i18n="sp.mission.h">Our Mission</h3><p data-i18n="sp.mission">To protect and promote women's rights and gender equality through independent oversight, advocacy, and strengthening inclusive participation and accountability.</p></div>
         </div>
 
-        <h2 style="margin-top:64px" data-i18n="sp.themes.h">Thematic Areas</h2>
-        <p class="lead" style="max-width:720px;margin-top:10px" data-i18n="sp.themes.p">The Plan is organised around three thematic areas.</p>
-
-        <div class="theme-block">
-          <h3 data-i18n="sp.t1.h">1. Access to Justice</h3>
-          <p class="obj" data-i18n="sp.t1.obj">To promote gender responsive laws and policies relating to access to justice, equal participation and representation.</p>
-          <ul>
-            <li data-i18n="sp.t1.1">Establish the Commission's own investigation, inquiry and mediation processes, and a regional presence.</li>
-            <li data-i18n="sp.t1.2">Analyse existing laws and policies for compliance with CEDAW, and intervene in ongoing law reform processes.</li>
-            <li data-i18n="sp.t1.3">Monitor the implementation of the National Policy on Gender Equality and Women's Empowerment 2023–2033.</li>
-            <li data-i18n="sp.t1.4">Promote sex-disaggregated data and women's representation in decision-making bodies.</li>
-          </ul>
-        </div>
-
-        <div class="theme-block">
-          <h3 data-i18n="sp.t2.h">2. Safety, Peace and Security</h3>
-          <p class="obj" data-i18n="sp.t2.obj">Gender-responsive access to justice is ensured in relation to safety, peace and security.</p>
-          <ul>
-            <li data-i18n="sp.t2.1"><strong>Sexual and Gender-Based Violence:</strong> monitor the Multisectoral National Action Plan to Address Sexual and Gender-Based Violence 2024–2028, address sexual harassment including at the workplace under ILO Convention 190, and undertake an islandwide study on rape.</li>
-            <li data-i18n="sp.t2.2"><strong>Women, Peace and Security:</strong> monitor the National Action Plan on Women, Peace and Security 2023–2027, and advocate for women affected by conflict.</li>
-          </ul>
-        </div>
-
-        <div class="theme-block">
-          <h3 data-i18n="sp.t3.h">3. Access to Resources and Opportunities</h3>
-          <p class="obj" data-i18n="sp.t3.obj">To promote gender responsive laws, policies and practices in the workplace, access to gender responsive health services that cover all phases of a woman's life, and gender-responsive actions to climate change and disasters.</p>
-          <ul>
-            <li data-i18n="sp.t3.1"><strong>Economic Justice:</strong> provide a gendered perspective on labour law reform and advocate for recognition of women's contribution to the economy.</li>
-            <li data-i18n="sp.t3.2"><strong>Women's Access to Health:</strong> promote free and quality healthcare for women throughout their lifespan.</li>
-            <li data-i18n="sp.t3.3"><strong>Environment, Climate Change and Disasters:</strong> address women's representation in climate and disaster decision-making, and advocate for sex-disaggregated data.</li>
-          </ul>
-        </div>
-
-        <h2 style="margin-top:64px" data-i18n="sp.work.h">How the Commission Will Work</h2>
-        <p class="lead" style="max-width:720px;margin-top:10px" data-i18n="sp.work.p">Six strategic interventions cut across all three thematic areas.</p>
-        <div class="chip-row">
-          <span class="chip" data-i18n="sp.chip.1">Policy and Law Reform</span>
-          <span class="chip" data-i18n="sp.chip.2">Inquiry, Litigation and Mediation</span>
-          <span class="chip" data-i18n="sp.chip.3">Referrals and Collaboration</span>
-          <span class="chip" data-i18n="sp.chip.4">Monitoring</span>
-          <span class="chip" data-i18n="sp.chip.5">Research and Fact Finding</span>
-          <span class="chip" data-i18n="sp.chip.6">Advocacy</span>
-        </div>
-
-        <div class="sp-two">
-          <div class="sp-box"><h3 data-i18n="str.6h">National Fund for Women</h3><p data-i18n="sp.fund.p">The Commission will set up and manage the National Fund for Women, as provided for in the Women Empowerment Act, and will establish a Fund Management Committee as an oversight mechanism.</p></div>
-          <div class="sp-box"><h3 data-i18n="sp.inst.h">Institutional Development</h3><p data-i18n="sp.inst.p">As a new Commission, it will focus on governance, infrastructure, financial management, human resources, communications, outreach and public engagement, including outreach across all nine provinces.</p></div>
-        </div>
       </div>
     </section>
   </div>
@@ -884,7 +800,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
         <div class="org-chart">
           <div class="org-box top" data-i18n="div.top">Chairperson and six Commissioners</div>
           <div class="org-line" aria-hidden="true"></div>
-          <div class="org-box" data-i18n="div.ed">Executive Director</div>
+          <div class="org-box"><span data-i18n="div.ed">Executive Director</span><div style="font-family:'Inter',sans-serif;font-weight:600;font-size:0.9rem;color:var(--tmid);margin-top:4px">Ms K.D.R. Olga</div></div>
           <div class="org-line" aria-hidden="true"></div>
           <div class="div-grid">
             <div class="div-card">
@@ -988,6 +904,22 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     </section>
   </div>
 
+  <!-- ═══ CONTACT: REGIONAL OFFICES ═══ -->
+  <div id="page-contact-regional" class="page">
+    <div class="page-hero-plain container">
+      <p class="crumb"><a onclick="go('home')">Home</a> / Contact Us / Regional Offices</p>
+      <span class="eyebrow">Contact Us</span>
+      <h1>Regional Offices</h1>
+    </div>
+    <section class="section">
+      <div class="container">
+        <div class="notice-card" style="margin-top:0">
+          <h3>Will be announced</h3>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <!-- ═══ GENERIC STUB ═══ -->
   <div id="page-stub" class="page">
     <div class="page-hero-plain container">
@@ -1027,11 +959,11 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
         </div>
         <div class="footer-col">
           <h5 data-i18n="foot.info">Information</h5>
-          <a onclick="goStub('Case Recommendations')" data-i18n="nav.recmed">Recommendations &amp; Mediation</a>
+          <a onclick="goStub('Recommendations')">Recommendations</a>
           <a onclick="go('press')" data-i18n="nav.press">Press Releases</a>
           <a onclick="go('about-strategic')" data-i18n="sp.h1">Strategic Plan 2027–2031</a>
           <a onclick="goStub('Download the Forms')" data-i18n="nav.rti">Right to Information</a>
-          <a onclick="go('about-act')" data-i18n="foot.act">Women Empowerment Act 2024</a>
+          <a onclick="go('acts-laws')">Acts &amp; Laws</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -2315,6 +2247,7 @@ const I18N = {
 }
 };
 const STUB = {
+"Recommendations": {"en": "Recommendations"},
 "Case Recommendations": {
 "en": "Case Recommendations",
 "si": "පැමිණිලි සම්බන්ධ නිර්දේශ",
@@ -2800,9 +2733,40 @@ const MEMBERS = [
 "கலன சேனாரத்ன சர்வதேச சட்டம், மனித உரிமைகள் மற்றும் அரசியலமைப்புச் சட்டம் ஆகிய துறைகளில் நிபுணத்துவம் பெற்ற சட்டக் கல்வியாளராவார். லண்டன் பல்கலைக்கழகத்தில் LLB பட்டத்தையும், University College London இல் LLM பட்டத்தையும், ஹொங்கொங் பல்கலைக்கழகத்தில் PhD பட்டத்தையும் பெற்றுள்ளார். Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) என்ற நூலின் ஆசிரியராவார். Asian Journal of International Law இன் ஆசிரியர் சபை உறுப்பினராகவும் உள்ளார். தற்போது பேராதனைப் பல்கலைக்கழகத்தின் சட்டத் துறையின் சிரேஷ்ட விரிவுரையாளராகவும் துறைத் தலைவராகவும் பணியாற்றுகின்றார். அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். இதற்கு முன்னர், இலங்கை வெளிநாட்டலுவல்கள் அமைச்சிலும் திமோர்-லெஸ்தேயிலுள்ள UNDP இலும் சட்ட அலுவலராகவும், சமூக விஞ்ஞானிகள் சங்கத்தில் (SSA) ஆய்வு உதவியாளராகவும் பணியாற்றியுள்ளார்."
 ]
 }
+},
+{
+"photo": "static/images/commissioners/gayani.jpg",
+"chair": false,
+"name": {"en": "M. U. Gayani"},
+"short": {"en": "Chairperson, Kithul Development Board"},
+"bio": {"en": [
+"M. U. Gayani holds a Master of Business Administration (MBA) from the University of Colombo and a B.Sc. (Special) Degree in Chemistry from the University of Colombo. She is also an ISO 22000:2018 Lead Auditor.",
+"Professionally, she brings over 20 years of cross-functional experience across the industrial, R&D, and academic sectors. At present, she serves as a Commissioner of the National Commission on Women and as the Chairperson of the Kithul Development Board. Previously, she served as an Enterprise Promotion Manager and Assistant Director at the Industrial Development Board of Ceylon (IDB). Throughout her career, she has spearheaded national-level programs to empower women-led enterprises and drive sector growth. Additionally, she works as an independent consultant specializing in women's entrepreneurship and business development, providing expert guidance to help industries upgrade and successfully obtain required certifications."
+]}
+},
+{
+"photo": "static/images/commissioners/janaha-selvaras.jpg",
+"chair": false,
+"name": {"en": "Janaha Selvaras"},
+"short": {"en": "Attorney-at-Law; Senior Lecturer, Department of Legal Studies, The Open University of Sri Lanka"},
+"bio": {"en": [
+"Janaha Selvaras was appointed as a Full-Time Commissioner of the National Commission on Women of Sri Lanka in September 2025. She is an Attorney-at-Law and legal academic with expertise in international law, human rights, environmental law, and open and distance learning.",
+"She holds a Bachelor of Laws with Honours from the Faculty of Law, University of Colombo, and a Master of Laws specialising in International Legal Studies from South Asian University (SAARC University), New Delhi. She also holds postgraduate diplomas in International Law and Diplomacy from the Indian Society of International Law and Human Resource Management from the University of Colombo.",
+"She serves as a Senior Lecturer in the Department of Legal Studies at the Open University of Sri Lanka. She is also a Board Member of the National Youth Services Council of Sri Lanka."
+]}
+},
+{
+"photo": "static/images/commissioners/olga.jpg",
+"ed": true,
+"name": {"en": "K.D.R. Olga"},
+"short": {"en": "Retired public servant; former Secretary to the Ministry of Women and Child Affairs"},
+"bio": {"en": [
+"Ms. K.D.R. Olga is a retired public servant with over 35 years of service. She began her career as a Government Accountant. When she was getting retired, she was the Secretary to the Ministry of Women and Child Affairs. From August 2020 to May 2022, she also served as the Secretary to the Ministry of Energy.",
+"A significant portion of her career was dedicated to the General Treasury, where she gained extensive experience in key areas such as budgeting, cash management, government accounting, and public procurement. During her tenure at the General Treasury, she also served as the Treasury’s representative on the Boards of Directors of several State-Owned Enterprises."
+]}
 }
 ];
-const VACANT = 2; // places still to be announced
+const VACANT = 0; // places still to be announced
 const PERSON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#672D62" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>';
 function renderMembers(){
   let html = MEMBERS.map((m,i)=>{
@@ -2810,8 +2774,9 @@ function renderMembers(){
     const photo = m.photo ? '<img src="'+m.photo+'" alt="'+esc(name)+'" loading="lazy">' : PERSON_SVG;
     return '<div class="comm-card"><div class="comm-photo">'+photo+'</div><div class="comm-info">'
       + (m.chair ? '<span class="comm-badge">'+esc(t('ui.chair'))+'</span>' : '')
+      + (m.ed ? '<span class="comm-badge">Executive Director</span>' : '')
       + '<div class="nm">'+esc(name)+'</div><div class="rl">'+esc(L(m.short))+'</div>'
-      + '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>'
+      + (m.bio ? '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>' : '')
       + '</div></div>';
   }).join('');
   for(let k=0;k<VACANT;k++){
@@ -2829,7 +2794,7 @@ function openBio(i){
     ? '<img class="bio-photo" src="'+m.photo+'" alt="'+esc(name)+'">'
     : '<div class="bio-photo" style="display:flex;align-items:center;justify-content:center">'+PERSON_SVG+'</div>';
   document.getElementById('bio-name').textContent = name;
-  document.getElementById('bio-role').textContent = m.chair ? t('ui.chair') : t('ui.commissioner');
+  document.getElementById('bio-role').textContent = m.ed ? 'Executive Director' : (m.chair ? t('ui.chair') : t('ui.commissioner'));
   document.getElementById('bio-text').innerHTML = L(m.bio).map(p=>'<p>'+esc(p)+'</p>').join('');
   document.getElementById('bio-modal').classList.add('open');
   document.querySelector('#bio-modal .bio-close').focus();
@@ -2872,6 +2837,7 @@ function go(id){
   document.querySelectorAll('.nav-toplink').forEach(b=>b.classList.remove('active'));
   if(id.startsWith('about-')) document.getElementById('navtop-about').classList.add('active');
   if(id==='divisions') document.getElementById('navtop-divisions').classList.add('active');
+  if(id==='acts-laws') document.getElementById('navtop-acts').classList.add('active');
   if(id==='documentation') document.getElementById('navtop-documentation').classList.add('active');
   if(id==='press') document.getElementById('navtop-news').classList.add('active');
   window.scrollTo({top:0,behavior:'smooth'});
@@ -2971,10 +2937,8 @@ document.addEventListener('keydown', function(e){
   if(e.key==='Escape'){ closeLangModal(); closeExternalModal(); if(document.getElementById('bio-modal').classList.contains('open')) closeBio(); }
 });
 
-// ── INITIAL RENDER ──
-renderDocs();
-renderCarousels();
-renderMembers();
+// ── INITIAL RENDER (English-only draft for review) ──
+enterSite('en');
 
 </script>
 </body>
