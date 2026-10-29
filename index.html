@@ -693,7 +693,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     </div>
     <section class="section" style="padding-top:8px">
       <div class="container">
-        <h2 style="margin:48px 0 18px">International Law</h2>
+        <h2 style="margin:48px 0 18px">International Agreements</h2>
         <div class="doc-list">
           <div class="doc-item">
             <div><h3>Universal Declaration of Human Rights</h3></div>
@@ -2969,8 +2969,15 @@ function resetA11y(){
   refreshA11yLabels();
   document.querySelectorAll('#a11y-panel [data-theme]').forEach(b=>b.setAttribute('aria-pressed', b.dataset.theme===''));
 }
+function closeA11y(){
+  const p = document.getElementById('a11y-panel');
+  if(p.classList.contains('open')){ p.classList.remove('open'); document.getElementById('a11y-fab').setAttribute('aria-expanded', false); }
+}
+document.addEventListener('click', function(e){
+  if(!e.target.closest('#a11y-panel') && !e.target.closest('#a11y-fab')) closeA11y();
+});
 document.addEventListener('keydown', function(e){
-  if(e.key==='Escape'){ closeLangModal(); closeExternalModal(); if(document.getElementById('bio-modal').classList.contains('open')) closeBio(); }
+  if(e.key==='Escape'){ closeA11y(); closeLangModal(); closeExternalModal(); if(document.getElementById('bio-modal').classList.contains('open')) closeBio(); }
 });
 
 // ── INITIAL RENDER (English-only draft for review) ──
