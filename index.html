@@ -2811,6 +2811,7 @@ function renderMembers(){
     return '<div class="comm-card"><div class="comm-photo">'+photo+'</div><div class="comm-info">'
       + (m.chair ? '<span class="comm-badge">'+esc(t('ui.chair'))+'</span>' : '')
       + (m.ed ? '<span class="comm-badge">Executive Director</span>' : '')
+      + (!m.chair && !m.ed ? '<span class="comm-badge">'+esc(t('ui.commissioner'))+'</span>' : '')
       + '<div class="nm">'+esc(name)+'</div>'
       + (m.bio ? '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>' : '')
       + '</div></div>';
