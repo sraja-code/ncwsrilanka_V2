@@ -823,7 +823,6 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     <section class="section" style="padding-top:48px">
       <div class="container">
         <h2 style="margin-bottom:26px">Current Members of the Commission</h2>
-        <div class="mem-strip" id="mem-strip"></div>
         <div class="mem-profiles" id="mem-profiles"></div>
       </div>
     </section>
@@ -2699,13 +2698,6 @@ function roleOf(m){
   return t('ui.commissioner');
 }
 function renderMembers(){
-  const strip = MEMBERS.map((m,i)=>{
-    const photo = m.photo ? '<img src="'+m.photo+'" alt="" loading="lazy">' : PERSON_SVG;
-    return '<button class="mem-thumb" onclick="jumpToMember('+i+')">'
-      + '<div class="ph">'+photo+'</div>'
-      + '<div class="nm">'+esc(L(m.name))+'</div>'
-      + '<div class="rl">'+esc(roleOf(m))+'</div></button>';
-  }).join('');
   const profiles = MEMBERS.map((m,i)=>{
     const name = L(m.name);
     const photo = m.photo ? '<img src="'+m.photo+'" alt="'+esc(name)+'" loading="lazy">' : PERSON_SVG;
@@ -2717,7 +2709,6 @@ function renderMembers(){
       + (m.ed ? '<div class="since"></div>' : '<div class="since">'+esc(SINCE)+'</div>')
       + bio + '</div></article>';
   }).join('');
-  document.getElementById('mem-strip').innerHTML = strip;
   document.getElementById('mem-profiles').innerHTML = profiles;
 }
 function jumpToMember(i){
