@@ -148,8 +148,6 @@ nav.mainnav{background:#fff;border-bottom:1px solid var(--border);position:stick
 .mob-menu a{display:block;padding:10px 24px 10px 36px;font-size:0.86rem;color:var(--text);text-decoration:none;cursor:pointer}
 .mob-menu a:hover{background:var(--purple-lt)}
 .mob-menu a.mob-flat{padding-left:24px;font-weight:700;color:var(--purple)}
-@media(max-width:620px){
-}
 @media(max-width:460px){
   .container{padding:0 18px}
   .nav-logo-row-inner{padding:12px 18px}
@@ -217,7 +215,7 @@ html.a11y-readable h1,html.a11y-readable h2,html.a11y-readable h3,html.a11y-read
 html[data-theme="dark"] body{background:#15101a;color:#F3EEF3}
 html[data-theme="dark"] .page,html[data-theme="dark"] nav.mainnav,html[data-theme="dark"] .util-bar,html[data-theme="dark"] footer{background:#15101a!important}
 html[data-theme="dark"] h1,html[data-theme="dark"] h2,html[data-theme="dark"] h3,html[data-theme="dark"] h4{color:#D9A9D2}
-html[data-theme="dark"] .card,html[data-theme="dark"] .nav-dropdown,html[data-theme="dark"] .mob-menu,html[data-theme="dark"] .lang-modal-box,html[data-theme="dark"] .a11y-panel,html[data-theme="dark"] .info-block-bd,html[data-theme="dark"] .obj-item,html[data-theme="dark"] .pow-item,html[data-theme="dark"] .enf-body,html[data-theme="dark"] .comm-card,html[data-theme="dark"] .comm-photo,html[data-theme="dark"] .util-bar,html[data-theme="dark"] .notice-card,html[data-theme="dark"] .comm-note,html[data-theme="dark"] .enf-lbl,html[data-theme="dark"] .summary-toggle,html[data-theme="dark"] .summary-body,html[data-theme="dark"] .nav-menu-row,html[data-theme="dark"] .action-bar,html[data-theme="dark"] .car-card,html[data-theme="dark"] .car-img,html[data-theme="dark"] .doc-item,html[data-theme="dark"] .doc-filter button,html[data-theme="dark"] .sp-vm>div,html[data-theme="dark"] .sp-box,html[data-theme="dark"] .div-card,html[data-theme="dark"] .org-box{background:#241A28!important;border-color:#453a48!important}
+html[data-theme="dark"] .card,html[data-theme="dark"] .nav-dropdown,html[data-theme="dark"] .mob-menu,html[data-theme="dark"] .lang-modal-box,html[data-theme="dark"] .a11y-panel,html[data-theme="dark"] .info-block-bd,html[data-theme="dark"] .obj-item,html[data-theme="dark"] .pow-item,html[data-theme="dark"] .enf-body,html[data-theme="dark"] .comm-card,html[data-theme="dark"] .comm-photo,html[data-theme="dark"] .util-bar,html[data-theme="dark"] .notice-card,html[data-theme="dark"] .comm-note,html[data-theme="dark"] .enf-lbl,html[data-theme="dark"] .summary-toggle,html[data-theme="dark"] .summary-body,html[data-theme="dark"] .nav-menu-row,html[data-theme="dark"] .action-bar,html[data-theme="dark"] .car-card,html[data-theme="dark"] .car-img,html[data-theme="dark"] .doc-item,html[data-theme="dark"] .doc-filter button,html[data-theme="dark"] .sp-vm>div,html[data-theme="dark"] .sp-box,html[data-theme="dark"] .div-card,html[data-theme="dark"] .org-box,html[data-theme="dark"] .mem-thumb .ph,html[data-theme="dark"] .mem-profile .ph{background:#241A28!important;border-color:#453a48!important}
 html[data-theme="dark"] .nav-toplink,html[data-theme="dark"] .tmid,html[data-theme="dark"] .mob-group-hd,html[data-theme="dark"] .nav-dropdown a,html[data-theme="dark"] .mob-menu a,html[data-theme="dark"] p,html[data-theme="dark"] li,html[data-theme="dark"] .crumb,html[data-theme="dark"] .kd-txt,html[data-theme="dark"] .rl,html[data-theme="dark"] .lm-native,html[data-theme="dark"] .util-lang,html[data-theme="dark"] .doc-lang,html[data-theme="dark"] .org-box{color:#E7DCE6!important}
 html[data-theme="dark"] .footer-col a,html[data-theme="dark"] .footer-brand p,html[data-theme="dark"] .footer-bottom{color:#C9B9C7!important}
 html[data-theme="yellow"] body{background:#000;color:#FFE600}
@@ -286,7 +284,7 @@ html[data-theme="gray"] body{filter:grayscale(1)}
 .enf-card.span2{grid-column:span 2;grid-template-columns:120px 1fr}
 @media(max-width:700px){.enf-grid{grid-template-columns:1fr}.enf-card.span2{grid-column:span 1}}
 
-/* ── members ── */
+/* ── members (legacy card + modal styles, kept for the biography modal) ── */
 .comm-note{background:var(--purple-lt);border-left:4px solid var(--teal);padding:14px 18px;font-size:0.86rem;color:var(--tmid);margin:24px 0}
 .comm-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);margin-top:16px}
 .comm-card{background:#fff;display:flex;flex-direction:column}
@@ -307,6 +305,27 @@ html[data-theme="gray"] body{filter:grayscale(1)}
 .bio-box .bio-close{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.5rem;line-height:1;color:var(--tmid);cursor:pointer;padding:6px}
 @media(max-width:640px){.bio-box{grid-template-columns:1fr}.bio-box .bio-photo{max-width:170px}}
 
+/* ── members: HRCSL-style photo strip + full profiles ── */
+.mem-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:24px;margin-bottom:56px}
+.mem-thumb{background:none;border:none;padding:0;text-align:center;cursor:pointer;font:inherit;color:inherit}
+.mem-thumb .ph{aspect-ratio:4/5;background:var(--purple-lt);overflow:hidden;border-bottom:3px solid var(--purple);margin-bottom:12px;display:flex;align-items:center;justify-content:center}
+.mem-thumb .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.mem-thumb .ph svg{width:52px;height:52px}
+.mem-thumb .nm{font-family:'Noto Serif','Noto Serif Sinhala','Noto Serif Tamil',serif;font-weight:700;color:var(--purple);font-size:0.95rem;line-height:1.35}
+.mem-thumb .rl{font-size:0.8rem;font-weight:700;color:var(--teal);margin-top:4px}
+.mem-thumb:hover .nm{text-decoration:underline;text-underline-offset:3px}
+.mem-profiles{border-top:1px solid var(--border)}
+.mem-profile{display:grid;grid-template-columns:200px 1fr;gap:36px;padding:44px 0;border-bottom:1px solid var(--border);scroll-margin-top:150px}
+.mem-profile:focus{outline:none}
+.mem-profile .ph{background:var(--purple-lt);aspect-ratio:4/5;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.mem-profile .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.mem-profile .ph svg{width:52px;height:52px}
+.mem-profile h3{margin-bottom:4px}
+.mem-profile .rl{font-weight:700;color:var(--teal);font-size:0.9rem}
+.mem-profile .since{font-size:0.82rem;color:var(--tlt);margin:2px 0 18px}
+.mem-profile p{color:var(--tmid);line-height:1.85;margin-bottom:14px}
+.mem-profile p:last-child{margin-bottom:0}
+@media(max-width:640px){.mem-profile{grid-template-columns:1fr;gap:18px;padding:34px 0}.mem-profile .ph{max-width:170px}}
 
 .history-text{max-width:780px}
 .history-text p{color:var(--tmid);line-height:1.9;margin-bottom:18px}
@@ -794,16 +813,18 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
     </section>
   </div>
 
-  <!-- ═══ ABOUT: MEMBERS ═══ -->
+  <!-- ═══ ABOUT: MEMBERS (HRCSL-style) ═══ -->
   <div id="page-about-members" class="page">
     <div class="page-hero-plain container">
       <p class="crumb" data-i18n="crumb.members"><a onclick="go('home')" data-i18n="ui.home">Home</a> / About Us / Members of the Commission</p>
       <span class="eyebrow" data-i18n="nav.about">About Us</span>
       <h1 data-i18n="nav.members">Members of the Commission</h1>
     </div>
-    <section class="section">
+    <section class="section" style="padding-top:48px">
       <div class="container">
-        <div class="comm-grid" id="comm-grid" style="margin-top:0"></div>
+        <h2 style="margin-bottom:26px">Current Members of the Commission</h2>
+        <div class="mem-strip" id="mem-strip"></div>
+        <div class="mem-profiles" id="mem-profiles"></div>
       </div>
     </section>
   </div>
@@ -964,7 +985,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             </div>
             <div class="contact-row">
               <div class="contact-icon">✉️</div>
-              <div><div class="contact-lbl" data-i18n="con.email.l">Email</div><div class="contact-val"><a href="mailto:contact.ncw@gmail.com">contact.ncw@gmail.com</a></div></div>
+              <div><div class="contact-lbl" data-i18n="con.email.l">Email</div><div class="contact-val"><a href="mailto:contact.ncwsrilanka@gmail.com">contact.ncwsrilanka@gmail.com</a></div></div>
             </div>
           </div>
         </div>
@@ -1018,7 +1039,7 @@ html[lang="ta"] .enf-lbl .t,html[lang="si"] .enf-lbl .t{font-size:1.15rem}
             </div>
           </div>
           <p class="sf-line"><strong>Tel:</strong> <a href="tel:+94112685582">+94 11 268 5582</a></p>
-          <p class="sf-line"><strong>Email:</strong> <a href="mailto:contact.ncw@gmail.com">contact.ncw@gmail.com</a></p>
+          <p class="sf-line"><strong>Email:</strong> <a href="mailto:contact.ncwsrilanka@gmail.com">contact.ncwsrilanka@gmail.com</a></p>
         </div>
         <div class="sf-links">
           <h5>Quick Links</h5>
@@ -2147,8 +2168,8 @@ const I18N = {
 },
 "stub.p": {
 "en": "Will be announced.",
-"si": "මෙම කොටස සකස් කරමින් පවතී. අන්තර්ගතය ලැබෙන පරිදි මෙහි පළ කරනු ලැබේ.<br>මේ අතරතුර, ඔබට <strong>contact.ncw@gmail.com</strong> හරහා කොමිෂන් සභාව සෘජුවම සම්බන්ධ කර ගත හැකිය.",
-"ta": "இப்பகுதி தயாரிக்கப்பட்டு வருகின்றது. உள்ளடக்கம் கிடைக்கப்பெறும்போது இங்கு வெளியிடப்படும்.<br>இதற்கிடையில், <strong>contact.ncw@gmail.com</strong> ஊடாக ஆணைக்குழுவை நேரடியாகத் தொடர்புகொள்ளலாம்."
+"si": "මෙම කොටස සකස් කරමින් පවතී. අන්තර්ගතය ලැබෙන පරිදි මෙහි පළ කරනු ලැබේ.<br>මේ අතරතුර, ඔබට <strong>contact.ncwsrilanka@gmail.com</strong> හරහා කොමිෂන් සභාව සෘජුවම සම්බන්ධ කර ගත හැකිය.",
+"ta": "இப்பகுதி தயாரிக்கப்பட்டு வருகின்றது. உள்ளடக்கம் கிடைக்கப்பெறும்போது இங்கு வெளியிடப்படும்.<br>இதற்கிடையில், <strong>contact.ncwsrilanka@gmail.com</strong> ஊடாக ஆணைக்குழுவை நேரடியாகத் தொடர்புகொள்ளலாம்."
 },
 "stub.back": {
 "en": "← Back to Home",
@@ -2670,25 +2691,40 @@ const MEMBERS = [{"photo":"static/images/commissioners/grace-asirwatham.jpg","ch
 {"photo":"static/images/commissioners/gayani.jpg","chair":false,"name":{"en":"M. U. Gayani"},"short":{"en":"Chairperson, Kithul Development Board"},"bio":{"en":["M. U. Gayani holds a Master of Business Administration (MBA) from the University of Colombo and a B.Sc. (Special) Degree in Chemistry from the University of Colombo. She is also an ISO 22000:2018 Lead Auditor.","Professionally, she brings over 20 years of cross-functional experience across the industrial, R&D, and academic sectors. At present, she serves as a Commissioner of the National Commission on Women and as the Chairperson of the Kithul Development Board. Previously, she served as an Enterprise Promotion Manager and Assistant Director at the Industrial Development Board of Ceylon (IDB). Throughout her career, she has spearheaded national-level programs to empower women-led enterprises and drive sector growth. Additionally, she works as an independent consultant specializing in women's entrepreneurship and business development, providing expert guidance to help industries upgrade and successfully obtain required certifications."]}},
 {"photo":"static/images/commissioners/kalana-senaratne.jpg","chair":false,"name":{"en":"Dr Kalana Senaratne","si":"ආචාර්ය කලන සේනාරත්න","ta":"கலாநிதி கலன சேனாரத்ன"},"short":{"en":"Senior Lecturer and Head, Department of Law, University of Peradeniya","si":"ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී, නීති අධ්‍යයනාංශය, පේරාදෙණිය විශ්වවිද්‍යාලය","ta":"சிரேஷ்ட விரிவுரையாளர் மற்றும் துறைத் தலைவர், சட்டத் துறை, பேராதனைப் பல்கலைக்கழகம்"},"bio":{"en":["Kalana Senaratne is a legal academic specializing in the fields of international law, human rights and constitutional law. He holds an LLB from the University of London, an LLM from University College London, and a PhD from the University of Hong Kong. He is the author of Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021). He is a member of the Editorial Board of the Asian Journal of International Law. Senaratne is currently a Senior Lecturer and the Head of the Department of Law, University of Peradeniya. He was appointed to the National Commission on Women in September, 2025. Previously, he has worked as a legal officer at the Ministry of Foreign Affairs in Sri Lanka, the UNDP in Timor-Leste, and as a research associate at the Social Scientists’ Association (SSA)."],"si":["කලන සේනාරත්න ජාත්‍යන්තර නීතිය, මානව හිමිකම් සහ ආණ්ඩුක්‍රම ව්‍යවස්ථා නීතිය යන ක්ෂේත්‍රවල විශේෂඥතාවක් ඇති නීති ශාස්ත්‍රඥයෙකි. ඔහු ලන්ඩන් විශ්වවිද්‍යාලයෙන් LLB උපාධියක්, University College London ආයතනයෙන් LLM උපාධියක් සහ හොංකොං විශ්වවිද්‍යාලයෙන් PhD උපාධියක් ලබා ඇත. ඔහු Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) ග්‍රන්ථයේ කතුවරයා වේ. ඔහු Asian Journal of International Law හි කතු මණ්ඩල සාමාජිකයෙකි. සේනාරත්න මහතා දැනට පේරාදෙණිය විශ්වවිද්‍යාලයේ නීති අධ්‍යයනාංශයේ ජ්‍යෙෂ්ඨ කථිකාචාර්ය සහ අංශ ප්‍රධානී ලෙස සේවය කරයි. ඔහු 2025 සැප්තැම්බර් මාසයේදී කාන්තාවන් පිළිබඳ ජාතික කොමිෂන් සභාවට පත් කරන ලදී. මීට පෙර ඔහු ශ්‍රී ලංකා විදේශ කටයුතු අමාත්‍යාංශයේ සහ ටිමෝර්-ලෙස්ටේ හි UNDP ආයතනයේ නීති නිලධාරියෙකු ලෙස ද, සමාජ විද්‍යාඥයින්ගේ සංගමයේ (SSA) පර්යේෂණ සහායකයෙකු ලෙස ද සේවය කර ඇත."],"ta":["கலன சேனாரத்ன சர்வதேச சட்டம், மனித உரிமைகள் மற்றும் அரசியலமைப்புச் சட்டம் ஆகிய துறைகளில் நிபுணத்துவம் பெற்ற சட்டக் கல்வியாளராவார். லண்டன் பல்கலைக்கழகத்தில் LLB பட்டத்தையும், University College London இல் LLM பட்டத்தையும், ஹொங்கொங் பல்கலைக்கழகத்தில் PhD பட்டத்தையும் பெற்றுள்ளார். Internal Self-Determination in International Law: History, Theory, and Practice (Cambridge University Press, 2021) என்ற நூலின் ஆசிரியராவார். Asian Journal of International Law இன் ஆசிரியர் சபை உறுப்பினராகவும் உள்ளார். தற்போது பேராதனைப் பல்கலைக்கழகத்தின் சட்டத் துறையின் சிரேஷ்ட விரிவுரையாளராகவும் துறைத் தலைவராகவும் பணியாற்றுகின்றார். அவர் 2025 செப்டெம்பர் மாதம் பெண்கள் பற்றிய தேசிய ஆணைக்குழுவிற்கு நியமிக்கப்பட்டார். இதற்கு முன்னர், இலங்கை வெளிநாட்டலுவல்கள் அமைச்சிலும் திமோர்-லெஸ்தேயிலுள்ள UNDP இலும் சட்ட அலுவலராகவும், சமூக விஞ்ஞானிகள் சங்கத்தில் (SSA) ஆய்வு உதவியாளராகவும் பணியாற்றியுள்ளார்."]}},
 {"photo":"static/images/commissioners/olga.jpg","ed":true,"name":{"en":"K.D.R. Olga"},"short":{"en":"Retired public servant; former Secretary to the Ministry of Women and Child Affairs"},"bio":{"en":["K.D.R. Olga is a retired public servant with over 35 years of service. She began her career as a Government Accountant. When she was getting retired, she was the Secretary to the Ministry of Women and Child Affairs. From August 2020 to May 2022, she also served as the Secretary to the Ministry of Energy.","A significant portion of her career was dedicated to the General Treasury, where she gained extensive experience in key areas such as budgeting, cash management, government accounting, and public procurement. During her tenure at the General Treasury, she also served as the Treasury’s representative on the Boards of Directors of several State-Owned Enterprises."]}}];
-const VACANT = 0; // places still to be announced
 const PERSON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="#672D62" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>';
+const SINCE = 'Since September 2025';
+function roleOf(m){
+  if(m.ed) return 'Executive Director';
+  if(m.chair) return t('ui.chair');
+  return t('ui.commissioner');
+}
 function renderMembers(){
-  let html = MEMBERS.map((m,i)=>{
+  const strip = MEMBERS.map((m,i)=>{
+    const photo = m.photo ? '<img src="'+m.photo+'" alt="" loading="lazy">' : PERSON_SVG;
+    return '<button class="mem-thumb" onclick="jumpToMember('+i+')">'
+      + '<div class="ph">'+photo+'</div>'
+      + '<div class="nm">'+esc(L(m.name))+'</div>'
+      + '<div class="rl">'+esc(roleOf(m))+'</div></button>';
+  }).join('');
+  const profiles = MEMBERS.map((m,i)=>{
     const name = L(m.name);
     const photo = m.photo ? '<img src="'+m.photo+'" alt="'+esc(name)+'" loading="lazy">' : PERSON_SVG;
-    return '<div class="comm-card"><div class="comm-photo">'+photo+'</div><div class="comm-info">'
-      + (m.chair ? '<span class="comm-badge">'+esc(t('ui.chair'))+'</span>' : '')
-      + (m.ed ? '<span class="comm-badge">Executive Director</span>' : '')
-      + (!m.chair && !m.ed ? '<span class="comm-badge">'+(m.fulltime ? 'Full-Time Commissioner' : esc(t('ui.commissioner')))+'</span>' : '')
-      + '<div class="nm">'+esc(name)+'</div>'
-      + (m.bio ? '<button class="comm-bio-btn" onclick="openBio('+i+')">'+esc(t('ui.readbio'))+'</button>' : '')
-      + '</div></div>';
+    const bio = m.bio ? L(m.bio).map(p=>'<p>'+esc(p)+'</p>').join('') : '';
+    return '<article class="mem-profile" id="member-'+i+'" tabindex="-1">'
+      + '<div class="ph">'+photo+'</div>'
+      + '<div><h3>'+esc(name)+'</h3>'
+      + '<div class="rl">'+esc(roleOf(m))+'</div>'
+      + (m.ed ? '<div class="since"></div>' : '<div class="since">'+esc(SINCE)+'</div>')
+      + bio + '</div></article>';
   }).join('');
-  for(let k=0;k<VACANT;k++){
-    html += '<div class="comm-card"><div class="comm-photo">'+PERSON_SVG+'</div><div class="comm-info">'
-      + '<div class="nm">'+esc(t('ui.tba'))+'</div><div class="rl">'+esc(t('ui.tbadetail'))+'</div></div></div>';
-  }
-  document.getElementById('comm-grid').innerHTML = html;
+  document.getElementById('mem-strip').innerHTML = strip;
+  document.getElementById('mem-profiles').innerHTML = profiles;
+}
+function jumpToMember(i){
+  const el = document.getElementById('member-'+i);
+  if(!el) return;
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+  el.focus({preventScroll:true});
 }
 let bioReturnFocus = null;
 function openBio(i){
@@ -2699,7 +2735,7 @@ function openBio(i){
     ? '<img class="bio-photo" src="'+m.photo+'" alt="'+esc(name)+'">'
     : '<div class="bio-photo" style="display:flex;align-items:center;justify-content:center">'+PERSON_SVG+'</div>';
   document.getElementById('bio-name').textContent = name;
-  document.getElementById('bio-role').textContent = m.ed ? 'Executive Director' : (m.chair ? t('ui.chair') : (m.fulltime ? 'Full-Time Commissioner' : t('ui.commissioner')));
+  document.getElementById('bio-role').textContent = roleOf(m);
   document.getElementById('bio-text').innerHTML = L(m.bio).map(p=>'<p>'+esc(p)+'</p>').join('');
   document.getElementById('bio-modal').classList.add('open');
   document.querySelector('#bio-modal .bio-close').focus();
